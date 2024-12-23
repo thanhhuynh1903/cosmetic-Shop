@@ -1,0 +1,11 @@
+
+  /* Tùy chỉnh nút điều hướng */
+  .swiper-button-next,
+  .swiper-button-prev {
+    font-size: 12px!important;
+    color: #c28b7a; /* Màu sắc của nút điều hướng */
+  }
+
+  :root {
+    --swiper-navigation-size: 27px;
+}

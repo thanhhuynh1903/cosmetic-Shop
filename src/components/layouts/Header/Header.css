@@ -1,0 +1,12 @@
+@import url('https://fonts.cdnfonts.com/css/pinyon-script');
+
+.color-header{
+    background-color: #c89687;
+}
+
+.custom-logo{
+    font-weight: 500;
+    font-size: 30px;
+    color: #f8fafc;
+    font-family: 'Pinyon Script', sans-serif;
+}
