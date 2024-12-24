@@ -5,6 +5,7 @@ import Breadcrumbs from "../components/breadcrumbs/breadcrumbs";
 import FloatingCart from "../components/CartFloat/FloatingCart";
 import Drawer from "../components/Drawer/Drawer";
 import CardOrder from "../components/CardOrder.js/CardOrder";
+import ColorPicker from "../components/ColorPicker/ColorPicker";
 export default function ProductDetail() {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
@@ -59,50 +60,56 @@ export default function ProductDetail() {
               <h1 className="text-2xl font-bold">$13.65</h1>
               <p>100ml</p>
             </div>
+            <div className="h-full">
+              <div><ColorPicker/></div>
+            </div>
             {/* Buttons */}
-            <div className="flex items-end gap-6 mt-6 h-full">
+            <div className="flex items-end gap-6 mt-6">
               {/* Quantity Control */}
-              <div className="flex items-center rounded-lg  border border-gray-100 mb-2">
-                <button
-                  className="text-gray-400 hover:text-gray-600 focus:outline-none"
-                  aria-label="Decrease quantity"
-                  onClick={handleDecrement}
+              <div
+              className="flex items-center rounded-[20px]  border-2 border-[#96a3b3] justify-around"
+              style={{ width: "17%" }}
+            >
+              <button
+                className="text-[#96a3b3] hover:text-gray-600 focus:outline-none"
+                aria-label="Decrease quantity"
+                onClick={handleDecrement}
+              >
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M18 12H6"
-                    />
-                  </svg>
-                </button>
-                <span className="mx-2 text-center w-4">{quantity}</span>
-                <button
-                  className="text-gray-400 hover:text-gray-600 focus:outline-none"
-                  aria-label="Increase quantity"
-                  onClick={handleIncrement}
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M18 12H6"
+                  />
+                </svg>
+              </button>
+              <span className="mx-2 text-center w-4">{quantity}</span>
+              <button
+                className="text-[#96a3b3] hover:text-gray-600 focus:outline-none"
+                aria-label="Increase quantity"
+                onClick={handleIncrement}
+              >
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    />
-                  </svg>
-                </button>
-              </div>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                  />
+                </svg>
+              </button>
+            </div>
               <button className="bg-weight-brown outline outline-offset-2 outline-white  text-white px-6 py-2 rounded-md hover:bg-gray-800">
                 Buy now
               </button>

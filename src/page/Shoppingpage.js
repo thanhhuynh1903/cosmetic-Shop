@@ -39,11 +39,11 @@ export default function Shoppingpage() {
         All products
       </h2>
       <div className="grid grid-cols-10 gap-4 p-4">
-        <div className="col-span-2 bg-blue-300 p-4 rounded-lg">
+        <div className="col-span-2 p-4 rounded-lg">
           <Sidebar categorys={products} categoryCount={categoryCount}/>
           <Tags tags={products}/>
         </div>
-        <div className="col-span-8 bg-green-300 p-4 rounded-lg">
+        <div className="col-span-8 p-4 rounded-lg">
           <ProductsList products={products} loading={isLoading}/>
         </div>
       </div>

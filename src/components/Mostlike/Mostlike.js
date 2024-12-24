@@ -30,7 +30,7 @@ export default function Mostlike() {
         Most liked products
       </div>
       <Swiper
-        className="h-[350px]"
+        className="h-[430px]"
           modules={[Autoplay,Navigation, Scrollbar]}
           spaceBetween={18}
           slidesPerView={5}

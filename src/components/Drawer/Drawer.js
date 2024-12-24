@@ -1,38 +1,31 @@
 import React from "react";
 import useCartStore from "../../util/zustandCartState";
+import CardOrder from "../CardOrder.js/CardOrder";
 
 export default function Drawer() {
   const { isOpen, toggleDrawer } = useCartStore(); // Destructuring state from Zustand store
 
   return (
     <main>
-      {/* Drawer Section */}
-      <section
+      {/* Drawer Section */}      <section
         className={`fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform ease-in-out duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } bg-white w-[30rem] dark:bg-gray-800`}
-        tabindex="-1"
+        } bg-white w-full sm:w-[30rem] dark:bg-gray-800`} // w-full for mobile, sm:w-[30rem] for larger screens
+        tabIndex="-1"
         aria-labelledby="drawer-right-label"
       >
-        <h5
-          id="drawer-right-label"
-          className="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400"
-        >
-          <svg
-            className="w-4 h-4 me-2.5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 20 20"
+        <div className="flex justify-center">
+          <h5
+            id="drawer-right-label"
+            className="inline-flex text-center items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400"
           >
-            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-          </svg>
-          Right Drawer
-        </h5>
+            Shopping Bag
+          </h5>
+        </div>
         <button
           onClick={toggleDrawer}
           type="button"
-          className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
+          className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center"
         >
           <svg
             className="w-3 h-3"
@@ -51,52 +44,39 @@ export default function Drawer() {
           </svg>
           <span className="sr-only">Close menu</span>
         </button>
-        <p className="mb-6 text-sm text-gray-500 dark:text-gray-400">
-          Supercharge your hiring by taking advantage of our{" "}
-          <a
-            href="#"
-            className="text-blue-600 underline font-medium dark:text-blue-500 hover:no-underline"
-          >
-            limited-time sale
-          </a>{" "}
-          for Flowbite Docs + Job Board. Unlimited access to over 190K
-          top-ranked candidates and the #1 design job board.
-        </p>
-        <article className="grid grid-cols-2 gap-4">
-          <a
-            href="#"
-            className="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-          >
-            Learn more
-          </a>
-          <a
-            href="#"
-            className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-          >
-            Get access{" "}
-            <svg
-              className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 10"
+        <hr className="mb-5 text-[#96a3b3]" />
+        <div className="space-y-2 overflow-y-auto max-h-[466px] ">
+          <CardOrder />
+          <CardOrder />
+          <CardOrder />
+          
+          {/* <CardOrder />
+          <CardOrder /> */}
+        </div>
+        <hr className="my-5 text-[#96a3b3]" />
+        <div>
+          <p className="text-sm text-[#96a3b3]">You have <strong>3 items</strong> in your bag</p>
+        </div>
+        <div className="flex-direction flex flex-col">
+          <div className="flex justify-between mb-5">
+            <h4 className="font-bold">Subtotal </h4>
+            <h5>$16.7</h5>
+          </div>
+          <article className="grid grid-cols gap-4">
+            <button
+              href="#"
+              className="px-4 py-2 text-sm font-medium text-center text-white bg-black  rounded-[20px] focus:outline-none hover:outline hover:outline-[#C5C7CA] hover:text-[#C5C7CA] focus:z-10 focus:ring-4 focus:ring-[#C5C7CA] "
             >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 5h12m0 0L9 1m4 4L9 9"
-              />
-            </svg>
-          </a>
-        </article>
+              Continue to checkout
+            </button>
+          </article>
+        </div>
       </section>
 
       {/* Overlay to close drawer when clicked outside */}
       {isOpen && (
         <section
-          className="w-screen h-full bg-gray-500 bg-opacity-50 fixed top-0 left-0"
+          className="w-screen h-full bg-black bg-opacity-80 fixed top-0 left-0 z-30"
           onClick={toggleDrawer}
         ></section>
       )}

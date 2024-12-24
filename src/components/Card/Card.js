@@ -23,26 +23,26 @@ export default function Card({ key, product, expired }) {
         key={key}
         className={`${
           expired
-            ? "min-w-[320px] max-w-[320px] h-[390px] shadow-custom mx-5 mb-5"
-            : "min-w-[280px] max-w-[280px] h-[315px] shadow-lg"
+            ? "min-w-[320px] max-w-[320px] h-[460px] shadow-custom mx-5 mb-5"
+            : "min-w-[280px] max-w-[280px] h-[385px] shadow-lg"
         }  p-3 rounded-lg `}
       >
-        <div className="w-full h-[200px] object-cover">
+        <div className="w-full h-[270px] ">
           <img
-            src={product?.image_link}
+            src={product?.api_featured_image}
             alt={product?.name}
-            className="w-full h-full rounded-md"
+            className="w-full h-full rounded-md object-contain"
           />
         </div>
 
         <p
           className={`${
-            expired ? "h-[40px]" : ""
+            expired ? "h-[40px] mt-3" : ""
           } text-base text-gray-700 font-semibold dark:text-gray-400`}
         >
           {product.name}
         </p>
-        <p className={`mt-3 text-sm text-gray-700 dark:text-gray-400`}>
+        <p className={`mt-1 text-sm text-[#96a3b3] dark:text-gray-400`}>
           {product.brand}
         </p>
         {expired && (
@@ -68,7 +68,7 @@ export default function Card({ key, product, expired }) {
             <div>
               <button
                 onClick={handleNavigate}
-                className="inline-flex items-center px-3 py-2 text-sm font-medium font-semibold text-center text-weight-brown outline outline-1 outline-weight-brown bg-[#fffff] rounded-lg hover:bg-weight-brown hover:text-white hover:outline-0"
+                className="mt-2 inline-flex items-center px-3 py-2 text-sm font-medium font-semibold text-center text-weight-brown outline outline-1 outline-weight-brown bg-[#fffff] rounded-lg hover:bg-weight-brown hover:text-white hover:outline-0"
               >
                 Buy now
                 <svg
