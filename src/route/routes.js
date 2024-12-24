@@ -5,6 +5,7 @@ const routes = {
     blog: '/blog',
     about: '/about',
     content: '/content',
+    checkout: '/checkout',
 };
 
 export default routes;

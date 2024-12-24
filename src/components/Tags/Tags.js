@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Tags({tags}) {
     //mai doc hieu lai code phan nay
-    const allTags = tags.flatMap((product) => product.tag_list);
+    const allTags = tags?.flatMap((product) => product?.tag_list);
     const uniqueTags = [...new Set(allTags)];
   return (
     <div className="mt-3">

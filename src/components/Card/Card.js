@@ -23,7 +23,7 @@ export default function Card({ key, product, expired }) {
         key={key}
         className={`${
           expired
-            ? "min-w-[320px] max-w-[320px] h-[460px] shadow-custom mx-5 mb-5"
+            ? "min-w-[320px] max-w-[320px] h-[460px] shadow-custom mx-5 mb-5 hover:shadow-shadowhover transition:shadow duration-500 ease-in-out"
             : "min-w-[280px] max-w-[280px] h-[385px] shadow-lg"
         }  p-3 rounded-lg `}
       >
@@ -42,7 +42,7 @@ export default function Card({ key, product, expired }) {
         >
           {product.name}
         </p>
-        <p className={`mt-1 text-sm text-[#96a3b3] dark:text-gray-400`}>
+        <p className={`mt-1 text-sm text-[#96a3b3] dark:text-gray-400 font-semibold`}>
           {product.brand}
         </p>
         {expired && (

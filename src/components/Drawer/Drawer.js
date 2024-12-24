@@ -1,10 +1,14 @@
 import React from "react";
 import useCartStore from "../../util/zustandCartState";
 import CardOrder from "../CardOrder.js/CardOrder";
+import { useNavigate } from "react-router-dom";
 
 export default function Drawer() {
   const { isOpen, toggleDrawer } = useCartStore(); // Destructuring state from Zustand store
-
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/checkout");
+  }
   return (
     <main>
       {/* Drawer Section */}      <section
@@ -64,7 +68,7 @@ export default function Drawer() {
           </div>
           <article className="grid grid-cols gap-4">
             <button
-              href="#"
+            onClick={handleNavigate}
               className="px-4 py-2 text-sm font-medium text-center text-white bg-black  rounded-[20px] focus:outline-none hover:outline hover:outline-[#C5C7CA] hover:text-[#C5C7CA] focus:z-10 focus:ring-4 focus:ring-[#C5C7CA] "
             >
               Continue to checkout

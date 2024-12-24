@@ -15,7 +15,7 @@ const useAllProductStore = create((set) => ({
         throw new Error('Failed to fetch products');
       }
       const data = await response.json();
-      const limitedData = data.slice(10, 30); // Chỉ lấy 10 sản phẩm đầu tiên
+      const limitedData = data.slice(10, 40); // Chỉ lấy 30 sản phẩm đầu tiên
       
       set({ products: limitedData, isLoading: false }); // Lưu dữ liệu vào state
     } catch (error) {

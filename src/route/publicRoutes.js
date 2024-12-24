@@ -5,7 +5,7 @@ import About from '../page/About/About';
 import Content from '../page/Content/Content';
 import TotalComponents from '../components/layouts/TotalComponents/TotalComponents';
 import ProductDetail from '../page/ProductDetail';
-
+import Checkout from '../page/Checkout';
 const publicRoutes = [
   {
     path: '/',
@@ -21,6 +21,11 @@ const publicRoutes = [
     path: '/products/:id',
     component: ProductDetail,
     title: 'Products Detail',
+  },
+  {
+    path: '/checkout',
+    component: Checkout,
+    title: 'Checkout',
   },
   {
     path: '/blog',
