@@ -1,36 +1,58 @@
 import React from "react";
-import suatam from "../../assets/imgs/suatam.png";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import DeleteIcon from "../DeleteIcon/DeleteIcon";
-export default function CardOrder() {
+import useCartStore from "../../util/zustandCartState";
+export default function CardOrder({ cart }) {
+  const { updateQuantity, removeFromCart } = useCartStore();
   const [quantity, setQuantity] = useState(1);
-
+  useEffect(() => {
+    setQuantity(cart.quantity);
+  }, [cart.quantity]);
   // Handle quantity increment and decrement
   const handleIncrement = () => {
-    setQuantity((prev) => prev + 1);
+    const newQuantity = quantity + 1;
+    setQuantity(newQuantity);
+    updateQuantity(cart.id, newQuantity);
   };
 
   const handleDecrement = () => {
     if (quantity > 1) {
-      setQuantity((prev) => prev - 1);
+      const newQuantity = quantity - 1;
+      setQuantity(newQuantity);
+      updateQuantity(cart.id, newQuantity);
     }
   };
+
+  const handleRemove = () => {
+    removeFromCart(cart.id);
+    console.log(removeFromCart(cart.id));
+    
+  };
+
   return (
     <div className="shadow rounded-md p-4 max-w-sm h-76 w-full flex flex-col rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] md:max-w-xl md:flex-row h-[150px]">
       <div className="flex space-x-4 w-full">
-        <div className="h-full w-50">
-          <img src={suatam} className="h-full w-full rounded-lg" />
+        <div className="h-full w-[30%]">
+          <img src={cart?.image} className="h-full w-full object-contain rounded-lg" />
         </div>
-        <div className="flex-1 space-y-2 py-1">
+        <div className="flex-1 space-y-1 py-1">
           <div className="flex justify-between">
-            <p className="font-bold">Ritual</p>
-            <p>$12.00</p>
+            <p className="font-bold text-[14px] overflow-hidden whitespace-nowrap	text-ellipsis w-[80%]">{cart.name}</p>
+            <p>${cart.price}</p>
           </div>
           <div>
-            <p className="text-[#96a3b3] text-[12px]">Color: Black</p>
+            <div className="group relative flex text-[#96a3b3] text-[12px]">Color:
+              <div
+                key={cart.color}
+                className="m-1 flex items-center rounded-full border-2 border-[#96a3b3] p-[5px] cursor-pointer z-0"
+                style={{ backgroundColor: cart.color }}
+              ></div>
+            </div>
           </div>
-          <p className="text-[#96a3b3] text-[12px] mb-1">Type: Lipstick</p>
-          <div className="flex item-center mt-1 space-x-2" >
+          <p className="text-[#96a3b3] text-[12px] mb-1">
+            Type: {cart.type ? cart.type : "None"}
+          </p>
+          <div className="flex item-center mt-1 space-x-2">
             <div
               className="flex items-center rounded-[20px]  border-2 border-[#96a3b3] justify-around"
               style={{ width: "40%" }}
@@ -75,7 +97,7 @@ export default function CardOrder() {
                 </svg>
               </button>
             </div>
-            <DeleteIcon />
+            <DeleteIcon handleRemove={handleRemove}/>
           </div>
         </div>
       </div>

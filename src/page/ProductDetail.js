@@ -1,20 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import suatam from "../assets/imgs/suatam.png";
 import Breadcrumbs from "../components/breadcrumbs/breadcrumbs";
 import FloatingCart from "../components/CartFloat/FloatingCart";
 import Drawer from "../components/Drawer/Drawer";
 import CardOrder from "../components/CardOrder.js/CardOrder";
 import ColorPicker from "../components/ColorPicker/ColorPicker";
 import useDetailStore from "../util/zustandfetchDetail";
-import { useEffect } from "react";
 import { Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import useCartStore from "../util/zustandCartState";
+
 export default function ProductDetail() {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
-  const [selectedTab, setSelectedTab] = useState("description"); // State to track the selected tab
+  const [selectedTab, setSelectedTab] = useState("description");
+  const [selectedColor, setSelectedColor] = useState(null);
   const { product, isLoading, error, fetchProductDetail } = useDetailStore();
+  const { addToCart } = useCartStore();
 
   useEffect(() => {
     if (id) {
@@ -35,6 +37,7 @@ export default function ProductDetail() {
       setQuantity((prev) => prev - 1);
     }
   };
+
   const renderStars = (rating) => {
     const totalStars = 5;
     let stars = [];
@@ -51,6 +54,19 @@ export default function ProductDetail() {
     return stars;
   };
 
+  const handleAddToCart = () => {
+    addToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.api_featured_image,
+      color: selectedColor,
+      type: product.product_type,
+      quantity,
+      
+    });
+  };
+
   return (
     <div className="bg-white min-h-screen flex flex-col py-4 px-[10%]">
       <Breadcrumbs />
@@ -63,7 +79,7 @@ export default function ProductDetail() {
             <img
               src={product?.api_featured_image}
               alt="Product"
-              className="w-full  object-contain md:max-w-md rounded-md"
+              className="w-full object-contain md:max-w-md rounded-md"
               style={{ height: "470px" }}
             />
           </div>
@@ -86,14 +102,14 @@ export default function ProductDetail() {
               <p className="text-sm font-bold text-[#A9CCAD]">In Stock</p>
             </div>
             <div>
-              <ColorPicker color={product} />
+              <ColorPicker color={product} selectedColor={selectedColor} onColorSelect={setSelectedColor} />
             </div>
 
             {/* Buttons */}
             <div className="flex items-end gap-6 mt-6">
               {/* Quantity Control */}
               <div
-                className="flex items-center rounded-[20px]  border-2 border-[#96a3b3] justify-around"
+                className="flex items-center rounded-[20px] border-2 border-[#96a3b3] justify-around"
                 style={{ width: "17%" }}
               >
                 <button
@@ -136,10 +152,10 @@ export default function ProductDetail() {
                   </svg>
                 </button>
               </div>
-              <button className="bg-weight-brown outline outline-offset-2 outline-white  text-white px-6 py-2 rounded-md hover:bg-gray-800">
+              <button onClick={handleAddToCart} className="bg-weight-brown outline outline-offset-2 outline-white text-white px-6 py-2 rounded-md hover:bg-gray-800">
                 Buy now
               </button>
-              <button className="border border-gray-300 px-6 py-2 rounded-md hover:bg-gray-100">
+              <button onClick={handleAddToCart} className="border border-gray-300 px-6 py-2 rounded-md hover:bg-gray-100">
                 Add to cart
               </button>
             </div>
@@ -194,7 +210,7 @@ export default function ProductDetail() {
                     <p className="text-gray-600 mt-4">
                       {product?.description
                         ? product?.description
-                        : "This product don't have description"}
+                        : "This product doesn't have a description"}
                     </p>
                   </>
                 )}
@@ -209,13 +225,7 @@ export default function ProductDetail() {
                     </div>
                   </div>
                 )}
-                <Drawer>
-                  <CardOrder />
-                  <CardOrder />
-                  <CardOrder />
-                  <CardOrder />
-                  <CardOrder />
-                </Drawer>
+                <Drawer />
               </div>
             </div>
           </div>

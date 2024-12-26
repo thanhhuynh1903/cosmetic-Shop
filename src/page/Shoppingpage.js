@@ -8,6 +8,7 @@ import useAllProductStore from "../util/zustandfetchAllproduct";
 import useCount from "../util/zustandCount";
 import { useEffect } from "react";
 import FloatingCart from "../components/CartFloat/FloatingCart";
+import Drawer from "../components/Drawer/Drawer";
 export default function Shoppingpage() {
   const { products, fetchAllProducts, isLoading, error } = useAllProductStore();
   const { setProducts, updateCategoryCount, categoryCount } = useCount();
@@ -47,6 +48,7 @@ export default function Shoppingpage() {
           <ProductsList products={products} loading={isLoading}/>
         </div>
       </div>
+      <Drawer/>
       <FloatingCart/>
     </div>
   );

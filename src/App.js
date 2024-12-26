@@ -8,7 +8,6 @@ import Footer from "./components/layouts/Footer/Footer";
 const App = () => {
   const location = useLocation();
   const hideHeaderFooter = location.pathname === "/checkout";
-  console.log(hideHeaderFooter);
 
   return (
     <div className="app-container">
