@@ -2,6 +2,7 @@ import React from "react";
 import ItemCheckout from "../components/ItemCheckout/ItemCheckout";
 import { Link } from "react-router-dom";
 import "../components/layouts/Header/Header.css";
+
 export default function Checkout() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-6 sm:px-6 lg:px-8">

@@ -14,7 +14,7 @@ export default function Drawer() {
     // Calculate item totals and overall subtotal
     const itemTotals = items.map((item) => {
       const price = parseFloat(item.price);
-      const total = price * item.quantity; 
+      const total = price * item.quantity;
       return {
         name: item.name,
         price: price,
@@ -22,7 +22,7 @@ export default function Drawer() {
         total: total,
       };
     });
-console.log(itemTotals);
+    console.log(itemTotals);
 
     // Calculate final subtotal
     const subtotal = itemTotals.reduce((sum, item) => sum + item.total, 0);
@@ -88,6 +88,7 @@ console.log(itemTotals);
           </div>
           <article className="grid grid-cols gap-4">
             <button
+              disabled={cart.length ? false : true}
               onClick={handleNavigate}
               className="px-4 py-2 text-sm font-medium text-center text-white bg-black  rounded-[20px] focus:outline-none hover:outline hover:outline-[#C5C7CA] hover:text-[#C5C7CA] focus:z-10 focus:ring-4 focus:ring-[#C5C7CA] "
             >

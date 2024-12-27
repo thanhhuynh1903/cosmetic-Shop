@@ -53,8 +53,11 @@ export default function ProductDetail() {
     }
     return stars;
   };
+console.log(quantity);
 
   const handleAddToCart = () => {
+    console.log(quantity);
+    
     addToCart({
       id: product.id,
       name: product.name,
@@ -63,7 +66,6 @@ export default function ProductDetail() {
       color: selectedColor,
       type: product.product_type,
       quantity,
-      
     });
   };
 
