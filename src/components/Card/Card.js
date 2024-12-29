@@ -20,12 +20,13 @@ export default function Card({ key, product, expired }) {
   return (
     <div className="flex">
       <div
+      onClick={handleNavigate}
         key={key}
         className={`${
           expired
             ? "min-w-[320px] max-w-[320px] h-[460px] shadow-custom mx-5 mb-5 hover:shadow-shadowhover transition:shadow duration-500 ease-in-out"
             : "min-w-[280px] max-w-[280px] h-[385px] shadow-lg"
-        }  p-3 rounded-lg `}
+        }  p-3 rounded-lg cursor-pointer`}
       >
         <div className="w-full h-[270px] ">
           <img
@@ -43,8 +44,11 @@ export default function Card({ key, product, expired }) {
           {product.name}
         </p>
         <p className={`mt-1 text-sm text-[#96a3b3] dark:text-gray-400 font-semibold`}>
-          {product.brand}
+          Brand: {product.brand}
         </p>
+        {/* <p className={`mt-1 text-sm text-[#96a3b3] dark:text-gray-400 font-semibold`}>
+          {product.tag_list}
+        </p> */}
         {expired && (
           <div className="flex items-center my-1">
             {stars.map((star, index) => (

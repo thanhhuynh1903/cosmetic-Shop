@@ -22,12 +22,12 @@ export default function Drawer() {
         total: total,
       };
     });
-    console.log(itemTotals);
-
+  
     // Calculate final subtotal
     const subtotal = itemTotals.reduce((sum, item) => sum + item.total, 0);
     return subtotal;
   }
+
   return (
     <main>
       {/* Drawer Section */}{" "}

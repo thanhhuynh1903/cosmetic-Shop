@@ -5,7 +5,8 @@ const useAllProductStore = create((set) => ({
   products: [], // Trạng thái lưu trữ danh sách sản phẩm
   isLoading: false, // Trạng thái loading
   error: null, // Trạng thái lỗi
-
+  tagFilter: '', // State for tag filter
+  categoryFilter: '',
   // Hàm fetch dữ liệu từ API
   fetchAllProducts: async () => {
     set({ isLoading: true, error: null }); // Bắt đầu loading
@@ -22,6 +23,9 @@ const useAllProductStore = create((set) => ({
       set({ error: error.message, isLoading: false }); // Lưu lỗi vào state
     }
   },
+ 
+  setCategoryFilter: (category) => set({ categoryFilter: category }),
+  setTagFilter: (tag) => set({ tagFilter: tag }), // Function to set tag filter
 }));
 
 export default useAllProductStore;

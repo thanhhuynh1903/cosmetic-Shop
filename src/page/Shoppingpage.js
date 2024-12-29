@@ -10,7 +10,7 @@ import { useEffect } from "react";
 import FloatingCart from "../components/CartFloat/FloatingCart";
 import Drawer from "../components/Drawer/Drawer";
 export default function Shoppingpage() {
-  const { products, fetchAllProducts, isLoading, error } = useAllProductStore();
+  const { products, fetchAllProducts, isLoading, error,categoryFilter, setCategoryFilter,tagFilter, setTagFilter } = useAllProductStore();
   const { setProducts, updateCategoryCount, categoryCount } = useCount();
 
   // Fetch dữ liệu khi component được mount
@@ -25,9 +25,11 @@ export default function Shoppingpage() {
     }
   }, [products, setProducts, updateCategoryCount]); // Ensure this runs when products are updated
 
-  console.log(categoryCount);
-
-
+  const filteredProducts = products.filter(product => {
+    const matchesCategory = categoryFilter ? product.category === categoryFilter : true;
+    const matchesTag = tagFilter ? product.tag_list?.includes(tagFilter) : true;
+    return matchesCategory && matchesTag;
+  });
 
   return (
     <div className="m-5 ">
@@ -41,11 +43,13 @@ export default function Shoppingpage() {
       </h2>
       <div className="grid grid-cols-10 gap-4 p-4">
         <div className="col-span-2 p-4 rounded-lg">
-          <Sidebar categorys={products} categoryCount={categoryCount}/>
-          <Tags tags={products}/>
+          <Sidebar categorys={products} categoryCount={categoryCount} setCategoryFilter={setCategoryFilter}/>
+          <Tags tags={products} setTagFilter={setTagFilter}/>
         </div>
         <div className="col-span-8 p-4 rounded-lg">
-          <ProductsList products={products} loading={isLoading}/>
+        {categoryFilter && <p className="text-[15px] text-start mb-2">Result for <strong>{categoryFilter}</strong></p>}
+        {tagFilter && <p className="text-[15px] text-start mb-2">Tag: <strong>{tagFilter}</strong></p>}
+          <ProductsList products={filteredProducts} loading={isLoading}/>
         </div>
       </div>
       <Drawer/>

@@ -9,9 +9,12 @@ import useDetailStore from "../util/zustandfetchDetail";
 import { Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import useCartStore from "../util/zustandCartState";
+import { useNavigate } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
 
 export default function ProductDetail() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [quantity, setQuantity] = useState(1);
   const [selectedTab, setSelectedTab] = useState("description");
   const [selectedColor, setSelectedColor] = useState(null);
@@ -47,17 +50,18 @@ export default function ProductDetail() {
           key={i}
           className={`text-${rating && rating >= i ? "" : "black-300"}`}
         >
-          <Star width={32} height={32} fill={rating === null ? "none" : rating >= i ? "" : "black"} />
+          <Star
+            width={32}
+            height={32}
+            fill={rating === null ? "none" : rating >= i ? "" : "black"}
+          />
         </span>
       );
     }
     return stars;
   };
-console.log(quantity);
 
   const handleAddToCart = () => {
-    console.log(quantity);
-    
     addToCart({
       id: product.id,
       name: product.name,
@@ -67,6 +71,19 @@ console.log(quantity);
       type: product.product_type,
       quantity,
     });
+  };
+
+  const handleBuyNow = () => {
+    addToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.api_featured_image,
+      color: selectedColor,
+      type: product.product_type,
+      quantity,
+    });
+    navigate("/checkout");
   };
 
   return (
@@ -104,7 +121,11 @@ console.log(quantity);
               <p className="text-sm font-bold text-[#A9CCAD]">In Stock</p>
             </div>
             <div>
-              <ColorPicker color={product} selectedColor={selectedColor} onColorSelect={setSelectedColor} />
+              <ColorPicker
+                color={product}
+                selectedColor={selectedColor}
+                onColorSelect={setSelectedColor}
+              />
             </div>
 
             {/* Buttons */}
@@ -154,12 +175,27 @@ console.log(quantity);
                   </svg>
                 </button>
               </div>
-              <button onClick={handleAddToCart} className="bg-weight-brown outline outline-offset-2 outline-white text-white px-6 py-2 rounded-md hover:bg-gray-800">
+
+              <button
+                disabled={!selectedColor}
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content="Choose Color!!"
+                onClick={handleBuyNow}
+                className="bg-weight-brown outline outline-offset-2 outline-white text-white px-6 py-2 rounded-md hover:bg-gray-800"
+              >
                 Buy now
               </button>
-              <button onClick={handleAddToCart} className="border border-gray-300 px-6 py-2 rounded-md hover:bg-gray-100">
+
+              <button
+                disabled={!selectedColor}
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content="Choose Color!!"
+                onClick={handleAddToCart}
+                className="border border-gray-300 px-6 py-2 rounded-md hover:bg-gray-100"
+              >
                 Add to cart
               </button>
+              {!selectedColor && <Tooltip id="my-tooltip" place="bottom" />}
             </div>
             {/* Tags */}
             <div>

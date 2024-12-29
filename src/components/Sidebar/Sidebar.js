@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export default function Sidebar({ categorys, categoryCount }) {
+export default function Sidebar({
+  categorys,
+  categoryCount,
+  setCategoryFilter,
+}) {
   const allCategories = categorys.flatMap((cate) => cate.category);
   const uniqueCates = [...new Set(allCategories)];
   const filterCate = uniqueCates.filter((cate) => cate !== "");
-console.log(categorys);
 
   return (
     <div>
@@ -38,10 +41,23 @@ console.log(categorys);
       >
         <div className="h-full w-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 rounded-3xl border-[1px] border-[#c28b7a]">
           <ul className="space-y-2 font-medium">
+            <li>
+              <Link
+                onClick={() => setCategoryFilter("")}
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              >
+                <span className="flex-1 ms-3 whitespace-nowrap text-[#c28b7a]">
+                  All Products
+                </span>
+                <span className="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
+                  {/* Check if the category key exists in quantity param */}
+                </span>
+              </Link>
+            </li>
             {filterCate.map((item) => (
-              <li>
+              <li key={item}>
                 <Link
-                  key={item}
+                  onClick={() => setCategoryFilter(item)}
                   href="#"
                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
@@ -49,10 +65,11 @@ console.log(categorys);
                     {item}
                   </span>
                   <span className="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
-                    {/* Check if the category key exists in quantity param */}
-                    ({categoryCount.hasOwnProperty(item)
+                    {/* Check if the category key exists in quantity param */}(
+                    {categoryCount.hasOwnProperty(item)
                       ? categoryCount[item]
-                      : ""})
+                      : ""}
+                    )
                   </span>
                 </Link>
               </li>
