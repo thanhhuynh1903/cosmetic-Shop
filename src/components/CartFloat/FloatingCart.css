@@ -1,25 +1,80 @@
 .floating-cart {
-    position: fixed;   /* Fixes the cart to the screen */
-    bottom: 20px;      /* Distance from the bottom */
-    right: 20px;       /* Distance from the right */
-    z-index: 999;      /* Ensures it's above other content */
+  position: fixed; /* Fixes the cart to the screen */
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  z-index: 999; /* Ensures it's above other content */
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0);
   }
-  
-  .cart-button {
-    border: solid 2px #E19898;
-    background-color: transparent;
-    color: #E19898;
-    padding: 10px 15px;
-    border-radius: 50%;
-    font-size: 24px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  10% {
+    transform: rotate(15deg);
   }
-  
-  .cart-button:hover {
-    background-color: #d9b09e;
-    color:whitesmoke;
-    border: solid 2px #D8C4B6;
+  20% {
+    transform: rotate(-10deg);
   }
-  
+  30% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  60% {
+    transform: rotate(-3deg);
+  }
+  70% {
+    transform: rotate(2deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.ring {
+  animation-name: ring;
+  animation-iteration-count: 2;
+}
+
+.cart-button {
+  border: none;
+  background: linear-gradient(135deg, #ff6e6c, #e19898);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  position: relative; /* For positioning the cart-count badge */
+}
+
+.cart-button:hover {
+  transform: translateY(-5px);
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #ff4757;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid white;
+}

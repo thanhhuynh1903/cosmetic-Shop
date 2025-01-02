@@ -8,7 +8,7 @@ const useAllProductStore = create((set) => ({
   tagFilter: '', // State for tag filter
   categoryFilter: '',
   // Hàm fetch dữ liệu từ API
-  fetchAllProducts: async () => {
+  fetchAllProducts: async (retryCount = 0) => {
     set({ isLoading: true, error: null }); // Bắt đầu loading
     try {
       const response = await fetch('http://makeup-api.herokuapp.com/api/v1/products.json');
@@ -20,7 +20,14 @@ const useAllProductStore = create((set) => ({
       
       set({ products: limitedData, isLoading: false }); // Lưu dữ liệu vào state
     } catch (error) {
-      set({ error: error.message, isLoading: false }); // Lưu lỗi vào state
+      if (retryCount < 5) { // Thử lại tối đa 5 lần
+        const delay = Math.pow(2, retryCount) * 1000; // Exponential backoff delay
+        setTimeout(() => {
+          useAllProductStore.getState().fetchAllProducts(retryCount + 1);
+        }, delay);
+      } else {
+        set({ error: error.message, isLoading: false }); // Lưu lỗi vào state, reset retry count
+      }
     }
   },
  

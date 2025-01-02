@@ -2,14 +2,23 @@ import React from "react";
 import ItemCheckout from "../components/ItemCheckout/ItemCheckout";
 import { Link } from "react-router-dom";
 import "../components/layouts/Header/Header.css";
-
+import { useNavigate } from "react-router-dom";
 export default function Checkout() {
+  const navigate = useNavigate();
+  const handleCancelCheckout = () => {
+    navigate("/products");
+  };
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-6 sm:px-6 lg:px-8">
       <div className="flex items-center justify-center ">
         {/* <img src={logo} className="w-16 h-16 object-cover" /> */}
         <Link to="/">
-          <h1 className="custom-logo " style={{ color: "#c28b7a", font: "bold",fontSize:"40px" }}>Beauty</h1>
+          <h1
+            className="custom-logo "
+            style={{ color: "#c28b7a", font: "bold", fontSize: "40px" }}
+          >
+            Beauty
+          </h1>
         </Link>
       </div>
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-7xl lg:max-w-7xl">
@@ -245,10 +254,11 @@ export default function Checkout() {
                 </div>
                 <div className="flex justify-between mt-6">
                   <button
+                    onClick={handleCancelCheckout}
                     type="button"
                     className="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg font-semibold"
                   >
-                    Return to cart
+                    Cancel Checkout
                   </button>
                   <button
                     type="submit"

@@ -7,6 +7,7 @@ export default function Drawer() {
   const { isOpen, toggleDrawer, cart } = useCartStore(); // Destructuring state from Zustand store
   const navigate = useNavigate();
   const handleNavigate = () => {
+    toggleDrawer();
     navigate("/checkout");
   };
 
