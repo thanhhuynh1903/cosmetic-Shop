@@ -1,17 +1,177 @@
-import React from "react";
+import React, { useState } from "react";
 import ItemCheckout from "../components/ItemCheckout/ItemCheckout";
 import { Link } from "react-router-dom";
 import "../components/layouts/Header/Header.css";
 import { useNavigate } from "react-router-dom";
+import useUserState from "../util/zustandUserState";
 export default function Checkout() {
   const navigate = useNavigate();
+  const { user,setUser } = useUserState();
+  // State cho form data và errors
+  const [formData, setFormData] = useState({
+    email: "",
+    firstName: "",
+    lastName: "",
+    company: "",
+    address: "",
+    apartment: "",
+    city: "",
+    province: "",
+    postalCode: "",
+    phone: "",
+    country: "Vietnam",
+    newsOffers: false,
+    textOffers: false
+  });
+  
+  const [errors, setErrors] = useState({});
+  const [touched, setTouched] = useState({});
+
+  // Xử lý thay đổi input
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value
+    });
+    
+    // Validate khi người dùng thay đổi giá trị
+    validateField(name, type === "checkbox" ? checked : value);
+  };
+
+  // Đánh dấu field đã được chạm vào
+  const handleBlur = (e) => {
+    const { name } = e.target;
+    setTouched({
+      ...touched,
+      [name]: true
+    });
+    validateField(name, formData[name]);
+  };
+
+  // Validate từng field
+  const validateField = (name, value) => {
+    let newErrors = { ...errors };
+    
+    switch (name) {
+      case "email":
+        if (!value) {
+          newErrors.email = "Email là bắt buộc";
+        } else if (!/\S+@\S+\.\S+/.test(value)) {
+          newErrors.email = "Email không hợp lệ";
+        } else {
+          delete newErrors.email;
+        }
+        break;
+      
+      case "firstName":
+        if (!value) {
+          newErrors.firstName = "Họ là bắt buộc";
+        } else {
+          delete newErrors.firstName;
+        }
+        break;
+      
+      case "lastName":
+        if (!value) {
+          newErrors.lastName = "Tên là bắt buộc";
+        } else {
+          delete newErrors.lastName;
+        }
+        break;
+      
+      case "address":
+        if (!value) {
+          newErrors.address = "Địa chỉ là bắt buộc";
+        } else {
+          delete newErrors.address;
+        }
+        break;
+      
+      case "city":
+        if (!value) {
+          newErrors.city = "Thành phố là bắt buộc";
+        } else {
+          delete newErrors.city;
+        }
+        break;
+      
+      case "province":
+        if (!value) {
+          newErrors.province = "Tỉnh/thành là bắt buộc";
+        } else {
+          delete newErrors.province;
+        }
+        break;
+      
+      case "postalCode":
+        if (!value) {
+          newErrors.postalCode = "Mã bưu điện là bắt buộc";
+        } else if (!/^\d{5,6}$/.test(value)) {
+          newErrors.postalCode = "Mã bưu điện không hợp lệ";
+        } else {
+          delete newErrors.postalCode;
+        }
+        break;
+      
+      case "phone":
+        if (!value) {
+          newErrors.phone = "Số điện thoại là bắt buộc";
+        } else if (!/^[0-9]{10,11}$/.test(value.replace(/[^0-9]/g, ''))) {
+          newErrors.phone = "Số điện thoại không hợp lệ";
+        } else {
+          delete newErrors.phone;
+        }
+        break;
+      
+      default:
+        break;
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // Validate toàn bộ form
+  const validateForm = () => {
+    const requiredFields = ["email", "firstName", "lastName", "address", "city", "province", "postalCode", "phone"];
+    let newErrors = {};
+    let newTouched = {};
+    
+    requiredFields.forEach(field => {
+      newTouched[field] = true;
+      if (!formData[field]) {
+        newErrors[field] = `${field} là bắt buộc`;
+      } else {
+        validateField(field, formData[field]);
+      }
+    });
+    
+    setTouched(newTouched);
+    setErrors({...newErrors, ...errors});
+    
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleCancelCheckout = () => {
     navigate("/products");
   };
+  
+  const handleConfirmCheckout = (e) => {
+    e.preventDefault();
+    
+    if (validateForm()) {
+      setUser(formData);
+      navigate("/complete");
+    } else {
+      // Hiển thị thông báo lỗi
+      alert("Vui lòng điền đầy đủ thông tin bắt buộc");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-6 sm:px-6 lg:px-8">
       <div className="flex items-center justify-center ">
-        {/* <img src={logo} className="w-16 h-16 object-cover" /> */}
         <Link to="/">
           <h1
             className="custom-logo "
@@ -26,14 +186,14 @@ export default function Checkout() {
           <h2 className="mb-4 text-2xl font-extrabold text-gray-900">
             Express Checkout
           </h2>
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleConfirmCheckout}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div>
                 <div className="flex justify-between mb-4">
-                  <button className="bg-purple-600 text-black py-2 px-4 rounded-lg font-semibold">
+                  <button type="button" className="bg-purple-600 text-black py-2 px-4 rounded-lg font-semibold">
                     Shop Pay
                   </button>
-                  <button className="bg-yellow-400 text-black py-2 px-4 rounded-lg font-semibold">
+                  <button type="button" className="bg-yellow-400 text-black py-2 px-4 rounded-lg font-semibold">
                     PayPal
                   </button>
                 </div>
@@ -42,24 +202,34 @@ export default function Checkout() {
                     htmlFor="email"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Contact
+                    Contact <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    value={formData.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className={`mt-1 block w-full px-3 py-2 border ${
+                      errors.email && touched.email ? 'border-red-500' : 'border-gray-300'
+                    } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                     placeholder="Email"
                   />
+                  {errors.email && touched.email && (
+                    <p className="text-[#CB0404] text-xs mt-1">{errors.email}</p>
+                  )}
                   <div className="flex items-center mt-2">
                     <input
                       type="checkbox"
-                      id="news-offers"
-                      name="news-offers"
+                      id="newsOffers"
+                      name="newsOffers"
+                      checked={formData.newsOffers}
+                      onChange={handleChange}
                       className="mr-2"
                     />
                     <label
-                      htmlFor="news-offers"
+                      htmlFor="newsOffers"
                       className="text-sm text-gray-600"
                     >
                       Email me with news and offers
@@ -88,47 +258,63 @@ export default function Checkout() {
                       htmlFor="country"
                       className="block text-sm font-medium text-gray-700"
                     >
-                      Country/Region
+                      Country/Region <span className="text-red-500">*</span>
                     </label>
                     <select
                       id="country"
                       name="country"
+                      value={formData.country}
+                      onChange={handleChange}
                       className="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     >
-                      {/* <option>Thailand</option> */}
                       <option>Vietnam</option>
-                      {/* Add more options as needed */}
                     </select>
                   </div>
                   <div>
                     <label
-                      htmlFor="first-name"
+                      htmlFor="firstName"
                       className="block text-sm font-medium text-gray-700"
                     >
-                      First Name
+                      First Name <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
-                      id="first-name"
-                      name="first-name"
-                      className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                      id="firstName"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      className={`mt-1 block w-full px-3 py-2 border ${
+                        errors.firstName && touched.firstName ? 'border-red-500' : 'border-gray-300'
+                      } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                       placeholder="First name"
                     />
+                    {errors.firstName && touched.firstName && (
+                      <p className="text-[#CB0404] text-xs mt-1">{errors.firstName}</p>
+                    )}
                   </div>
                   <div>
                     <label
-                      htmlFor="last-name"
+                      htmlFor="lastName"
                       className="block text-sm font-medium text-gray-700"
                     >
-                      Last Name
+                      Last Name <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
-                      id="last-name"
-                      name="last-name"
-                      className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                      id="lastName"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      className={`mt-1 block w-full px-3 py-2 border ${
+                        errors.lastName && touched.lastName ? 'border-red-500' : 'border-gray-300'
+                      } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                       placeholder="Last name"
                     />
+                    {errors.lastName && touched.lastName && (
+                      <p className="text-[#CB0404] text-xs mt-1">{errors.lastName}</p>
+                    )}
                   </div>
                 </div>
                 <div className="mb-4">
@@ -142,6 +328,8 @@ export default function Checkout() {
                     type="text"
                     id="company"
                     name="company"
+                    value={formData.company}
+                    onChange={handleChange}
                     className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="Company"
                   />
@@ -151,27 +339,37 @@ export default function Checkout() {
                     htmlFor="address"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Address
+                    Address <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
                     id="address"
                     name="address"
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    value={formData.address}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className={`mt-1 block w-full px-3 py-2 border ${
+                      errors.address && touched.address ? 'border-red-500' : 'border-gray-300'
+                    } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                     placeholder="Address"
                   />
+                  {errors.address && touched.address && (
+                    <p className="text-[#CB0404] text-xs mt-1">{errors.address}</p>
+                  )}
                 </div>
                 <div className="mb-4">
                   <label
-                    htmlFor="address-2"
+                    htmlFor="apartment"
                     className="block text-sm font-medium text-gray-700"
                   >
                     Apartment, suite, etc. (optional)
                   </label>
                   <input
                     type="text"
-                    id="address-2"
-                    name="address-2"
+                    id="apartment"
+                    name="apartment"
+                    value={formData.apartment}
+                    onChange={handleChange}
                     className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="Apartment, suite, etc."
                   />
@@ -182,45 +380,69 @@ export default function Checkout() {
                       htmlFor="city"
                       className="block text-sm font-medium text-gray-700"
                     >
-                      City
+                      City <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
                       id="city"
                       name="city"
-                      className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                      value={formData.city}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      className={`mt-1 block w-full px-3 py-2 border ${
+                        errors.city && touched.city ? 'border-red-500' : 'border-gray-300'
+                      } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                       placeholder="City"
                     />
+                    {errors.city && touched.city && (
+                      <p className="text-[#CB0404] text-xs mt-1">{errors.city}</p>
+                    )}
                   </div>
                   <div>
                     <label
                       htmlFor="province"
                       className="block text-sm font-medium text-gray-700"
                     >
-                      Province
+                      Province <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
                       id="province"
                       name="province"
-                      className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                      value={formData.province}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      className={`mt-1 block w-full px-3 py-2 border ${
+                        errors.province && touched.province ? 'border-red-500' : 'border-gray-300'
+                      } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                       placeholder="Province"
                     />
+                    {errors.province && touched.province && (
+                      <p className="text-[#CB0404] text-xs mt-1">{errors.province}</p>
+                    )}
                   </div>
                   <div>
                     <label
-                      htmlFor="postal-code"
+                      htmlFor="postalCode"
                       className="block text-sm font-medium text-gray-700"
                     >
-                      Postal Code
+                      Postal Code <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
-                      id="postal-code"
-                      name="postal-code"
-                      className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                      id="postalCode"
+                      name="postalCode"
+                      value={formData.postalCode}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      className={`mt-1 block w-full px-3 py-2 border ${
+                        errors.postalCode && touched.postalCode ? 'border-red-500' : 'border-gray-300'
+                      } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                       placeholder="Postal Code"
                     />
+                    {errors.postalCode && touched.postalCode && (
+                      <p className="text-[#CB0404] text-xs mt-1">{errors.postalCode}</p>
+                    )}
                   </div>
                 </div>
                 <div className="mb-4">
@@ -228,25 +450,35 @@ export default function Checkout() {
                     htmlFor="phone"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Phone
+                    Phone <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className={`mt-1 block w-full px-3 py-2 border ${
+                      errors.phone && touched.phone ? 'border-red-500' : 'border-gray-300'
+                    } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                     placeholder="Phone"
                   />
+                  {errors.phone && touched.phone && (
+                    <p className="text-[#CB0404] text-xs mt-1">{errors.phone}</p>
+                  )}
                 </div>
                 <div className="flex items-center mt-2">
                   <input
                     type="checkbox"
-                    id="news-offers"
-                    name="news-offers"
+                    id="textOffers"
+                    name="textOffers"
+                    checked={formData.textOffers}
+                    onChange={handleChange}
                     className="mr-2"
                   />
                   <label
-                    htmlFor="news-offers"
+                    htmlFor="textOffers"
                     className="text-sm text-gray-600"
                   >
                     Text me with news and offers

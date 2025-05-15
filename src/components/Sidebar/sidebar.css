@@ -1,0 +1,48 @@
+/* Custom scrollbar for the sidebar */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 4px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #e0c5bc;
+  border-radius: 10px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: #c28b7a;
+}
+
+/* Smooth transitions */
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible {
+  outline: 2px solid #c28b7a;
+  outline-offset: 2px;
+}
+
+/* Active category animation */
+.bg-\[\#f8f0ed\] {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-\[\#f8f0ed\]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #c28b7a;
+  border-radius: 0 2px 2px 0;
+}

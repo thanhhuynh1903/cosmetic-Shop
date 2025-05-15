@@ -1,0 +1,10 @@
+@media (max-width: 900px) {
+  .swiper {
+    height: 320px !important;
+  }
+}
+@media (max-width: 640px) {
+  .swiper {
+    height: 220px !important;
+  }
+}

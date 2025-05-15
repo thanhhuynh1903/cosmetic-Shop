@@ -1,12 +1,52 @@
 @import url('https://fonts.cdnfonts.com/css/pinyon-script');
 
-.color-header{
-    background-color: #c89687;
-}
-
 .custom-logo{
     font-weight: 500;
     font-size: 30px;
     color: #f8fafc;
     font-family: 'Pinyon Script', sans-serif;
+}
+.color-header {
+  background-color: #c28b7a;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.custom-logo {
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* Mobile menu animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.md\:hidden.bg-white {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .color-header {
+    padding: 0.5rem 0;
+  }
+
+  .custom-logo {
+    font-size: 1.5rem;
+  }
+}
+
+/* Optional: Add a subtle hover effect to mobile menu items */
+.md\:hidden.bg-white a:hover {
+  background-color: #f8f9fa;
 }

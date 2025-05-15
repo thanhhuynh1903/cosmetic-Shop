@@ -32,6 +32,12 @@ const useCartStore = create((set) => ({
           localStorage.setItem('cart', JSON.stringify(updatedCart));
           return { cart: updatedCart };
         }),
+      removeAllCart: () =>
+        set((state) => {
+          const updatedCart = [];
+          localStorage.setItem('cart', JSON.stringify(updatedCart));
+          return { cart: updatedCart };
+        }),
     
 }));
 

@@ -1,32 +1,49 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-export default function Tags({tags,setTagFilter}) {
-  const [selectedTag, setSelectedTag] = useState(null);
-    //mai doc hieu lai code phan nay
-    const allTags = tags?.flatMap((product) => product?.tag_list);
-    const uniqueTags = [...new Set(allTags)];
-    const handleTagClick = (tag) => {
-      setSelectedTag(tag);
-      setTagFilter(tag);
-    };
-  
+"use client"
+
+import { useState } from "react"
+
+export default function Tags({ tags, setTagFilter }) {
+  const [selectedTag, setSelectedTag] = useState(null)
+
+  // Get all unique tags
+  const allTags = tags?.flatMap((product) => product?.tag_list)
+  const uniqueTags = [...new Set(allTags)].filter(Boolean) // Filter out null/undefined
+
+  const handleTagClick = (tag) => {
+    // If clicking the already selected tag, deselect it
+    if (selectedTag === tag) {
+      setSelectedTag(null)
+      setTagFilter(null)
+    } else {
+      setSelectedTag(tag)
+      setTagFilter(tag)
+    }
+  }
+
+  // If no tags, don't render the component
+  if (!uniqueTags.length) return null
+
   return (
-    <div className="mt-3">
-      <p className="text-md">Tags</p>
-      <div className="flex flex-wrap">
+    <div className="mt-4 md:mt-6">
+      <p className="text-sm md:text-md font-medium mb-2 text-gray-700">Tags</p>
+      <div className="flex flex-wrap gap-1.5">
         {uniqueTags.map((tag) => (
-          <Link
-          key={tag}
-          onClick={() => handleTagClick(tag)}
-          className={`border-solid border-2 border-indigo-600 m-1 text-[13px] p-1 transition-background duration-500 ${
-            selectedTag === tag ? "bg-black text-white" : "hover:bg-black hover:text-white"
-          }`}
-        >
+          <button
+            key={tag}
+            onClick={() => handleTagClick(tag)}
+            className={`
+              px-2 py-1 text-xs md:text-sm rounded-md transition-all duration-300
+              ${
+                selectedTag === tag
+                  ? "bg-[#C28B7A] text-white border border-[#C28B7A]"
+                  : "border border-[#C28B7A] text-[#C28B7A] hover:bg-[#f8f0ed]"
+              }
+            `}
+          >
             {tag}
-          </Link>
+          </button>
         ))}
       </div>
     </div>
-  );
+  )
 }

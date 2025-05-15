@@ -6,6 +6,8 @@ import Content from '../page/Content/Content';
 import TotalComponents from '../components/layouts/TotalComponents/TotalComponents';
 import ProductDetail from '../page/ProductDetail';
 import Checkout from '../page/Checkout';
+import CompleteOrder from '../page/CompleteOrder/CompleteOrder';
+import ErrorPage from '../page/ErrorPage/ErrorPage';
 const publicRoutes = [
   {
     path: '/',
@@ -41,6 +43,16 @@ const publicRoutes = [
     path: '/content',
     component: Content,
     title: 'Content',
+  },
+  {
+    path: '/complete',
+    component: CompleteOrder,
+    title: 'CompleteOrder',
+  },
+  {
+    path: '/error',
+    component: ErrorPage,
+    title: 'ErrorPage',
   },
 ];
 

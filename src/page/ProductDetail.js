@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import useCartStore from "../util/zustandCartState";
 import { useNavigate } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
-
+import ProductDetailSkeleton from "../components/SkeleteLoading/SketeLoadingDetail";
 export default function ProductDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ export default function ProductDetail() {
     }
   }, [id, fetchProductDetail]);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <ProductDetailSkeleton/>;
   if (error) return <div>Error: {error}</div>;
 
   // Handle quantity increment and decrement
@@ -87,18 +87,18 @@ export default function ProductDetail() {
   };
 
   return (
-    <div className="bg-white min-h-screen flex flex-col py-4 px-[10%]">
-      <Breadcrumbs />
+  <div className="bg-white min-h-screen flex flex-col py-4 px-2 sm:px-4 md:px-8 lg:px-[10%]">
+      <Breadcrumbs productName={product?.name}/>
       {/* Container */}
       <div className="w-full my-5">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Image Section */}
-          <div className="flex justify-center">
+          <div className="flex justify-center items-center">
             <img
               src={product?.api_featured_image}
               alt="Product"
-              className="w-full object-contain md:max-w-md rounded-md"
+              className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg object-contain rounded-md"
               style={{ height: "470px" }}
             />
           </div>

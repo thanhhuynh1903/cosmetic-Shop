@@ -7,7 +7,7 @@ import "./App.css"; // Import file CSS
 import Footer from "./components/layouts/Footer/Footer";
 const App = () => {
   const location = useLocation();
-  const hideHeaderFooter = location.pathname === "/checkout";
+  const hideHeaderFooter = location.pathname === "/checkout" || location.pathname === "/complete";
 
   return (
     <div className="app-container">

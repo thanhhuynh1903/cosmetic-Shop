@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ShoppingBag } from 'lucide-react';
+import { ShoppingBag, X } from 'lucide-react';
 import './FloatingCart.css';
 import useCartStore from '../../util/zustandCartState';
 
@@ -12,24 +12,37 @@ export default function FloatingCart() {
       setIsRinging(true);
       const timeout = setTimeout(() => {
         setIsRinging(false);
-      }, 2000); // 2 seconds for the ringing animation
-
+      }, 2000);
       return () => clearTimeout(timeout);
     }
   }, [cart]);
 
   return (
     <div className="relative">
+      {/* Floating open button */}
       {!isOpen && (
         <div className="floating-cart">
           <button
             className={`cart-button ${isRinging ? 'ring' : ''}`}
             onClick={toggleDrawer}
+            aria-label="Open cart"
           >
             <ShoppingBag />
             {cart?.length > 0 && (
               <span className="cart-count">{cart.length}</span>
             )}
+          </button>
+        </div>
+      )}
+      {/* Floating close button (shows when cart is open) */}
+      {isOpen && (
+        <div className="floating-cart">
+          <button
+            className="cart-button"
+            onClick={toggleDrawer}
+            aria-label="Close cart"
+          >
+            <X />
           </button>
         </div>
       )}

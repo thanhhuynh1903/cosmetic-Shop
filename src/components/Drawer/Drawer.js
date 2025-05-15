@@ -23,7 +23,7 @@ export default function Drawer() {
         total: total,
       };
     });
-  
+
     // Calculate final subtotal
     const subtotal = itemTotals.reduce((sum, item) => sum + item.total, 0);
     return subtotal;
@@ -82,21 +82,23 @@ export default function Drawer() {
             You have <strong>{cart.length} items</strong> in your bag
           </p>
         </div>
-        <div className="flex-direction flex flex-col">
-          <div className="flex justify-between mb-5">
-            <h4 className="font-bold">Subtotal </h4>
-            <h5>${calculateSubtotal(cart)}</h5>
+        {cart.length > 0 && (
+          <div className="flex-direction flex flex-col">
+            <div className="flex justify-between mb-5">
+              <h4 className="font-bold">Subtotal </h4>
+              <h5>${calculateSubtotal(cart)}</h5>
+            </div>
+            <article className="grid grid-cols gap-4">
+              <button
+                disabled={cart.length ? false : true}
+                onClick={handleNavigate}
+                className="px-4 py-2 text-sm font-medium text-center text-white bg-black  rounded-[20px] focus:outline-none hover:outline hover:outline-[#C5C7CA] hover:text-[#C5C7CA] focus:z-10 focus:ring-4 focus:ring-[#C5C7CA] "
+              >
+                Continue to checkout
+              </button>
+            </article>
           </div>
-          <article className="grid grid-cols gap-4">
-            <button
-              disabled={cart.length ? false : true}
-              onClick={handleNavigate}
-              className="px-4 py-2 text-sm font-medium text-center text-white bg-black  rounded-[20px] focus:outline-none hover:outline hover:outline-[#C5C7CA] hover:text-[#C5C7CA] focus:z-10 focus:ring-4 focus:ring-[#C5C7CA] "
-            >
-              Continue to checkout
-            </button>
-          </article>
-        </div>
+        )}
       </section>
       {/* Overlay to close drawer when clicked outside */}
       {isOpen && (

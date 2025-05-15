@@ -1,7 +1,12 @@
-import { NavLink } from 'react-router-dom';
+"use client"
+import { NavLink } from "react-router-dom"
 
-function NavItem({ children, ...prop }) {
-    return <NavLink {...prop}>{children}</NavLink>;
+const NavItem = ({ children, className, to, onClick }) => {
+  return (
+    <NavLink to={to} className={className} onClick={onClick}>
+      {children}
+    </NavLink>
+  )
 }
 
-export default NavItem;
+export default NavItem

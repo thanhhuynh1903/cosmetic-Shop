@@ -1,0 +1,21 @@
+/* Product button styling */
+.product-button {
+  @apply bg-[#c28b7a] text-white px-6 py-2 rounded-md text-base md:text-lg absolute bottom-4 left-1/2 transform -translate-x-1/2 shadow-md hover:bg-[#b27a69] transition-colors;
+}
+
+/* Add responsive image styling */
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+/* Ensure proper aspect ratios */
+@media (min-width: 768px) {
+  .rounded-lg img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,21 @@
+/* Blog specific styles */
+.blog-post-card {
+  transition: transform 0.3s ease;
+}
+
+.blog-post-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blog-post-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-header {
+    font-size: 1.75rem;
+  }
+}
