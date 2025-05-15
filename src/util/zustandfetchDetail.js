@@ -9,7 +9,7 @@ const useDetailStore = create((set) => ({
   fetchProductDetail: async (id) => {
     set({ isLoading: true, error: null }); // Start loading
     try {
-      const response = await fetch(`http://makeup-api.herokuapp.com/api/v1/products/${id}.json`);
+      const response = await fetch(`https://makeup-api.herokuapp.com/api/v1/products/${id}.json`);
       if (!response.ok) {
         throw new Error('Failed to fetch product detail');
       }
