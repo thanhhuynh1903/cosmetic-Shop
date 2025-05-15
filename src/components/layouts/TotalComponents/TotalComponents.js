@@ -20,7 +20,9 @@ function TotalComponents() {
         </h2>
         <div className="mx-auto w-16 h-1 bg-[#C28B7A] rounded my-4"></div>
         <p className="text-center text-[#7d6e67] max-w-2xl mx-auto text-base md:text-lg px-2 sm:px-0">
-          Discover the science and joy behind skincare. Taking care of your skin is not just about beauty—it's about self-care, confidence, and happiness.
+          Discover the science and joy behind skincare. Taking care of your skin
+          is not just about beauty—it's about self-care, confidence, and
+          happiness.
         </p>
       </motion.div>
       <motion.div
@@ -32,8 +34,8 @@ function TotalComponents() {
         <Product />
       </motion.div>
       <div className="w-full my-8 flex justify-center">
-  <div className="h-1 w-24 bg-[#C28B7A] rounded"></div>
-</div>
+        <div className="h-1 w-24 bg-[#C28B7A] rounded"></div>
+      </div>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
