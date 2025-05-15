@@ -31,12 +31,14 @@ function TotalComponents() {
       >
         <Product />
       </motion.div>
+      <div className="w-full my-8 flex justify-center">
+  <div className="h-1 w-24 bg-[#C28B7A] rounded"></div>
+</div>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-        className="my-8 md:my-12"
       >
         <About />
       </motion.div>

@@ -5,7 +5,7 @@ import "./about.css";
 function About() {
   return (
     <Fragment>
-      <div className="w-[88%] m-auto p-auto my-10">
+      <div className="w-[88%] m-auto p-auto my-10 ">
         <div className="grid grid-cols-3 gap-4">
           <div className="relative  w-[55%] h-full rounded-md col-span-2">
             <img
