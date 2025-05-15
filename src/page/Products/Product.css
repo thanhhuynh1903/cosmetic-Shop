@@ -1,11 +1,14 @@
 /* Product button styling */
 .product-button {
-  @apply bg-[#c28b7a] text-white px-6 py-2 rounded-md text-base md:text-lg absolute bottom-4 left-1/2 transform -translate-x-1/2 shadow-md hover:bg-[#b27a69] transition-colors;
+  @apply bg-[#c28b7a] text-white px-6 py-2 rounded-md text-base md:text-lg absolute bottom-4 left-1/2 transform -translate-x-1/2 shadow-md hover:bg-[#b27a69] transition-colors w-36 md:w-44 font-semibold;
 }
 
 /* Add responsive image styling */
 img {
   transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 img:hover {
@@ -13,8 +16,18 @@ img:hover {
 }
 
 /* Ensure proper aspect ratios */
+.rounded-lg,
+.rounded-xl {
+  overflow: hidden;
+}
+
+.aspect-\[16\/9\] {
+  aspect-ratio: 16 / 9;
+}
+
 @media (min-width: 768px) {
-  .rounded-lg img {
+  .rounded-lg img,
+  .rounded-xl img {
     aspect-ratio: 16 / 9;
     object-fit: cover;
   }

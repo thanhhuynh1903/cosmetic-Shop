@@ -1,10 +1,10 @@
 "use client"
 import { useNavigate } from "react-router-dom"
-import { Star } from "lucide-react"
-
+import { Star,ShoppingBag } from "lucide-react"
+import useCartStore from "../../util/zustandCartState"
 export default function Card({ key, product, expired,isSwiper = false }) {
   const navigate = useNavigate()
-
+  const { addToCart,updateQuantity } = useCartStore();
   const handleNavigate = () => {
     navigate(`/products/${product.id}`)
   }
@@ -20,7 +20,7 @@ export default function Card({ key, product, expired,isSwiper = false }) {
   const stars = getStars(product.rating) // Assuming product.rating is a number between 0 and 5
 
   return (
-    <div className="flex">
+    <div className="flex ">
       <div
         onClick={handleNavigate}
         key={key}
@@ -75,7 +75,7 @@ export default function Card({ key, product, expired,isSwiper = false }) {
                 onClick={handleNavigate}
                 className="mt-2 inline-flex items-center px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium font-semibold text-center text-weight-brown outline outline-1 outline-weight-brown bg-[#fffff] rounded-lg hover:bg-weight-brown hover:text-white hover:outline-0 transition-all duration-300"
               >
-                Buy now
+                Buy now 
                 <svg
                   className="rtl:rotate-180 w-3 h-3 ms-1 sm:ms-2"
                   aria-hidden="true"
@@ -96,31 +96,17 @@ export default function Card({ key, product, expired,isSwiper = false }) {
           )}
         </div>
 
-        {expired && (
-          <div className="flex justify-center w-full mt-2">
-            <button
-              onClick={handleNavigate}
-              className="inline-flex items-center px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium font-semibold text-center text-weight-brown outline outline-1 outline-weight-brown bg-[#fffff] rounded-lg hover:bg-weight-brown hover:text-white hover:outline-0 transition-all duration-300 w-full sm:w-auto justify-center"
-            >
-              Add to bag
-              <svg
-                className="rtl:rotate-180 w-3 h-3 ms-1 sm:ms-2"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
+       {expired && (
+            <div className="flex justify-center w-full mt-2">
+              <button
+                onClick={handleNavigate}
+                className="inline-flex items-center px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-[#c28b7a] border border-[#c28b7a] rounded-lg hover:bg-[#c28b7a] hover:text-white transition-all duration-300 w-full justify-center"
               >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </button>
-          </div>
-        )}
+                <ShoppingBag size={14} className="mr-1 sm:mr-2" />
+                Add to bag
+              </button>
+            </div>
+          )}
       </div>
     </div>
   )

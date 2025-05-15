@@ -369,10 +369,10 @@ const CompleteOrder = () => {
                 <h3 className="font-medium mb-3">Need help?</h3>
                 <Link
                   to="/contact"
-                  className="block w-full py-2 px-3 bg-gray-100 text-gray-700 rounded-md text-sm font-medium text-center hover:bg-gray-200 transition-colors"
+                  className="border-blue-500 block w-full py-2 px-3 bg-gray-100 text-gray-700 rounded-md text-sm font-medium text-center hover:bg-gray-200 transition-colors"
                 >
                   Contact Support
-                </Link>
+                </Link>  
               </div>
             </div>
           </div>

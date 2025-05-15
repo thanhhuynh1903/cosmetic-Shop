@@ -5,9 +5,10 @@ import publicRoutes from "./route/publicRoutes";
 import Header from "./components/layouts/Header/Header";
 import "./App.css"; // Import file CSS
 import Footer from "./components/layouts/Footer/Footer";
+import ErrorPage404 from "./page/ErrorPage/ErrorPage";
 const App = () => {
   const location = useLocation();
-  const hideHeaderFooter = location.pathname === "/checkout" || location.pathname === "/complete";
+  const hideHeaderFooter = location.pathname === "/checkout" || location.pathname === "/complete" || location.pathname === "/error";
 
   return (
     <div className="app-container">
@@ -22,6 +23,7 @@ const App = () => {
               title={route.title}
             />
           ))}
+         {!hideHeaderFooter && <Route path="*" element={<ErrorPage404 />} />}
         </Routes>
       </div>
       {!hideHeaderFooter && <Footer />}

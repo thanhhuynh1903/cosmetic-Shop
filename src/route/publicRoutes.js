@@ -40,7 +40,7 @@ const publicRoutes = [
     title: 'About',
   },
   {
-    path: '/content',
+    path: '/contact',
     component: Content,
     title: 'Content',
   },

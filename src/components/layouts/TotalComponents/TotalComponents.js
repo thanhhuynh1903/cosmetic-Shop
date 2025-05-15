@@ -36,6 +36,7 @@ function TotalComponents() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+        className="my-8 md:my-12"
       >
         <About />
       </motion.div>

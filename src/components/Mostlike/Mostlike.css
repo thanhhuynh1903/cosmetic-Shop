@@ -24,17 +24,20 @@
 .swiper-scrollbar {
   background: rgba(194, 139, 122, 0.1) !important;
   height: 4px !important;
-  bottom: 0 !important;
-  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .swiper-scrollbar-drag {
   background: rgba(194, 139, 122, 0.6) !important;
+  border-radius: 4px;
 }
 
 /* Swiper slide styles */
 .swiper-slide {
   height: auto !important;
+  display: flex;
+  align-items: stretch;
 }
 
 /* Responsive adjustments */
@@ -46,5 +49,18 @@
 
   .swiper-scrollbar {
     height: 3px !important;
+  }
+}
+.swiper {
+  min-height: 340px;
+}
+@media (max-width: 640px) {
+  .swiper {
+    min-height: 380px;
+  }
+}
+@media (max-width: 480px) {
+  .swiper {
+    min-height: 300px;
   }
 }

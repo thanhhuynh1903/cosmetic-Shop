@@ -82,7 +82,7 @@ export default function Header() {
               Blog
             </NavItem>
             <NavItem className={navItemStyle} to={routes.content}>
-              Content
+              Contact
             </NavItem>
           </div>
 

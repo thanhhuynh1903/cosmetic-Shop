@@ -5,7 +5,7 @@ const nameMap = {
   products: "Products",
   about: "About",
   blog: "Blog",
-  content: "Content",
+  content: "Contact",
   // Add more mappings as needed
 };
 

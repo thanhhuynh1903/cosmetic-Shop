@@ -1,29 +1,33 @@
-"use client"
+"use client";
 
-import { useEffect } from "react"
-import Card from "../Card/Card"
-import useProductStore from "../../util/zustandfetch"
-import { Autoplay, Navigation, Scrollbar } from "swiper/modules"
-import "swiper/css/navigation"
-import "./Mostlike.css"
-import "swiper/css/scrollbar"
-import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/css"
-import { MostlikeProductsSkeleton } from "../SkeleteLoading/SkeletonLoading"
+import { useEffect } from "react";
+import Card from "../Card/Card";
+import useProductStore from "../../util/zustandfetch";
+import { Autoplay, Navigation, Scrollbar } from "swiper/modules";
+import "swiper/css/navigation";
+import "./Mostlike.css";
+import "swiper/css/scrollbar";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { MostlikeProductsSkeleton } from "../SkeleteLoading/SkeletonLoading";
 
 export default function Mostlike() {
-  const { products, fetchProducts, isLoading, error } = useProductStore()
+  const { products, fetchProducts, isLoading, error } = useProductStore();
 
   useEffect(() => {
-    fetchProducts()
-  }, [fetchProducts])
+    fetchProducts();
+  }, [fetchProducts]);
 
   if (isLoading) {
-    return <MostlikeProductsSkeleton />
+    return <MostlikeProductsSkeleton />;
   }
 
   if (error) {
-    return <div className="p-4 bg-red-50 text-red-600 rounded-md my-4">Error loading products: {error}</div>
+    return (
+      <div className="p-4 bg-red-50 text-red-600 rounded-md my-4">
+        Error loading products: {error}
+      </div>
+    );
   }
 
   return (
@@ -45,40 +49,37 @@ export default function Mostlike() {
         className="!pb-8"
         modules={[Autoplay, Navigation, Scrollbar]}
         spaceBetween={16}
-        slidesPerView={2}
+        slidesPerView={1.2}
         breakpoints={{
-          480: { slidesPerView: 2.5, spaceBetween: 16 },
-          640: { slidesPerView: 3, spaceBetween: 20 },
-          900: { slidesPerView: 4, spaceBetween: 20 },
-          1200: { slidesPerView: 5, spaceBetween: 24 },
+          360: { slidesPerView: 1.3 },
+          480: { slidesPerView: 1.8 },
+          640: { slidesPerView: 2.4 },
+          768: { slidesPerView: 3.2 },
+          1024: { slidesPerView: 4 },
+          1280: { slidesPerView: 5 },
         }}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
-        scrollbar={{
-          draggable: true,
-          hide: false,
-          el: ".swiper-scrollbar",
-        }}
+        scrollbar={{ draggable: true }}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
         loop
+        centeredSlides={false}
       >
         {products.map((product) => (
-          <SwiperSlide key={product.id} className="h-auto">
+          <SwiperSlide
+            key={product.id}
+            className="h-auto !w-[300px] sm:!w-[320px]"
+          >
             <Card product={product} isSwiper={true} />
           </SwiperSlide>
         ))}
-
-        {/* Custom navigation buttons */}
-        <div className="swiper-button-prev !hidden md:!flex"></div>
-        <div className="swiper-button-next !hidden md:!flex"></div>
-        <div className="swiper-scrollbar"></div>
       </Swiper>
     </div>
-  )
+  );
 }
