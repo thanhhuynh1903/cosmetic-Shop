@@ -34,7 +34,7 @@ function Blog() {
   ];
 
   return (
-    <div className="bg-[#faf7f5] py-12 md:py-16">
+    <div className="bg-[#faf7f5] py-6 md:py-16">
       <div className="w-[95%] md:w-[88%] mx-auto">
         <div className="text-center mb-10">
           <h1 className="text-[#c28b7a] text-3xl md:text-4xl lg:text-5xl tracking-wide mb-4">
