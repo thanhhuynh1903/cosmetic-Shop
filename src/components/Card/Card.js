@@ -40,8 +40,8 @@ export default function Card({ key, product, expired,isSwiper = false }) {
 
         <p
           className={`${
-            expired ? "h-auto sm:h-[40px] mt-3" : ""
-          } text-sm sm:text-base text-gray-700 font-semibold dark:text-gray-400 line-clamp-2`}
+            expired ? "h-auto sm:h-[45px] mt-3" : ""
+          } text-sm sm:text-base text-gray-700 font-semibold dark:text-gray-400 line-clamp-1`}
         >
           {product.name}
         </p>
