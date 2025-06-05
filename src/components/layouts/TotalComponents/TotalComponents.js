@@ -12,9 +12,9 @@ function TotalComponents() {
       <div className="bg-[#FFF] pb-12">
       <motion.div
         className="py-8 md:py-12"
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeIn" }}
+        transition={{ duration: 2, ease: "easeIn",delay: 0.5 }}
       >
         <h2 className="text-center text-[#C28B7A] my-4 md:my-6 text-2xl md:text-3xl lg:text-[35px] font-bold leading-tight">
           Why Skincare Makes <br className="hidden sm:block" /> You Happy
@@ -42,7 +42,7 @@ function TotalComponents() {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+        transition={{ duration: 0.7, ease: "easeIn", delay: 0.1 }}
       >
         <About />
       </motion.div>

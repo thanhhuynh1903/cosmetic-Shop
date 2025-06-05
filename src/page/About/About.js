@@ -19,7 +19,7 @@ function About() {
             />
           </div>
           <div>
-            <h2 className="text-[#c28b7a]">
+            <h2 className="text-[#c28b7a] font-bold text-2xl md:text-4xl lg:text-5xl tracking-wide">
               About <br />
               Company
             </h2>
