@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion"
 import Product from "../../../page/Products/Product";
 import Home from "../../../page/Home/Home";
 import About from "../../../page/About/About";
