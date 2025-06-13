@@ -35,18 +35,6 @@ function TotalComponents() {
         <Product />
       </motion.div>
       
-      <div className="w-full my-8 flex justify-center">
-        <div className="h-1 w-24 bg-[#C28B7A] rounded"></div>
-      </div>
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.7, ease: "easeIn", delay: 0.1 }}
-      >
-        <About />
-      </motion.div>
-      
       </div>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -54,7 +42,7 @@ function TotalComponents() {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
       >
-        <Blog />
+        <Blog cut={3}/>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 40 }}

@@ -8,6 +8,7 @@ import ProductDetail from '../page/ProductDetail';
 import Checkout from '../page/Checkout';
 import CompleteOrder from '../page/CompleteOrder/CompleteOrder';
 import ErrorPage from '../page/ErrorPage/ErrorPage';
+import BlogPost from '../page/Blog/BlogDetail/BlogDetai';
 const publicRoutes = [
   {
     path: '/',
@@ -23,6 +24,11 @@ const publicRoutes = [
     path: '/products/:id',
     component: ProductDetail,
     title: 'Products Detail',
+  },
+  {
+    path: '/blog/:id',
+    component: BlogPost,
+    title: 'Blog',
   },
   {
     path: '/checkout',
