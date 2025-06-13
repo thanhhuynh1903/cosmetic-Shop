@@ -1,22 +1,24 @@
-import { Link } from "react-router-dom"
-import { BlogAuthor } from "./BlogAuthor"
-import { RelatedPosts } from "./RelatedPost"
-import { ShareButtons } from "../../../components/ShareButton/ShareButton"
-import Breadcrumbs from "../../../components/breadcrumbs/breadcrumbs"
+import { Link } from "react-router-dom";
+import { BlogAuthor } from "./BlogAuthor";
+import { RelatedPosts } from "./RelatedPost";
+import { ShareButtons } from "../../../components/ShareButton/ShareButton";
+import Breadcrumbs from "../../../components/breadcrumbs/breadcrumbs";
 
 export default function BlogPost({ params }) {
   // In a real application, you would fetch the blog post data based on the slug
   // For this example, we'll use hardcoded data
   const post = {
     title: "The Benefits of Natural Skincare",
-    excerpt: "Discover why natural ingredients are better for your skin and the environment.",
+    excerpt:
+      "Discover why natural ingredients are better for your skin and the environment.",
     date: "May 15, 2023",
     author: {
       name: "Sarah Johnson",
-      avatar: "/images/avatar-sarah.jpg",
+      avatar: "https://st4.depositphotos.com/10208782/25036/i/450/depositphotos_250363866-stock-photo-woman-using-laptop-computer.jpg",
       bio: "Beauty expert with 10+ years of experience in the skincare industry.",
     },
-    image: "/images/natural-skincare.jpg",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-kb4Z6Ae86qq8usfSzIZOJsaRjlfpAjD1Mw&s",
     content: `
       <p>Natural skincare has gained immense popularity in recent years, and for good reason. Products made with natural ingredients offer numerous benefits for both your skin and the environment.</p>
       
@@ -53,67 +55,81 @@ export default function BlogPost({ params }) {
       {
         id: 2,
         title: "Morning Skincare Routine Guide",
-        excerpt: "Learn the perfect step-by-step morning routine for glowing skin all day.",
-        image: "/images/morning-routine.jpg",
+        excerpt:
+          "Learn the perfect step-by-step morning routine for glowing skin all day.",
+        image:
+          "https://preview.redd.it/what-is-the-best-and-worst-makeup-you-ever-tried-v0-1rw2ttjsusrb1.jpg?width=640&crop=smart&auto=webp&s=786cd94e8d90a4ad2c91f68bb78f9619eb949539",
         slug: "morning-skincare-routine",
       },
       {
         id: 3,
         title: "Understanding Skin Types",
-        excerpt: "How to identify your skin type and choose the right products for your needs.",
-        image: "/images/skin-types.jpg",
+        excerpt:
+          "How to identify your skin type and choose the right products for your needs.",
+        image:
+          "https://c0.wallpaperflare.com/preview/835/84/849/flatlay-makeup-beauty-cosmetics.jpg",
         slug: "understanding-skin-types",
       },
     ],
-  }
+  };
 
   return (
     <main className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumb */}
-        <Breadcrumbs productName={post.title} />
+          <Breadcrumbs productName={post?.title} />
 
           {/* Post Header */}
-          <h1 className="text-4xl md:text-5xl font-serif text-rose-500 mb-4">{post.title}</h1>
+          <h1 className="text-4xl md:text-5xl font-serif text-rose-500 mb-4">
+            {post?.title}
+          </h1>
 
           <div className="flex items-center justify-between mb-6">
-            <div className="text-rose-400">{post.date}</div>
+            <div className="text-rose-400">{post?.date}</div>
             <ShareButtons />
           </div>
 
           {/* Featured Image */}
           <div className="relative h-96 w-full mb-8 rounded-lg overflow-hidden shadow-md">
             <image
-              src={post.image || "/placeholder.svg?height=600&width=1200"}
-              alt={post.title}
+              src={post?.image}
+              alt={post?.title}
               fill
               className="object-cover"
             />
           </div>
 
           {/* Post Content */}
-          <div className="prose prose-rose max-w-none mb-12" dangerouslySetInnerHTML={{ __html: post.content }} />
+          <div
+            className="prose prose-rose max-w-none mb-12"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
 
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-12">
             {post.tags.map((tag) => (
-              <span key={tag} className="px-3 py-1 bg-rose-100 text-rose-500 rounded-full text-sm">
+              <span
+                key={tag}
+                className="px-3 py-1 bg-rose-100 text-rose-500 rounded-full text-sm"
+              >
                 #{tag}
               </span>
             ))}
           </div>
 
           {/* Author Bio */}
-          <BlogAuthor author={post.author} />
+          <BlogAuthor author={post?.author} />
 
           {/* Related Posts */}
           <div className="mt-16">
-            <h2 className="text-2xl font-serif text-rose-500 mb-6">Related Posts</h2>
-            <RelatedPosts posts={post.relatedPosts} />
+            <h2 className="text-2xl font-serif text-rose-500 mb-6">
+              Related Posts
+            </h2>
+            <RelatedPosts posts={post?.relatedPosts} />
           </div>
         </div>
       </div>
     </main>
-  )
+  );
 }

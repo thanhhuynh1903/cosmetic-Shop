@@ -37,7 +37,7 @@ const blogPosts = [
     excerpt:
       "How to identify your skin type and choose the right products for your needs.",
     image:
-      "https://c0.wallpaperflare.com/preview/835/84/849/flatlay-makeup-beauty-cosmetics.jpg",
+      "https://blog.vn.revu.net/wp-content/uploads/2023/07/beauty-blogger-2-1024x569.jpg",
     date: "July 10, 2023",
     author: "Michael Chen",
   },
@@ -47,7 +47,7 @@ const blogPosts = [
     excerpt:
       "How to identify your skin type and choose the right products for your needs.",
     image:
-      "https://c0.wallpaperflare.com/preview/835/84/849/flatlay-makeup-beauty-cosmetics.jpg",
+      "https://cdn.scratchmagazine.co.uk/wp-content/uploads/2021/01/Influencer-lead-Beauty-blogger-canva.jpg",
     date: "July 10, 2023",
     author: "Michael Chen",
   },
