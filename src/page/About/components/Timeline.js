@@ -1,23 +1,60 @@
-import React from "react"
+import { useRef } from 'react';
+import { motion } from 'framer-motion';
 
-const Milestone = ({ year, title, description }) => {
+const Milestone = ({ year, title, description, isLast }) => {
   return (
-    <div className="flex mb-12 relative">
+    <motion.div 
+      className="flex mb-12 relative"
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.7, type: "spring" }}
+    >
       <div className="mr-6 relative">
-        <div className="w-12 h-12 rounded-full bg-[#c28b7a] flex items-center justify-center text-white font-bold">
+        <motion.div 
+          className="w-12 h-12 rounded-full bg-[#c28b7a] flex items-center justify-center text-white font-bold"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
           {year}
-        </div>
-        <div className="absolute top-12 bottom-[-48px] left-1/2 w-0.5 bg-[#c28b7a] transform -translate-x-1/2"></div>
+        </motion.div>
+        {!isLast && (
+          <motion.div 
+            className="absolute top-12 bottom-[-48px] left-1/2 w-0.5 bg-[#c28b7a] transform -translate-x-1/2"
+            initial={{ height: 0 }}
+            whileInView={{ height: "100%" }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.3 }}
+          />
+        )}
       </div>
       <div className="flex-1 pt-2">
-        <h3 className="text-[#c28b7a] font-bold text-xl mb-2">{title}</h3>
-        <p className="text-gray-600">{description}</p>
+        <motion.h3 
+          className="text-[#c28b7a] font-bold text-xl mb-2"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+        >
+          {title}
+        </motion.h3>
+        <motion.p 
+          className="text-gray-600"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+        >
+          {description}
+        </motion.p>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
-export default function Timeline() {
+const Timeline = () => {
+  const ref = useRef(null);
+
   const milestones = [
     {
       year: "2015",
@@ -32,8 +69,7 @@ export default function Timeline() {
     {
       year: "2019",
       title: "International Expansion",
-      description:
-        "Our products became available in 15 countries, bringing our skincare philosophy to a global audience.",
+      description: "Our products became available in 15 countries, bringing our skincare philosophy to a global audience.",
     },
     {
       year: "2021",
@@ -45,23 +81,42 @@ export default function Timeline() {
       title: "Innovation Award",
       description: "Recognized for our breakthrough formulations combining science and natural ingredients.",
     },
+   
   ]
 
   return (
-    <div className="w-[88%] m-auto py-16">
-      <h2 className="text-[#c28b7a] font-bold text-2xl md:text-3xl lg:text-4xl tracking-wide mb-12 text-center">
+    <div className="w-[88%] m-auto py-16" ref={ref}>
+      <motion.h2 
+        className="text-[#c28b7a] font-bold text-2xl md:text-3xl lg:text-4xl tracking-wide mb-12 text-center"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
         Our Journey
-      </h2>
+      </motion.h2>
       <div className="max-w-3xl mx-auto">
         {milestones.map((milestone, index) => (
-          <Milestone key={index} year={milestone.year} title={milestone.title} description={milestone.description} />
+          <Milestone 
+            key={index} 
+            year={milestone.year} 
+            title={milestone.title} 
+            description={milestone.description} 
+            isLast={index === milestones.length - 1}
+          />
         ))}
-        <div className="flex justify-start">
-          <div className="w-12 h-12 rounded-full bg-[#c28b7a] flex items-center justify-center text-white font-bold">
-            Now
-          </div>
-        </div>
+        <motion.div 
+          className="flex justify-start"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+        >
+       
+        </motion.div>
       </div>
     </div>
   )
 }
+
+export default Timeline;

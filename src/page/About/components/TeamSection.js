@@ -1,20 +1,103 @@
-const TeamMember = ({ name, role, image }) => {
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
+const TeamMember = ({ name, role, image, index }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const memberRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => setIsVisible(true), index * 200);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (memberRef.current) {
+      observer.observe(memberRef.current);
+    }
+
+    return () => {
+      if (memberRef.current) {
+        observer.unobserve(memberRef.current);
+      }
+    };
+  }, [index]);
+
   return (
-    <div className="flex flex-col items-center">
-      <div className="w-48 h-48 rounded-full overflow-hidden mb-4">
-        <img
-          src={image || "/placeholder.svg"}
-          alt={name}
-          className="w-full h-full object-cover"
-        />
+    <div
+      ref={memberRef}
+      className={`group flex flex-col items-center transition-all duration-700 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
+      style={{ transitionDelay: `${index * 100}ms` }}
+    >
+      <div className="relative w-48 h-48 rounded-full overflow-hidden mb-4 transform transition-all duration-500 group-hover:scale-110 group-hover:shadow-2xl">
+        {/* Animated border */}
+        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#c28b7a] via-[#d4a394] to-[#c28b7a] p-1 animate-spin-slow opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div className="w-full h-full rounded-full bg-white"></div>
+        </div>
+
+        {/* Image container */}
+        <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-[#c28b7a] group-hover:border-[#d4a394] transition-colors duration-300">
+          <img
+            src={image || "/placeholder.svg?height=200&width=200"}
+            alt={name}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+
+          {/* Overlay on hover */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#c28b7a]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+
+        {/* Floating particles */}
+        <div className="absolute -top-2 -right-2 w-4 h-4 bg-[#c28b7a] rounded-full opacity-0 group-hover:opacity-100 animate-bounce transition-opacity duration-300"></div>
+        <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-[#d4a394] rounded-full opacity-0 group-hover:opacity-100 animate-bounce-delayed transition-opacity duration-300"></div>
       </div>
-      <h3 className="text-[#c28b7a] font-bold text-xl mb-1">{name}</h3>
-      <p className="text-gray-600">{role}</p>
+
+      <div className="text-center transform transition-all duration-300 group-hover:-translate-y-1">
+        <h3 className="text-[#c28b7a] font-bold text-xl mb-1 group-hover:text-[#b8806f] transition-colors duration-300">
+          {name}
+        </h3>
+        <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 font-medium">
+          {role}
+        </p>
+
+        {/* Animated underline */}
+        <div className="mt-2 h-0.5 bg-gradient-to-r from-[#c28b7a] to-[#d4a394] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
+      </div>
     </div>
   );
 };
 
-export default function TeamSection() {
+export default function AnimatedTeamSection() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const team = [
     {
       name: "Emma Johnson",
@@ -43,21 +126,59 @@ export default function TeamSection() {
   ];
 
   return (
-    <div className="bg-rose-50 py-16">
-      <div className="w-[88%] m-auto">
-        <h2 className="text-[#c28b7a] font-bold text-2xl md:text-3xl lg:text-4xl tracking-wide mb-12 text-center">
-          Meet Our Team
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div
+      ref={sectionRef}
+      className="bg-gradient-to-br from-rose-50 via-amber-50 to-rose-50 py-16 relative overflow-hidden"
+    >
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-[#c28b7a]/10 rounded-full animate-float"></div>
+        <div className="absolute top-1/2 right-20 w-24 h-24 bg-[#d4a394]/15 rounded-full animate-float-delayed"></div>
+        <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-[#c28b7a]/8 rounded-full animate-float-slow"></div>
+      </div>
+
+      <div className="w-[88%] m-auto relative z-10">
+        {/* Section header */}
+        <div
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          <div className="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-lg mb-6">
+            <span className="text-[#c28b7a] font-medium text-sm tracking-wide">
+              OUR TEAM
+            </span>
+          </div>
+
+          <h2 className="text-[#c28b7a] font-bold text-4xl md:text-5xl lg:text-6xl tracking-wide mb-4">
+            Meet Our{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c28b7a] to-[#d4a394]">
+              Experts
+            </span>
+          </h2>
+
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+            Our passionate team of beauty experts, scientists, and creatives
+            work together to bring you innovative skincare solutions that
+            deliver real results.
+          </p>
+
+          <div className="w-24 h-1 bg-gradient-to-r from-[#c28b7a] to-[#d4a394] mx-auto mt-6 rounded-full"></div>
+        </div>
+
+        {/* Team grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {team.map((member, index) => (
             <TeamMember
               key={index}
               name={member.name}
               role={member.role}
               image={member.image}
+              index={index}
             />
           ))}
         </div>
+
       </div>
     </div>
   );

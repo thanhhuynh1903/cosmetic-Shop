@@ -1,6 +1,10 @@
 import { ArrowRight } from "lucide-react"
-
+import { useNavigate } from "react-router-dom"
 export default function CTASection() {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/products");
+  }
   return (
     <div className="bg-[#c28b7a] py-16 text-white">
       <div className="w-[88%] m-auto text-center">
@@ -10,7 +14,7 @@ export default function CTASection() {
           skin's natural beauty.
         </p>
         <div className="flex justify-center gap-4 flex-wrap">
-          <button className="bg-white text-[#c28b7a] px-6 py-3 rounded-md font-bold flex items-center hover:bg-opacity-90 transition-all">
+          <button onClick={() => handleNavigate()} className="bg-white text-[#c28b7a] px-6 py-3 rounded-md font-bold flex items-center hover:bg-opacity-90 transition-all">
             Shop Our Products <ArrowRight size={16} className="ml-2" />
           </button>
           <button className="border-2 border-white px-6 py-3 rounded-md font-bold hover:bg-white hover:text-[#c28b7a] transition-all">
