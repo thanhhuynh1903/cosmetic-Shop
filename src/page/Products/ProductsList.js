@@ -13,7 +13,7 @@ export default function ProductsList({ products, loading }) {
   }
 
   return (
-    <div className="flex flex-wrap justify-center sm:justify-start gap-4 px-2 sm:px-4 md:px-6">
+    <div className="flex flex-wrap md:justify-start md:gap-5 sm:justify-start gap-4 px-2 sm:px-4 md:px-6">
       {products.map((product) => (
         <Card key={product.id} product={product} expired={true} isSwiper={false}/>
       ))}

@@ -12,6 +12,7 @@ import useCartStore from "../util/zustandCartState";
 import { useNavigate } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 import ProductDetailSkeleton from "../components/SkeleteLoading/SketeLoadingDetail";
+
 export default function ProductDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -27,7 +28,8 @@ export default function ProductDetail() {
     }
   }, [id, fetchProductDetail]);
 
-  if (isLoading) return <ProductDetailSkeleton/>;
+  if (isLoading) return <ProductDetailSkeleton />;
+
   if (error) return <div>Error: {error}</div>;
 
   // Handle quantity increment and decrement
@@ -43,19 +45,15 @@ export default function ProductDetail() {
 
   const renderStars = (rating) => {
     const totalStars = 5;
-    let stars = [];
+    const stars = [];
     for (let i = 1; i <= totalStars; i++) {
       stars.push(
-        <span
+        <Star
           key={i}
-          className={`text-${rating && rating >= i ? "" : "black-300"}`}
-        >
-          <Star
-            width={32}
-            height={32}
-            fill={rating === null ? "none" : rating >= i ? "" : "black"}
-          />
-        </span>
+          className={`w-8 h-8 ${
+            rating >= i ? "text-yellow-500 fill-current" : "text-gray-300"
+          }`}
+        />
       );
     }
     return stars;
@@ -87,14 +85,14 @@ export default function ProductDetail() {
   };
 
   return (
-  <div className="bg-white min-h-screen flex flex-col py-4 px-2 sm:px-4 md:px-8 lg:px-[10%]">
-      <Breadcrumbs productName={product?.name}/>
+    <div className="bg-white min-h-screen flex flex-col py-4 px-2 sm:px-4 md:px-8 lg:px-[10%]">
+      <Breadcrumbs productName={product?.name} />
       {/* Container */}
-      <div className="w-full my-5">
+      <div className="w-full py-5 md:py-[40px]">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Image Section */}
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-start">
             <img
               src={product?.api_featured_image}
               alt="Product"
@@ -202,10 +200,10 @@ export default function ProductDetail() {
               <div className="mt-5">
                 <p className="text-sm">Tags</p>
                 <div className="flex flex-wrap">
-                  {product?.tag_list.map((tag) => (
+                  {product?.tag_list?.map((tag) => (
                     <Link
                       key={tag}
-                      className="border-solid border-2 border-indigo-600 m-1 text-[13px] p-1 hover:bg-black hover:text-white transition-background duration-500"
+                      className="inline-block m-1 px-2 py-1 text-xs md:text-sm rounded-md transition-all duration-300 border border-[#C28B7A] text-[#C28B7A] hover:bg-[#f8f0ed]"
                     >
                       {tag}
                     </Link>

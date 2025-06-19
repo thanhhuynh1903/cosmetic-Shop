@@ -5,13 +5,13 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import Mostlike from "../components/Mostlike/Mostlike";
 import Product from "./Products/Product";
 import ProductsList from "./Products/ProductsList";
-import Tags from "../components/Tags/Tags";
 import useAllProductStore from "../util/zustandfetchAllproduct";
 import useCount from "../util/zustandCount";
 import FloatingCart from "../components/CartFloat/FloatingCart";
 import Drawer from "../components/Drawer/Drawer";
 import { ShoppingPageSkeleton } from "../components/SkeleteLoading/SkeletonLoading";
-
+import { Link } from "react-router-dom";
+import '../components/layouts/Header/Header.css';
 export default function Shoppingpage() {
   const {
     products,
@@ -27,6 +27,7 @@ export default function Shoppingpage() {
   const { setProducts, updateCategoryCount, categoryCount } = useCount();
   const [searchTerm, setSearchTerm] = useState("");
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("");
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   // Debounce effect
   useEffect(() => {
@@ -47,6 +48,20 @@ export default function Shoppingpage() {
       updateCategoryCount();
     }
   }, [products, setProducts, updateCategoryCount]);
+
+  // Prevent body scroll when mobile drawer is open
+  useEffect(() => {
+    if (mobileFiltersOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    // Cleanup function to reset overflow when component unmounts
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [mobileFiltersOpen]);
 
   const filteredProducts = products.filter((product) => {
     const matchesCategory = categoryFilter
@@ -70,7 +85,7 @@ export default function Shoppingpage() {
   }
 
   return (
-    <div className="mx-3 md:mx-5 my-4 md:my-5">
+    <div className="mx-3 md:mx-5 my-4 md:my-5 relative">
       <h2 className="text-center text-[#C28B7A] my-4 md:my-6 text-2xl md:text-3xl lg:text-[35px] font-medium">
         Choosing type of products
       </h2>
@@ -123,40 +138,103 @@ export default function Shoppingpage() {
         </div>
       </div>
 
-      {/* Mobile filter toggle button */}
-      <div className="md:hidden flex justify-center my-5">
+      {/* Mobile Filter Button - chỉ hiển thị trên mobile */}
+      <div className="mobile-filter-button md:hidden">
         <button
-          onClick={() =>
-            document.getElementById("mobile-filters").classList.toggle("hidden")
-          }
-          className="px-4 py-2 bg-[#C28B7A] text-white rounded-md text-sm font-medium hover:bg-[#A06E5F] transition-colors"
+          onClick={() => setMobileFiltersOpen(true)}
+          className="inline-flex items-center px-6 py-2 bg-[#C28B7A] text-white rounded-lg text-sm font-medium hover:bg-[#A06E5F] focus:outline-none focus:ring-2 focus:ring-[#C28B7A]/50 transition-all duration-200 shadow-md"
         >
+          <svg
+            className="w-4 h-4 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+            />
+          </svg>
           Filter Products
         </button>
       </div>
 
-      {/* Mobile filters */}
-      <div
-        id="mobile-filters"
-        className="md:hidden hidden mb-6 p-4 bg-white rounded-lg shadow-md"
-      >
-        <Sidebar
-          categorys={products}
-          categoryCount={categoryCount}
-          setCategoryFilter={setCategoryFilter}
-        />
-        <Tags tags={products} setTagFilter={setTagFilter} />
-      </div>
+      {/* Mobile filters drawer - mở từ bên trái */}
+      {mobileFiltersOpen && (
+        <>
+          {/* Overlay */}
+          <div
+            className={`mobile-drawer-overlay md:hidden ${
+              mobileFiltersOpen ? "open" : ""
+            }`}
+            onClick={() => setMobileFiltersOpen(false)}
+          />
 
+          {/* Drawer */}
+          <div
+            className={`mobile-drawer md:hidden ${
+              mobileFiltersOpen ? "open" : ""
+            }`}
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between p-4 border-b border-[#E8D5CC]">
+              <div className="flex items-center justify-center">
+                <Link to="/">
+                  <h1 className="custom-logo text-2xl md:text-3xl" style={{ color: "#C28B7A" }}>Beauty</h1>
+                </Link>
+              </div>
+              <button
+                type="button"
+                className="p-2 text-gray-400 hover:text-[#C28B7A] hover:bg-[#F8F0ED] rounded-lg transition-colors"
+                onClick={() => setMobileFiltersOpen(false)}
+              >
+                <span className="sr-only">Close menu</span>
+                <svg
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            {/* Sidebar Content */}
+            <div className="p-4">
+              <Sidebar
+                categorys={products}
+                categoryCount={categoryCount}
+                setCategoryFilter={setCategoryFilter}
+                tags={products}
+                setTagFilter={setTagFilter}
+                onClose={() => setMobileFiltersOpen(false)}
+                isMobile={true}
+              />
+            </div>
+          </div>
+        </>
+      )}
+
+      {/* Desktop layout */}
       <div className="grid grid-cols-1 md:grid-cols-10 gap-4 p-2 md:p-4">
-        {/* Sidebar */}
+        {/* Desktop Sidebar - ẩn trên mobile */}
         <div className="hidden md:block md:col-span-3 lg:col-span-2 p-4 bg-white rounded-lg shadow-sm">
           <Sidebar
             categorys={products}
             categoryCount={categoryCount}
             setCategoryFilter={setCategoryFilter}
+            tags={products}
+            setTagFilter={setTagFilter}
+            isMobile={false}
           />
-          <Tags tags={products} setTagFilter={setTagFilter} />
         </div>
 
         {/* Products list */}

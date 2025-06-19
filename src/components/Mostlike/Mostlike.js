@@ -48,7 +48,7 @@ export default function Mostlike() {
       <Swiper
         className="!pb-8"
         modules={[Autoplay, Navigation, Scrollbar]}
-        spaceBetween={16}
+        spaceBetween={0}
         slidesPerView={1.2}
         breakpoints={{
           360: { slidesPerView: 1.3 },

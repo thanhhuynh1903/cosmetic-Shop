@@ -37,9 +37,9 @@ export default function CardOrder({ cart }) {
             className="h-full w-full object-contain rounded-lg"
           />
         </div>
-        <div className="flex-1 space-y-1 py-1">
+        <div className="flex-1 space-y-1 py-1 w-[69%]">
           <div className="flex justify-between">
-            <p className="font-bold text-[14px] overflow-hidden whitespace-nowrap	text-ellipsis w-[80%]">
+            <p className="font-bold text-[14px] overflow-hidden whitespace-pre-wrap	break-normal">
               {cart.name}
             </p>
             <p>${cart.price}</p>

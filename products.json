@@ -1,0 +1,3393 @@
+[
+  {
+    "id": 1009,
+    "brand": "Revlon",
+    "name": "Extended interactive knowledgebase",
+    "price": "9.07",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1009/300/300",
+    "product_link": "https://www.mills.com/",
+    "website_link": "http://www.barker.info/",
+    "description": "Still commercial hold last. Similar husband impact oil. Whom war somebody vote.",
+    "rating": 1.5,
+    "category": "lip_gloss",
+    "product_type": "lipstick",
+    "tag_list": [
+      "No Talc",
+      "Vegan",
+      "Organic",
+      "EWG Verified"
+    ],
+    "created_at": "2023-08-08T16:22:20",
+    "updated_at": "2024-11-21T02:02:54",
+    "product_api_url": "https://example.com/api/v1/products/1009.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1009/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#e4a591",
+        "colour_name": "PeachPuff"
+      },
+      {
+        "hex_value": "#c01aec",
+        "colour_name": "BlanchedAlmond"
+      }
+    ]
+  },
+  {
+    "id": 1010,
+    "brand": "L'Or\u00e9al",
+    "name": "Organized explicit implementation",
+    "price": "41.60",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1010/300/300",
+    "product_link": "https://hardy.info/",
+    "website_link": "https://www.byrd.com/",
+    "description": "Win community study over. Number speech defense including. Tax affect expert stock also. Build civil behavior statement. Couple teacher usually bad eye. Skin father treatment include car.",
+    "rating": 2.3,
+    "category": "lip_gloss",
+    "product_type": "blush",
+    "tag_list": [
+      "EWG Verified",
+      "No Talc",
+      "Cruelty-Free",
+      "Hypoallergenic"
+    ],
+    "created_at": "2023-05-25T16:39:10",
+    "updated_at": "2024-06-22T00:05:17",
+    "product_api_url": "https://example.com/api/v1/products/1010.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1010/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#241340",
+        "colour_name": "GoldenRod"
+      },
+      {
+        "hex_value": "#65f973",
+        "colour_name": "DarkMagenta"
+      },
+      {
+        "hex_value": "#0d5be1",
+        "colour_name": "Tan"
+      }
+    ]
+  },
+  {
+    "id": 1011,
+    "brand": "e.l.f",
+    "name": "Balanced systemic capability",
+    "price": "34.48",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1011/300/300",
+    "product_link": "http://bowen.com/",
+    "website_link": "http://www.jordan.com/",
+    "description": "Mother food include admit entire. Hour paper detail skin inside age less. Paper different coach answer.",
+    "rating": 1.9,
+    "category": "lip_gloss",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "Vegan",
+      "Organic"
+    ],
+    "created_at": "2023-03-29T07:25:59",
+    "updated_at": "2025-03-15T02:54:37",
+    "product_api_url": "https://example.com/api/v1/products/1011.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1011/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#cc08d1",
+        "colour_name": "MidnightBlue"
+      }
+    ]
+  },
+  {
+    "id": 1012,
+    "brand": "Maybelline",
+    "name": "Fully-configurable scalable collaboration",
+    "price": "36.64",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1012/300/300",
+    "product_link": "http://www.giles.com/",
+    "website_link": "http://carter.com/",
+    "description": "Long practice know early medical under break ask. Mean garden catch government. Too few thing night character present front. Effect line through himself great bring. Yard open maintain on.",
+    "rating": 4.2,
+    "category": "liquid",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "Vegan",
+      "EWG Verified",
+      "No Talc"
+    ],
+    "created_at": "2023-01-02T00:13:40",
+    "updated_at": "2024-12-08T14:07:10",
+    "product_api_url": "https://example.com/api/v1/products/1012.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1012/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#9f0d7a",
+        "colour_name": "Lavender"
+      },
+      {
+        "hex_value": "#ee3b3e",
+        "colour_name": "DarkOrchid"
+      },
+      {
+        "hex_value": "#d6c44c",
+        "colour_name": "Red"
+      }
+    ]
+  },
+  {
+    "id": 1013,
+    "brand": "Revlon",
+    "name": "Seamless scalable utilization",
+    "price": "7.37",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1013/300/300",
+    "product_link": "https://www.williams.com/",
+    "website_link": "http://www.jenkins.com/",
+    "description": "Begin general former. Guess really southern true. Son term risk region modern despite phone. Place sign work. Artist member adult low. Skill on plant environment.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "mascara",
+    "tag_list": [
+      "Organic",
+      "Vegan",
+      "EWG Verified",
+      "No Talc"
+    ],
+    "created_at": "2024-03-25T21:02:25",
+    "updated_at": "2025-03-02T03:44:53",
+    "product_api_url": "https://example.com/api/v1/products/1013.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1013/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#d49b90",
+        "colour_name": "Plum"
+      },
+      {
+        "hex_value": "#d58a97",
+        "colour_name": "AntiqueWhite"
+      },
+      {
+        "hex_value": "#3f9d6d",
+        "colour_name": "LightGreen"
+      }
+    ]
+  },
+  {
+    "id": 1014,
+    "brand": "Covergirl",
+    "name": "Diverse explicit approach",
+    "price": "47.46",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1014/300/300",
+    "product_link": "https://www.davis.com/",
+    "website_link": "https://www.flowers.com/",
+    "description": "Sign oil small candidate each service more call. Section short involve. Attention why most clearly skill serve note. Evening sign little treat enjoy.",
+    "rating": 3.5,
+    "category": "powder",
+    "product_type": "lipstick",
+    "tag_list": [
+      "Cruelty-Free",
+      "No Talc",
+      "EWG Verified",
+      "Vegan"
+    ],
+    "created_at": "2023-06-04T06:13:39",
+    "updated_at": "2025-04-16T21:39:24",
+    "product_api_url": "https://example.com/api/v1/products/1014.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1014/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#ab32b2",
+        "colour_name": "Turquoise"
+      }
+    ]
+  },
+  {
+    "id": 1015,
+    "brand": "NYX",
+    "name": "Self-enabling cohesive Local Area Network",
+    "price": "44.78",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1015/300/300",
+    "product_link": "http://phelps-keller.org/",
+    "website_link": "http://davis-montes.com/",
+    "description": "Itself Congress check its may. Single back interest power. Edge measure include since why value. Look religious purpose different later.",
+    "rating": 3.5,
+    "category": "cream",
+    "product_type": "lipstick",
+    "tag_list": [
+      "Organic",
+      "EWG Verified",
+      "Cruelty-Free",
+      "No Talc"
+    ],
+    "created_at": "2024-05-04T20:39:12",
+    "updated_at": "2025-05-10T12:35:04",
+    "product_api_url": "https://example.com/api/v1/products/1015.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1015/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#13f628",
+        "colour_name": "Orange"
+      },
+      {
+        "hex_value": "#780d17",
+        "colour_name": "Linen"
+      }
+    ]
+  },
+  {
+    "id": 1016,
+    "brand": "e.l.f",
+    "name": "Managed background orchestration",
+    "price": "33.81",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1016/300/300",
+    "product_link": "https://rodriguez-mitchell.com/",
+    "website_link": "https://www.barr.biz/",
+    "description": "Real more remember modern. Investment build agency current threat politics land size. Owner lot protect their public.",
+    "rating": 3.9,
+    "category": "cream",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "EWG Verified",
+      "Vegan",
+      "Hypoallergenic"
+    ],
+    "created_at": "2024-02-04T23:30:52",
+    "updated_at": "2024-08-20T14:29:43",
+    "product_api_url": "https://example.com/api/v1/products/1016.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1016/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#3ebf52",
+        "colour_name": "Maroon"
+      }
+    ]
+  },
+  {
+    "id": 1017,
+    "brand": "Revlon",
+    "name": "Fundamental high-level process improvement",
+    "price": "30.93",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1017/300/300",
+    "product_link": "http://walker.com/",
+    "website_link": "https://www.gomez.com/",
+    "description": "Get already country arm chair give remember. School power describe positive still determine result. Success moment food less. Reason task specific learn today.",
+    "rating": 3.5,
+    "category": "powder",
+    "product_type": "mascara",
+    "tag_list": [
+      "Cruelty-Free",
+      "No Talc"
+    ],
+    "created_at": "2023-08-06T21:00:09",
+    "updated_at": "2025-05-19T11:01:38",
+    "product_api_url": "https://example.com/api/v1/products/1017.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1017/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#a848e9",
+        "colour_name": "Plum"
+      },
+      {
+        "hex_value": "#b0c5eb",
+        "colour_name": "RoyalBlue"
+      }
+    ]
+  },
+  {
+    "id": 1018,
+    "brand": "Revlon",
+    "name": "Pre-emptive user-facing algorithm",
+    "price": "29.91",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1018/300/300",
+    "product_link": "http://www.jones-mclean.org/",
+    "website_link": "https://www.moore.com/",
+    "description": "Set consider report explain. Body two west player employee life PM. Nature into after play season. Usually strategy energy plant they worry expert. Relate him coach without decide produce lose. Ten mention major one production skin apply determine.",
+    "rating": 3.7,
+    "category": "liquid",
+    "product_type": "lipstick",
+    "tag_list": [
+      "Cruelty-Free",
+      "No Talc",
+      "Organic"
+    ],
+    "created_at": "2023-01-22T20:11:32",
+    "updated_at": "2024-09-11T15:16:40",
+    "product_api_url": "https://example.com/api/v1/products/1018.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1018/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#d0fdb9",
+        "colour_name": "Wheat"
+      },
+      {
+        "hex_value": "#a0e28e",
+        "colour_name": "Ivory"
+      },
+      {
+        "hex_value": "#d35b72",
+        "colour_name": "LightYellow"
+      }
+    ]
+  },
+  {
+    "id": 1019,
+    "brand": "NYX",
+    "name": "Re-engineered transitional Local Area Network",
+    "price": "38.10",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1019/300/300",
+    "product_link": "https://middleton.com/",
+    "website_link": "https://www.jimenez.net/",
+    "description": "As ability information rather mission. Two of piece test camera window. Go door activity child yard real.",
+    "rating": 1.3,
+    "category": "liquid",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "EWG Verified",
+      "No Talc",
+      "Organic",
+      "Cruelty-Free"
+    ],
+    "created_at": "2024-06-06T03:57:12",
+    "updated_at": "2024-08-24T17:47:27",
+    "product_api_url": "https://example.com/api/v1/products/1019.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1019/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#cfd3ab",
+        "colour_name": "Plum"
+      },
+      {
+        "hex_value": "#3913e1",
+        "colour_name": "Sienna"
+      },
+      {
+        "hex_value": "#a15a94",
+        "colour_name": "Aquamarine"
+      }
+    ]
+  },
+  {
+    "id": 1020,
+    "brand": "L'Or\u00e9al",
+    "name": "Polarized object-oriented access",
+    "price": "9.85",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1020/300/300",
+    "product_link": "http://white.org/",
+    "website_link": "http://www.garcia.org/",
+    "description": "Figure space about hair information. Surface wall section nature news trouble more. Several member face almost year. Lay always point like buy ago. Professional maintain other where security top region. Development garden attack employee. May three building beautiful operation impact.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "lipstick",
+    "tag_list": [
+      "Hypoallergenic",
+      "Cruelty-Free",
+      "Vegan"
+    ],
+    "created_at": "2023-02-04T21:14:10",
+    "updated_at": "2025-01-07T05:11:38",
+    "product_api_url": "https://example.com/api/v1/products/1020.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1020/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#f2be42",
+        "colour_name": "MediumSpringGreen"
+      }
+    ]
+  },
+  {
+    "id": 1021,
+    "brand": "Maybelline",
+    "name": "Streamlined high-level intranet",
+    "price": "12.27",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1021/300/300",
+    "product_link": "http://conway.com/",
+    "website_link": "http://bryant.com/",
+    "description": "Customer receive next best over both lay realize. Teacher career try sea. Stay rate at four say performance town stop. Wife family group great amount. Husband only challenge growth certain college half. Human himself raise similar range long.",
+    "rating": 3.5,
+    "category": "cream",
+    "product_type": "lipstick",
+    "tag_list": [
+      "Hypoallergenic",
+      "No Talc"
+    ],
+    "created_at": "2024-03-20T03:11:40",
+    "updated_at": "2024-11-24T22:43:31",
+    "product_api_url": "https://example.com/api/v1/products/1021.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1021/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#a9d118",
+        "colour_name": "LightSalmon"
+      }
+    ]
+  },
+  {
+    "id": 1022,
+    "brand": "Maybelline",
+    "name": "Customer-focused reciprocal software",
+    "price": "12.85",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1022/300/300",
+    "product_link": "http://castillo.net/",
+    "website_link": "https://parrish.org/",
+    "description": "Letter daughter actually upon us night. Them whose in those already answer Mrs. Ability force lose down out where. Whole lay girl expect their. Attorney size choice. Remain couple few.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "blush",
+    "tag_list": [
+      "Hypoallergenic",
+      "EWG Verified",
+      "Organic",
+      "No Talc"
+    ],
+    "created_at": "2024-04-19T02:45:59",
+    "updated_at": "2024-08-13T17:13:57",
+    "product_api_url": "https://example.com/api/v1/products/1022.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1022/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#285c9a",
+        "colour_name": "Yellow"
+      },
+      {
+        "hex_value": "#7350c7",
+        "colour_name": "DarkOrange"
+      }
+    ]
+  },
+  {
+    "id": 1023,
+    "brand": "Revlon",
+    "name": "Synchronized foreground open system",
+    "price": "44.28",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1023/300/300",
+    "product_link": "http://mason-harrison.com/",
+    "website_link": "https://allen.com/",
+    "description": "Stand great several region defense car event. Drop begin ahead six trouble. Organization career community interview. Management half parent participant. Detail cup room.",
+    "rating": 2.5,
+    "category": "cream",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "Vegan",
+      "Organic",
+      "Hypoallergenic",
+      "Cruelty-Free"
+    ],
+    "created_at": "2023-04-03T20:43:35",
+    "updated_at": "2024-08-23T19:11:55",
+    "product_api_url": "https://example.com/api/v1/products/1023.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1023/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#ce8f1f",
+        "colour_name": "Lavender"
+      },
+      {
+        "hex_value": "#b6f9b1",
+        "colour_name": "LightGray"
+      }
+    ]
+  },
+  {
+    "id": 1024,
+    "brand": "C'est Moi",
+    "name": "Distributed regional monitoring",
+    "price": "28.82",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1024/300/300",
+    "product_link": "http://guerra-brown.com/",
+    "website_link": "https://www.williams-holmes.com/",
+    "description": "Better nice follow pattern art. That Congress card political. Modern approach its think blue as science.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "mascara",
+    "tag_list": [
+      "EWG Verified",
+      "Cruelty-Free"
+    ],
+    "created_at": "2023-04-27T14:52:52",
+    "updated_at": "2024-11-02T15:44:28",
+    "product_api_url": "https://example.com/api/v1/products/1024.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1024/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#e1e7b5",
+        "colour_name": "DarkMagenta"
+      },
+      {
+        "hex_value": "#d3501e",
+        "colour_name": "LightSeaGreen"
+      }
+    ]
+  },
+  {
+    "id": 1025,
+    "brand": "Maybelline",
+    "name": "Horizontal discrete info-mediaries",
+    "price": "31.28",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1025/300/300",
+    "product_link": "http://www.spencer.com/",
+    "website_link": "https://harper.com/",
+    "description": "Economic land trial wind necessary treatment item. Commercial air study south card. Us court up find. Tonight option although office vote service change drug.",
+    "rating": 3.2,
+    "category": "cream",
+    "product_type": "foundation",
+    "tag_list": [
+      "Hypoallergenic",
+      "Organic",
+      "No Talc"
+    ],
+    "created_at": "2024-06-08T16:30:45",
+    "updated_at": "2024-08-14T20:32:44",
+    "product_api_url": "https://example.com/api/v1/products/1025.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1025/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#2f79a8",
+        "colour_name": "LightSeaGreen"
+      },
+      {
+        "hex_value": "#7e975a",
+        "colour_name": "Plum"
+      },
+      {
+        "hex_value": "#4383fa",
+        "colour_name": "CadetBlue"
+      }
+    ]
+  },
+  {
+    "id": 1026,
+    "brand": "e.l.f",
+    "name": "Organized dynamic portal",
+    "price": "17.62",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1026/300/300",
+    "product_link": "http://www.johnson.com/",
+    "website_link": "https://lee.com/",
+    "description": "Green street necessary office resource your window herself. Main society evidence lay. Friend alone major wide money grow color.",
+    "rating": 4.0,
+    "category": "liquid",
+    "product_type": "lipstick",
+    "tag_list": [
+      "Hypoallergenic",
+      "No Talc",
+      "Organic"
+    ],
+    "created_at": "2023-03-28T02:03:38",
+    "updated_at": "2024-08-05T06:53:09",
+    "product_api_url": "https://example.com/api/v1/products/1026.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1026/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#c883f9",
+        "colour_name": "DarkSalmon"
+      },
+      {
+        "hex_value": "#e43a31",
+        "colour_name": "Peru"
+      },
+      {
+        "hex_value": "#2e6de5",
+        "colour_name": "LightSlateGray"
+      }
+    ]
+  },
+  {
+    "id": 1027,
+    "brand": "Covergirl",
+    "name": "Public-key client-server functionalities",
+    "price": "26.51",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1027/300/300",
+    "product_link": "https://smith.biz/",
+    "website_link": "http://gonzales.net/",
+    "description": "Set address thousand land. Mention up after really argue voice. Public owner song news either audience treat. Husband wind never red grow oil raise. Town positive successful check everybody education billion.",
+    "rating": 3.5,
+    "category": "cream",
+    "product_type": "lipstick",
+    "tag_list": [
+      "Vegan",
+      "Cruelty-Free",
+      "Hypoallergenic",
+      "EWG Verified"
+    ],
+    "created_at": "2022-10-03T19:43:33",
+    "updated_at": "2024-06-21T12:46:52",
+    "product_api_url": "https://example.com/api/v1/products/1027.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1027/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#ed6990",
+        "colour_name": "Salmon"
+      },
+      {
+        "hex_value": "#9f35f1",
+        "colour_name": "Beige"
+      },
+      {
+        "hex_value": "#5b07df",
+        "colour_name": "DarkOrchid"
+      }
+    ]
+  },
+  {
+    "id": 1028,
+    "brand": "Maybelline",
+    "name": "Profit-focused secondary throughput",
+    "price": "11.03",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1028/300/300",
+    "product_link": "http://www.waters.com/",
+    "website_link": "https://www.martinez.biz/",
+    "description": "Throw need impact their day star. Sea day get region. Majority turn open guess rate bag. Home ask director pretty run worker. Although require explain today other anything just. Check arrive message ahead human administration dog.",
+    "rating": 3.5,
+    "category": "powder",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "Organic",
+      "EWG Verified",
+      "No Talc"
+    ],
+    "created_at": "2022-09-27T09:04:05",
+    "updated_at": "2025-02-16T20:06:05",
+    "product_api_url": "https://example.com/api/v1/products/1028.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1028/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#a298ba",
+        "colour_name": "Yellow"
+      },
+      {
+        "hex_value": "#1c0b57",
+        "colour_name": "Green"
+      }
+    ]
+  },
+  {
+    "id": 1029,
+    "brand": "e.l.f",
+    "name": "Proactive intangible model",
+    "price": "36.28",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1029/300/300",
+    "product_link": "https://www.gallagher.net/",
+    "website_link": "http://hall.biz/",
+    "description": "Land study find value. Institution describe it gas. Large kid crime stop scientist type third. Far hour into western finally large attack another.",
+    "rating": 3.5,
+    "category": "cream",
+    "product_type": "foundation",
+    "tag_list": [
+      "EWG Verified",
+      "Cruelty-Free",
+      "No Talc",
+      "Hypoallergenic"
+    ],
+    "created_at": "2024-01-20T19:46:32",
+    "updated_at": "2024-06-22T17:27:07",
+    "product_api_url": "https://example.com/api/v1/products/1029.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1029/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#2d12f4",
+        "colour_name": "Silver"
+      },
+      {
+        "hex_value": "#91ff9d",
+        "colour_name": "OliveDrab"
+      },
+      {
+        "hex_value": "#5065a4",
+        "colour_name": "Sienna"
+      }
+    ]
+  },
+  {
+    "id": 1030,
+    "brand": "e.l.f",
+    "name": "Multi-tiered logistical synergy",
+    "price": "38.91",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1030/300/300",
+    "product_link": "https://lester.net/",
+    "website_link": "http://coleman.com/",
+    "description": "Look smile lay single couple. Center plant kid major pick upon. West save why eat lead.",
+    "rating": 2.4,
+    "category": "liquid",
+    "product_type": "blush",
+    "tag_list": [
+      "EWG Verified",
+      "Hypoallergenic",
+      "Vegan",
+      "Organic"
+    ],
+    "created_at": "2022-10-24T23:42:32",
+    "updated_at": "2025-01-18T16:49:47",
+    "product_api_url": "https://example.com/api/v1/products/1030.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1030/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#677172",
+        "colour_name": "Orchid"
+      },
+      {
+        "hex_value": "#dfbb8f",
+        "colour_name": "PaleGoldenRod"
+      },
+      {
+        "hex_value": "#a0f99c",
+        "colour_name": "SlateGray"
+      }
+    ]
+  },
+  {
+    "id": 1031,
+    "brand": "Maybelline",
+    "name": "Exclusive directional algorithm",
+    "price": "31.55",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1031/300/300",
+    "product_link": "http://www.powell-blackwell.com/",
+    "website_link": "https://www.burns.com/",
+    "description": "Tax act loss close. Specific fly media police tonight central serve. Leave care even improve ahead guess.",
+    "rating": 3.5,
+    "category": "lip_gloss",
+    "product_type": "blush",
+    "tag_list": [
+      "Cruelty-Free",
+      "Hypoallergenic",
+      "No Talc",
+      "Organic"
+    ],
+    "created_at": "2024-04-28T17:37:00",
+    "updated_at": "2024-11-10T01:32:37",
+    "product_api_url": "https://example.com/api/v1/products/1031.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1031/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#50b4f1",
+        "colour_name": "PeachPuff"
+      }
+    ]
+  },
+  {
+    "id": 1032,
+    "brand": "e.l.f",
+    "name": "Reactive background implementation",
+    "price": "32.38",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1032/300/300",
+    "product_link": "http://allen.biz/",
+    "website_link": "https://hanna.org/",
+    "description": "Amount under wait out truth role agreement. Once little account nation all bad. Campaign himself modern. Community enough hand other pay style. Government pick our method region mention hundred.",
+    "rating": 2.7,
+    "category": "cream",
+    "product_type": "foundation",
+    "tag_list": [
+      "EWG Verified",
+      "Cruelty-Free",
+      "Organic"
+    ],
+    "created_at": "2024-04-15T16:35:07",
+    "updated_at": "2025-03-03T19:59:51",
+    "product_api_url": "https://example.com/api/v1/products/1032.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1032/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#efcf96",
+        "colour_name": "DarkOrchid"
+      },
+      {
+        "hex_value": "#efb038",
+        "colour_name": "LightSalmon"
+      },
+      {
+        "hex_value": "#199363",
+        "colour_name": "LavenderBlush"
+      }
+    ]
+  },
+  {
+    "id": 1033,
+    "brand": "C'est Moi",
+    "name": "Compatible actuating complexity",
+    "price": "43.22",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1033/300/300",
+    "product_link": "http://lloyd.com/",
+    "website_link": "http://www.gallegos.com/",
+    "description": "Step hit unit protect in audience. Follow city whatever eat central purpose particular. Mother campaign box. Remain agree full citizen next. Couple whether need condition town page most. At good yard machine. Serious middle design remain.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "blush",
+    "tag_list": [
+      "Cruelty-Free",
+      "No Talc",
+      "Hypoallergenic"
+    ],
+    "created_at": "2023-11-11T04:10:03",
+    "updated_at": "2024-07-23T06:14:47",
+    "product_api_url": "https://example.com/api/v1/products/1033.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1033/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#ae2717",
+        "colour_name": "MediumVioletRed"
+      },
+      {
+        "hex_value": "#1409c5",
+        "colour_name": "BlanchedAlmond"
+      },
+      {
+        "hex_value": "#a96669",
+        "colour_name": "LightSeaGreen"
+      }
+    ]
+  },
+  {
+    "id": 1034,
+    "brand": "L'Or\u00e9al",
+    "name": "Centralized full-range forecast",
+    "price": "48.86",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1034/300/300",
+    "product_link": "https://wilson-phillips.com/",
+    "website_link": "http://www.bush.org/",
+    "description": "Like employee throughout cold woman western state family. Some down head second generation on feeling. Focus design enter tend they lawyer. Article truth new phone. Sometimes defense wear important serve machine upon. Level because could painting church card.",
+    "rating": 3.5,
+    "category": "lip_gloss",
+    "product_type": "blush",
+    "tag_list": [
+      "EWG Verified",
+      "Organic",
+      "Cruelty-Free",
+      "No Talc"
+    ],
+    "created_at": "2023-03-17T15:44:32",
+    "updated_at": "2024-07-29T03:36:59",
+    "product_api_url": "https://example.com/api/v1/products/1034.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1034/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#a09a0b",
+        "colour_name": "OldLace"
+      },
+      {
+        "hex_value": "#301f11",
+        "colour_name": "Tan"
+      }
+    ]
+  },
+  {
+    "id": 1035,
+    "brand": "e.l.f",
+    "name": "De-engineered contextually-based help-desk",
+    "price": "28.42",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1035/300/300",
+    "product_link": "http://www.williams-sutton.net/",
+    "website_link": "http://taylor.org/",
+    "description": "Black school everybody. Shoulder south begin. Material about probably need put. Choose direction offer lead.",
+    "rating": 2.5,
+    "category": "liquid",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "EWG Verified",
+      "Vegan"
+    ],
+    "created_at": "2023-02-03T20:28:29",
+    "updated_at": "2024-12-08T16:13:10",
+    "product_api_url": "https://example.com/api/v1/products/1035.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1035/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#e7ee74",
+        "colour_name": "Aqua"
+      },
+      {
+        "hex_value": "#bbbe47",
+        "colour_name": "White"
+      }
+    ]
+  },
+  {
+    "id": 1036,
+    "brand": "C'est Moi",
+    "name": "Reactive didactic capability",
+    "price": "43.18",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1036/300/300",
+    "product_link": "http://www.fitzpatrick.info/",
+    "website_link": "http://oconnor-gonzalez.org/",
+    "description": "Picture standard specific business executive quality must. Miss number by bill expect type goal. Senior however real practice Mr image control.",
+    "rating": 4.3,
+    "category": "liquid",
+    "product_type": "lipstick",
+    "tag_list": [
+      "Cruelty-Free",
+      "EWG Verified"
+    ],
+    "created_at": "2022-07-20T01:56:04",
+    "updated_at": "2025-04-09T03:42:33",
+    "product_api_url": "https://example.com/api/v1/products/1036.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1036/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#4c326e",
+        "colour_name": "Brown"
+      },
+      {
+        "hex_value": "#8e85f1",
+        "colour_name": "IndianRed"
+      }
+    ]
+  },
+  {
+    "id": 1037,
+    "brand": "C'est Moi",
+    "name": "Down-sized 24/7 middleware",
+    "price": "41.03",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1037/300/300",
+    "product_link": "http://www.hood.com/",
+    "website_link": "https://mitchell.com/",
+    "description": "Determine sense begin message. Fast available firm suggest. Cell economy knowledge unit.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "Organic",
+      "No Talc",
+      "Hypoallergenic"
+    ],
+    "created_at": "2022-09-23T06:23:40",
+    "updated_at": "2024-11-13T07:45:59",
+    "product_api_url": "https://example.com/api/v1/products/1037.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1037/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#ee04ac",
+        "colour_name": "Turquoise"
+      },
+      {
+        "hex_value": "#f42690",
+        "colour_name": "DarkTurquoise"
+      },
+      {
+        "hex_value": "#18f358",
+        "colour_name": "LightSalmon"
+      }
+    ]
+  },
+  {
+    "id": 1038,
+    "brand": "Maybelline",
+    "name": "Compatible multi-tasking strategy",
+    "price": "10.57",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1038/300/300",
+    "product_link": "https://www.schneider.com/",
+    "website_link": "https://mcdonald-collins.net/",
+    "description": "Daughter your family tough. Would not pick form participant half whether learn. Place property place. More present adult house. National keep art down building. Clear because movie outside check.",
+    "rating": 3.5,
+    "category": "cream",
+    "product_type": "lipstick",
+    "tag_list": [
+      "Hypoallergenic",
+      "No Talc",
+      "Vegan",
+      "EWG Verified"
+    ],
+    "created_at": "2023-01-27T22:00:49",
+    "updated_at": "2024-07-24T14:05:34",
+    "product_api_url": "https://example.com/api/v1/products/1038.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1038/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#90c0b5",
+        "colour_name": "MediumOrchid"
+      },
+      {
+        "hex_value": "#e491fc",
+        "colour_name": "BlanchedAlmond"
+      }
+    ]
+  },
+  {
+    "id": 1039,
+    "brand": "L'Or\u00e9al",
+    "name": "Automated coherent Local Area Network",
+    "price": "40.85",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1039/300/300",
+    "product_link": "https://www.gonzalez.com/",
+    "website_link": "http://li.info/",
+    "description": "President three must suggest head language bill. Job left able important security up. Computer TV tough use collection Congress individual.",
+    "rating": 3.5,
+    "category": "lip_gloss",
+    "product_type": "mascara",
+    "tag_list": [
+      "Hypoallergenic",
+      "Organic"
+    ],
+    "created_at": "2023-10-08T04:41:37",
+    "updated_at": "2024-09-24T12:49:00",
+    "product_api_url": "https://example.com/api/v1/products/1039.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1039/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#b92062",
+        "colour_name": "Blue"
+      }
+    ]
+  },
+  {
+    "id": 1040,
+    "brand": "Covergirl",
+    "name": "Multi-lateral holistic service-desk",
+    "price": "31.38",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1040/300/300",
+    "product_link": "http://www.lowe-ramos.com/",
+    "website_link": "http://www.burch.info/",
+    "description": "Door western recognize. Join report four risk key. Specific free nice meet accept. Movie memory decide never seek in almost record. Piece prepare ball war green too budget. Machine daughter particularly region enjoy beyond.",
+    "rating": 3.5,
+    "category": "powder",
+    "product_type": "foundation",
+    "tag_list": [
+      "Cruelty-Free",
+      "EWG Verified"
+    ],
+    "created_at": "2024-04-04T23:12:39",
+    "updated_at": "2025-05-05T00:34:53",
+    "product_api_url": "https://example.com/api/v1/products/1040.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1040/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#921aaf",
+        "colour_name": "DimGray"
+      }
+    ]
+  },
+  {
+    "id": 1041,
+    "brand": "Maybelline",
+    "name": "Multi-tiered fault-tolerant instruction set",
+    "price": "5.30",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1041/300/300",
+    "product_link": "http://landry.biz/",
+    "website_link": "http://www.carter.com/",
+    "description": "Office seven beat include police guess truth spend. Finally feel believe message appear participant. Now mother court audience. Dinner cost place. Happy law research hit view another. Lawyer be alone their soon relate.",
+    "rating": 3.5,
+    "category": "powder",
+    "product_type": "foundation",
+    "tag_list": [
+      "No Talc",
+      "Hypoallergenic",
+      "Organic",
+      "Cruelty-Free"
+    ],
+    "created_at": "2023-09-10T12:11:16",
+    "updated_at": "2025-02-27T11:47:35",
+    "product_api_url": "https://example.com/api/v1/products/1041.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1041/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#fb837f",
+        "colour_name": "DarkKhaki"
+      }
+    ]
+  },
+  {
+    "id": 1042,
+    "brand": "NYX",
+    "name": "Optional optimizing application",
+    "price": "21.62",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1042/300/300",
+    "product_link": "http://frank.com/",
+    "website_link": "https://www.choi-carter.com/",
+    "description": "Establish hair along responsibility ball tell inside. Southern former industry difference policy necessary face. Radio live whom point.",
+    "rating": 2.4,
+    "category": "powder",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "Cruelty-Free",
+      "Hypoallergenic",
+      "EWG Verified"
+    ],
+    "created_at": "2023-06-30T12:09:56",
+    "updated_at": "2024-06-27T19:51:44",
+    "product_api_url": "https://example.com/api/v1/products/1042.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1042/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#bce7f7",
+        "colour_name": "Salmon"
+      },
+      {
+        "hex_value": "#e27f4d",
+        "colour_name": "LightCoral"
+      },
+      {
+        "hex_value": "#000a4f",
+        "colour_name": "MediumAquaMarine"
+      }
+    ]
+  },
+  {
+    "id": 1043,
+    "brand": "e.l.f",
+    "name": "Face-to-face radical algorithm",
+    "price": "27.96",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1043/300/300",
+    "product_link": "http://www.williams-sanchez.net/",
+    "website_link": "https://lynch.net/",
+    "description": "Voice administration theory nearly interview address that. Draw others morning show whom interest about yeah. Identify small concern arm financial glass guess economy.",
+    "rating": 2.2,
+    "category": "lip_gloss",
+    "product_type": "blush",
+    "tag_list": [
+      "Hypoallergenic",
+      "Vegan",
+      "EWG Verified",
+      "No Talc"
+    ],
+    "created_at": "2023-11-25T06:48:37",
+    "updated_at": "2024-06-26T07:54:57",
+    "product_api_url": "https://example.com/api/v1/products/1043.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1043/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#d60ee5",
+        "colour_name": "LightGreen"
+      }
+    ]
+  },
+  {
+    "id": 1044,
+    "brand": "Covergirl",
+    "name": "Up-sized optimizing moderator",
+    "price": "20.43",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1044/300/300",
+    "product_link": "https://mason.com/",
+    "website_link": "http://mcknight-perez.com/",
+    "description": "Require concern week major look business. Fish agreement reflect operation participant catch. Never these director edge ability part continue outside.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "blush",
+    "tag_list": [
+      "Organic",
+      "Cruelty-Free",
+      "No Talc",
+      "Vegan"
+    ],
+    "created_at": "2022-11-25T02:59:35",
+    "updated_at": "2025-03-07T06:26:32",
+    "product_api_url": "https://example.com/api/v1/products/1044.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1044/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#196ae9",
+        "colour_name": "Fuchsia"
+      },
+      {
+        "hex_value": "#461df2",
+        "colour_name": "Lime"
+      },
+      {
+        "hex_value": "#c2806b",
+        "colour_name": "SteelBlue"
+      }
+    ]
+  },
+  {
+    "id": 1045,
+    "brand": "Revlon",
+    "name": "Synergistic system-worthy application",
+    "price": "9.53",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1045/300/300",
+    "product_link": "https://www.allen-hudson.com/",
+    "website_link": "https://www.jones.com/",
+    "description": "Debate relate product happy put. Enough always size tree alone huge my over. East this they image environmental human president.",
+    "rating": 3.3,
+    "category": "cream",
+    "product_type": "mascara",
+    "tag_list": [
+      "Hypoallergenic",
+      "Organic",
+      "Cruelty-Free"
+    ],
+    "created_at": "2024-02-16T13:00:06",
+    "updated_at": "2025-06-14T20:44:49",
+    "product_api_url": "https://example.com/api/v1/products/1045.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1045/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#349aac",
+        "colour_name": "Turquoise"
+      },
+      {
+        "hex_value": "#bf369f",
+        "colour_name": "LightCyan"
+      }
+    ]
+  },
+  {
+    "id": 1046,
+    "brand": "e.l.f",
+    "name": "Front-line user-facing hub",
+    "price": "39.03",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1046/300/300",
+    "product_link": "https://jimenez-perez.com/",
+    "website_link": "https://www.wood-hughes.org/",
+    "description": "Hit indicate painting board store. Rise focus pressure focus lot. Hear prove forward catch man throw night news. Score candidate black responsibility computer couple tend. Personal hope institution operation size. What some eat pay. On soon kind treat everything catch.",
+    "rating": 4.9,
+    "category": "cream",
+    "product_type": "foundation",
+    "tag_list": [
+      "No Talc",
+      "Vegan",
+      "EWG Verified",
+      "Hypoallergenic"
+    ],
+    "created_at": "2022-08-02T05:06:57",
+    "updated_at": "2024-08-07T23:31:54",
+    "product_api_url": "https://example.com/api/v1/products/1046.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1046/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#211081",
+        "colour_name": "Cornsilk"
+      },
+      {
+        "hex_value": "#834ec1",
+        "colour_name": "Pink"
+      }
+    ]
+  },
+  {
+    "id": 1047,
+    "brand": "e.l.f",
+    "name": "Secured exuding initiative",
+    "price": "21.28",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1047/300/300",
+    "product_link": "https://www.garcia.biz/",
+    "website_link": "http://www.ward.net/",
+    "description": "Civil better ok approach. Far seat part before letter. Still meet increase foot want happy. Owner one follow edge vote.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "Hypoallergenic",
+      "Cruelty-Free",
+      "No Talc"
+    ],
+    "created_at": "2023-06-05T09:29:01",
+    "updated_at": "2024-09-19T11:49:38",
+    "product_api_url": "https://example.com/api/v1/products/1047.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1047/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#d937d4",
+        "colour_name": "OrangeRed"
+      },
+      {
+        "hex_value": "#d326f0",
+        "colour_name": "Brown"
+      }
+    ]
+  },
+  {
+    "id": 1048,
+    "brand": "e.l.f",
+    "name": "Switchable uniform leverage",
+    "price": "39.26",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1048/300/300",
+    "product_link": "http://www.mcdaniel.com/",
+    "website_link": "http://johnson.biz/",
+    "description": "Field news choose six. Write glass Mr his house charge any. Rule consider dark personal from. Probably manager then summer. Card finish very song leave thank situation. Success bill run face show.",
+    "rating": 3.5,
+    "category": "cream",
+    "product_type": "lipstick",
+    "tag_list": [
+      "EWG Verified",
+      "Cruelty-Free",
+      "No Talc"
+    ],
+    "created_at": "2022-11-27T05:29:56",
+    "updated_at": "2025-02-06T10:09:22",
+    "product_api_url": "https://example.com/api/v1/products/1048.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1048/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#074566",
+        "colour_name": "Pink"
+      },
+      {
+        "hex_value": "#4f995a",
+        "colour_name": "Bisque"
+      },
+      {
+        "hex_value": "#aa2caf",
+        "colour_name": "SaddleBrown"
+      }
+    ]
+  },
+  {
+    "id": 1049,
+    "brand": "Maybelline",
+    "name": "Quality-focused mission-critical system engine",
+    "price": "15.36",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1049/300/300",
+    "product_link": "https://www.carlson.org/",
+    "website_link": "http://turner.com/",
+    "description": "Evidence hour start agency value their. Police card while million around. Marriage today clearly high present can economic. Career either fly others improve moment building.",
+    "rating": 3.5,
+    "category": "cream",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "No Talc",
+      "Hypoallergenic"
+    ],
+    "created_at": "2023-03-29T21:06:31",
+    "updated_at": "2024-12-18T15:04:03",
+    "product_api_url": "https://example.com/api/v1/products/1049.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1049/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#4bc03c",
+        "colour_name": "OldLace"
+      }
+    ]
+  },
+  {
+    "id": 1050,
+    "brand": "Covergirl",
+    "name": "Inverse tertiary algorithm",
+    "price": "49.67",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1050/300/300",
+    "product_link": "http://www.andrews-thompson.com/",
+    "website_link": "https://www.king.info/",
+    "description": "Minute difference example notice foreign hope. Top we argue. Describe organization game foot lay throughout suddenly. Speak major sound technology. Investment physical executive best. Theory fill take few each.",
+    "rating": 3.2,
+    "category": "liquid",
+    "product_type": "blush",
+    "tag_list": [
+      "No Talc",
+      "Cruelty-Free"
+    ],
+    "created_at": "2023-03-02T01:14:35",
+    "updated_at": "2025-02-10T07:45:32",
+    "product_api_url": "https://example.com/api/v1/products/1050.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1050/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#4f6380",
+        "colour_name": "Pink"
+      }
+    ]
+  },
+  {
+    "id": 1051,
+    "brand": "e.l.f",
+    "name": "Open-source incremental encoding",
+    "price": "18.41",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1051/300/300",
+    "product_link": "https://www.french-orozco.com/",
+    "website_link": "http://www.fields.biz/",
+    "description": "Rise its wall effort. Dog whatever everybody paper son truth friend. Indicate cup response party early would still. Manage subject already fight ten ok issue. Really industry good current. Half start prepare while.",
+    "rating": 3.5,
+    "category": "cream",
+    "product_type": "mascara",
+    "tag_list": [
+      "Cruelty-Free",
+      "EWG Verified",
+      "Hypoallergenic"
+    ],
+    "created_at": "2022-10-22T01:21:50",
+    "updated_at": "2024-10-24T07:31:44",
+    "product_api_url": "https://example.com/api/v1/products/1051.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1051/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#cd08ad",
+        "colour_name": "DarkOliveGreen"
+      }
+    ]
+  },
+  {
+    "id": 1052,
+    "brand": "Maybelline",
+    "name": "Decentralized grid-enabled collaboration",
+    "price": "38.34",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1052/300/300",
+    "product_link": "https://www.thomas-shaw.org/",
+    "website_link": "https://saunders.net/",
+    "description": "State artist another beat. He bank full process wish happy sometimes more. Always four different accept mention.",
+    "rating": 3.5,
+    "category": "lip_gloss",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "Organic",
+      "Hypoallergenic",
+      "No Talc"
+    ],
+    "created_at": "2023-06-29T12:35:17",
+    "updated_at": "2025-04-19T23:03:57",
+    "product_api_url": "https://example.com/api/v1/products/1052.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1052/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#d9dec6",
+        "colour_name": "Sienna"
+      },
+      {
+        "hex_value": "#4220ba",
+        "colour_name": "LightCoral"
+      },
+      {
+        "hex_value": "#0ce971",
+        "colour_name": "Purple"
+      }
+    ]
+  },
+  {
+    "id": 1053,
+    "brand": "L'Or\u00e9al",
+    "name": "Vision-oriented multi-tasking orchestration",
+    "price": "46.45",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1053/300/300",
+    "product_link": "https://www.evans.com/",
+    "website_link": "http://diaz-wilson.com/",
+    "description": "He truth air bad against. Six phone avoid night gun dark suddenly. Nice ahead play good quickly character. Smile court training partner. Eight operation give image create some let. Red buy possible something crime senior.",
+    "rating": 4.2,
+    "category": "powder",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "No Talc",
+      "Cruelty-Free",
+      "Organic",
+      "Hypoallergenic"
+    ],
+    "created_at": "2023-03-05T01:44:29",
+    "updated_at": "2025-06-06T19:25:51",
+    "product_api_url": "https://example.com/api/v1/products/1053.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1053/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#bb0752",
+        "colour_name": "LemonChiffon"
+      }
+    ]
+  },
+  {
+    "id": 1054,
+    "brand": "Maybelline",
+    "name": "Digitized cohesive moratorium",
+    "price": "10.24",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1054/300/300",
+    "product_link": "http://www.barnes.com/",
+    "website_link": "http://www.johnson.com/",
+    "description": "Difficult police reveal several instead difference. Out buy its throughout pressure. Land ahead home painting politics. Blue teach talk professor. May ready and subject. Energy rule return now foot job. Food concern represent western quality until culture.",
+    "rating": 4.6,
+    "category": "liquid",
+    "product_type": "foundation",
+    "tag_list": [
+      "Vegan",
+      "Hypoallergenic"
+    ],
+    "created_at": "2024-04-03T05:21:58",
+    "updated_at": "2025-05-18T10:08:17",
+    "product_api_url": "https://example.com/api/v1/products/1054.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1054/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#482245",
+        "colour_name": "MediumVioletRed"
+      },
+      {
+        "hex_value": "#4ef633",
+        "colour_name": "LightGreen"
+      },
+      {
+        "hex_value": "#b51221",
+        "colour_name": "NavajoWhite"
+      }
+    ]
+  },
+  {
+    "id": 1055,
+    "brand": "e.l.f",
+    "name": "Business-focused bifurcated time-frame",
+    "price": "39.54",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1055/300/300",
+    "product_link": "https://norris.com/",
+    "website_link": "https://brennan.com/",
+    "description": "Start citizen director little amount hotel however. And very thought yourself positive event product beautiful. Dinner some if on indicate last miss worker. Way politics say training rather drive. Treatment born piece television piece down.",
+    "rating": 4.6,
+    "category": "liquid",
+    "product_type": "foundation",
+    "tag_list": [
+      "Cruelty-Free",
+      "Hypoallergenic",
+      "Vegan"
+    ],
+    "created_at": "2022-12-21T12:00:44",
+    "updated_at": "2024-07-09T16:21:56",
+    "product_api_url": "https://example.com/api/v1/products/1055.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1055/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#ff0107",
+        "colour_name": "Brown"
+      },
+      {
+        "hex_value": "#969974",
+        "colour_name": "MediumPurple"
+      },
+      {
+        "hex_value": "#6d43dc",
+        "colour_name": "LightPink"
+      }
+    ]
+  },
+  {
+    "id": 1056,
+    "brand": "Maybelline",
+    "name": "Realigned local help-desk",
+    "price": "29.01",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1056/300/300",
+    "product_link": "https://kim-rodriguez.info/",
+    "website_link": "http://www.clark.net/",
+    "description": "Another nearly must sport gun. Husband lead rich fund truth. Piece indicate better something structure. Rest skill bit country. Not case community year red weight page.",
+    "rating": 3.5,
+    "category": "lip_gloss",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "Hypoallergenic",
+      "EWG Verified",
+      "No Talc"
+    ],
+    "created_at": "2023-01-06T20:31:05",
+    "updated_at": "2024-07-24T06:55:25",
+    "product_api_url": "https://example.com/api/v1/products/1056.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1056/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#315564",
+        "colour_name": "DarkTurquoise"
+      },
+      {
+        "hex_value": "#85837a",
+        "colour_name": "OliveDrab"
+      }
+    ]
+  },
+  {
+    "id": 1057,
+    "brand": "Covergirl",
+    "name": "Right-sized neutral interface",
+    "price": "23.84",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1057/300/300",
+    "product_link": "http://stanley.com/",
+    "website_link": "https://www.harvey.com/",
+    "description": "Bank boy specific start sign government. Usually over sure ago those world group. Base special out wear determine.",
+    "rating": 3.5,
+    "category": "powder",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "Hypoallergenic",
+      "No Talc"
+    ],
+    "created_at": "2023-12-15T03:06:26",
+    "updated_at": "2024-07-25T16:36:27",
+    "product_api_url": "https://example.com/api/v1/products/1057.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1057/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#6a8444",
+        "colour_name": "LightGoldenRodYellow"
+      }
+    ]
+  },
+  {
+    "id": 1058,
+    "brand": "Revlon",
+    "name": "Sharable attitude-oriented process improvement",
+    "price": "7.98",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1058/300/300",
+    "product_link": "https://haynes-holloway.com/",
+    "website_link": "https://gallegos.com/",
+    "description": "Get art indeed move go certainly until. Performance window series strategy himself pattern. Voice all rest push wind table. Focus fly federal clear. Establish fight authority water personal politics.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "mascara",
+    "tag_list": [
+      "Vegan",
+      "Cruelty-Free"
+    ],
+    "created_at": "2023-10-21T19:17:43",
+    "updated_at": "2024-12-06T15:35:37",
+    "product_api_url": "https://example.com/api/v1/products/1058.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1058/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#3eb9a7",
+        "colour_name": "DarkViolet"
+      },
+      {
+        "hex_value": "#bf7b3b",
+        "colour_name": "LightGreen"
+      },
+      {
+        "hex_value": "#dd991c",
+        "colour_name": "DarkRed"
+      }
+    ]
+  },
+  {
+    "id": 1059,
+    "brand": "L'Or\u00e9al",
+    "name": "Polarized homogeneous policy",
+    "price": "11.47",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1059/300/300",
+    "product_link": "https://brown-chase.com/",
+    "website_link": "http://www.taylor-jones.biz/",
+    "description": "Message recognize water best. Opportunity me rest majority bill scientist. Power magazine stuff method yet fear. Site return various indeed administration wonder.",
+    "rating": 4.6,
+    "category": "cream",
+    "product_type": "lipstick",
+    "tag_list": [
+      "EWG Verified",
+      "Cruelty-Free"
+    ],
+    "created_at": "2022-12-17T09:17:01",
+    "updated_at": "2024-07-06T09:04:04",
+    "product_api_url": "https://example.com/api/v1/products/1059.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1059/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#364afc",
+        "colour_name": "SaddleBrown"
+      },
+      {
+        "hex_value": "#e8d441",
+        "colour_name": "Indigo"
+      }
+    ]
+  },
+  {
+    "id": 1060,
+    "brand": "Revlon",
+    "name": "Networked directional framework",
+    "price": "27.52",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1060/300/300",
+    "product_link": "http://www.gutierrez.biz/",
+    "website_link": "http://www.pitts-wood.com/",
+    "description": "Order visit former paper. Instead lawyer left. Them fight let television member miss analysis. Land past someone between. High allow help oil.",
+    "rating": 3.5,
+    "category": "powder",
+    "product_type": "mascara",
+    "tag_list": [
+      "Vegan",
+      "EWG Verified",
+      "Organic"
+    ],
+    "created_at": "2022-09-23T08:13:14",
+    "updated_at": "2025-03-23T06:13:57",
+    "product_api_url": "https://example.com/api/v1/products/1060.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1060/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#b9cd97",
+        "colour_name": "YellowGreen"
+      },
+      {
+        "hex_value": "#597577",
+        "colour_name": "PowderBlue"
+      }
+    ]
+  },
+  {
+    "id": 1061,
+    "brand": "Maybelline",
+    "name": "Open-architected transitional help-desk",
+    "price": "48.72",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1061/300/300",
+    "product_link": "https://www.rodriguez-roy.com/",
+    "website_link": "http://taylor-hanson.com/",
+    "description": "Fact create local. Improve environment vote size. I industry real floor.",
+    "rating": 3.5,
+    "category": "powder",
+    "product_type": "mascara",
+    "tag_list": [
+      "Cruelty-Free",
+      "Hypoallergenic",
+      "No Talc",
+      "Organic"
+    ],
+    "created_at": "2022-07-28T11:11:52",
+    "updated_at": "2024-11-29T19:22:36",
+    "product_api_url": "https://example.com/api/v1/products/1061.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1061/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#0fa907",
+        "colour_name": "LightPink"
+      },
+      {
+        "hex_value": "#78a74c",
+        "colour_name": "DarkSlateBlue"
+      }
+    ]
+  },
+  {
+    "id": 1062,
+    "brand": "Maybelline",
+    "name": "Centralized stable infrastructure",
+    "price": "43.26",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1062/300/300",
+    "product_link": "https://www.ingram.biz/",
+    "website_link": "http://www.taylor.com/",
+    "description": "Itself physical ahead and analysis. Step prepare force change box this behind receive. Future two game fire wide what.",
+    "rating": 4.2,
+    "category": "liquid",
+    "product_type": "mascara",
+    "tag_list": [
+      "EWG Verified",
+      "Hypoallergenic",
+      "Vegan",
+      "Organic"
+    ],
+    "created_at": "2024-03-04T21:53:03",
+    "updated_at": "2024-12-31T08:37:36",
+    "product_api_url": "https://example.com/api/v1/products/1062.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1062/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#26003c",
+        "colour_name": "Navy"
+      }
+    ]
+  },
+  {
+    "id": 1063,
+    "brand": "Covergirl",
+    "name": "Expanded content-based software",
+    "price": "20.26",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1063/300/300",
+    "product_link": "http://figueroa.com/",
+    "website_link": "http://fisher.com/",
+    "description": "Teacher approach fly. Around bed building. Story goal cost artist future. Key why shoulder too tree somebody tend. Sing maintain speech gas along event car.",
+    "rating": 3.6,
+    "category": "powder",
+    "product_type": "lipstick",
+    "tag_list": [
+      "Organic",
+      "EWG Verified"
+    ],
+    "created_at": "2024-04-24T11:31:29",
+    "updated_at": "2025-01-07T15:30:12",
+    "product_api_url": "https://example.com/api/v1/products/1063.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1063/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#bb8363",
+        "colour_name": "Pink"
+      }
+    ]
+  },
+  {
+    "id": 1064,
+    "brand": "NYX",
+    "name": "Realigned 5thgeneration info-mediaries",
+    "price": "32.73",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1064/300/300",
+    "product_link": "http://www.salinas.net/",
+    "website_link": "https://www.johnson.info/",
+    "description": "Author clear million threat better success as. Pattern since around anyone yes such. Worker writer red thought fear month enter.",
+    "rating": 3.5,
+    "category": "powder",
+    "product_type": "blush",
+    "tag_list": [
+      "Cruelty-Free",
+      "EWG Verified",
+      "Organic"
+    ],
+    "created_at": "2024-02-23T14:44:22",
+    "updated_at": "2024-11-03T18:32:46",
+    "product_api_url": "https://example.com/api/v1/products/1064.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1064/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#b7ef6e",
+        "colour_name": "DarkGreen"
+      },
+      {
+        "hex_value": "#72b39e",
+        "colour_name": "Gold"
+      }
+    ]
+  },
+  {
+    "id": 1065,
+    "brand": "Covergirl",
+    "name": "Reactive fresh-thinking help-desk",
+    "price": "16.34",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1065/300/300",
+    "product_link": "https://www.thornton.com/",
+    "website_link": "https://marshall.info/",
+    "description": "Small and east wonder. Sit station television onto attack. Call reflect wonder yeah government about. Television behind maybe wish too. My within each.",
+    "rating": 1.5,
+    "category": "cream",
+    "product_type": "lipstick",
+    "tag_list": [
+      "Hypoallergenic",
+      "Cruelty-Free",
+      "EWG Verified",
+      "No Talc"
+    ],
+    "created_at": "2023-01-25T04:06:04",
+    "updated_at": "2025-06-06T19:58:44",
+    "product_api_url": "https://example.com/api/v1/products/1065.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1065/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#8fe6f2",
+        "colour_name": "HoneyDew"
+      }
+    ]
+  },
+  {
+    "id": 1066,
+    "brand": "Covergirl",
+    "name": "Vision-oriented tangible portal",
+    "price": "22.52",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1066/300/300",
+    "product_link": "https://hoffman.com/",
+    "website_link": "https://www.andrews.com/",
+    "description": "Try also form produce seat edge list. Group understand office purpose just vote. Training tell article society. Land age cut for from still. Price can class assume.",
+    "rating": 3.5,
+    "category": "lip_gloss",
+    "product_type": "foundation",
+    "tag_list": [
+      "No Talc",
+      "EWG Verified",
+      "Hypoallergenic"
+    ],
+    "created_at": "2022-09-15T04:36:42",
+    "updated_at": "2025-01-30T11:53:41",
+    "product_api_url": "https://example.com/api/v1/products/1066.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1066/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#b7d629",
+        "colour_name": "DarkSeaGreen"
+      },
+      {
+        "hex_value": "#5c90bf",
+        "colour_name": "Brown"
+      },
+      {
+        "hex_value": "#47c8a6",
+        "colour_name": "Bisque"
+      }
+    ]
+  },
+  {
+    "id": 1067,
+    "brand": "NYX",
+    "name": "Sharable high-level methodology",
+    "price": "19.23",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1067/300/300",
+    "product_link": "https://hendrix.com/",
+    "website_link": "https://colon-jensen.com/",
+    "description": "Explain would treatment newspaper because success at. Serious billion the. Power participant yeah certain board. However doctor grow who teach opportunity address.",
+    "rating": 4.2,
+    "category": "cream",
+    "product_type": "mascara",
+    "tag_list": [
+      "Organic",
+      "Hypoallergenic",
+      "EWG Verified"
+    ],
+    "created_at": "2022-12-25T22:26:03",
+    "updated_at": "2024-08-18T22:21:10",
+    "product_api_url": "https://example.com/api/v1/products/1067.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1067/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#15066a",
+        "colour_name": "RoyalBlue"
+      },
+      {
+        "hex_value": "#bac63d",
+        "colour_name": "DarkRed"
+      }
+    ]
+  },
+  {
+    "id": 1068,
+    "brand": "Revlon",
+    "name": "Front-line dedicated access",
+    "price": "9.79",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1068/300/300",
+    "product_link": "https://garcia.com/",
+    "website_link": "http://www.martinez.com/",
+    "description": "Line member wide threat kitchen face office raise. Social account others chance team into college would. One certain enjoy may. Kitchen approach car happy buy brother. Student when trouble rather drive. Pressure health decade likely explain security condition.",
+    "rating": 3.6,
+    "category": "liquid",
+    "product_type": "blush",
+    "tag_list": [
+      "Organic",
+      "Hypoallergenic",
+      "No Talc"
+    ],
+    "created_at": "2022-10-24T23:43:07",
+    "updated_at": "2024-08-29T09:06:16",
+    "product_api_url": "https://example.com/api/v1/products/1068.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1068/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#2d7b91",
+        "colour_name": "Pink"
+      },
+      {
+        "hex_value": "#172291",
+        "colour_name": "Red"
+      },
+      {
+        "hex_value": "#036f93",
+        "colour_name": "BurlyWood"
+      }
+    ]
+  },
+  {
+    "id": 1069,
+    "brand": "Revlon",
+    "name": "Implemented even-keeled collaboration",
+    "price": "26.94",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1069/300/300",
+    "product_link": "http://castro.org/",
+    "website_link": "https://smith.com/",
+    "description": "Student conference fall instead bag great woman. Short whatever score gun understand lot base. Loss skin degree decade charge quickly. Pull money student anyone hear growth single almost. Yard imagine ago full.",
+    "rating": 3.5,
+    "category": "cream",
+    "product_type": "foundation",
+    "tag_list": [
+      "Vegan",
+      "EWG Verified",
+      "Hypoallergenic"
+    ],
+    "created_at": "2023-02-25T07:59:33",
+    "updated_at": "2024-09-06T18:08:33",
+    "product_api_url": "https://example.com/api/v1/products/1069.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1069/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#05df8f",
+        "colour_name": "Purple"
+      },
+      {
+        "hex_value": "#3067c8",
+        "colour_name": "Brown"
+      }
+    ]
+  },
+  {
+    "id": 1070,
+    "brand": "NYX",
+    "name": "Automated fresh-thinking collaboration",
+    "price": "14.93",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1070/300/300",
+    "product_link": "https://thomas.com/",
+    "website_link": "https://smith.com/",
+    "description": "Leg medical there accept. Send west none door investment too area. Federal whether president speech his system. Receive key occur course goal goal choose.",
+    "rating": 3.4,
+    "category": "powder",
+    "product_type": "blush",
+    "tag_list": [
+      "Organic",
+      "Vegan"
+    ],
+    "created_at": "2023-07-17T18:44:45",
+    "updated_at": "2024-08-14T18:04:28",
+    "product_api_url": "https://example.com/api/v1/products/1070.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1070/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#aa0a97",
+        "colour_name": "Navy"
+      }
+    ]
+  },
+  {
+    "id": 1071,
+    "brand": "Covergirl",
+    "name": "Reverse-engineered homogeneous alliance",
+    "price": "7.49",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1071/300/300",
+    "product_link": "https://peters-yates.com/",
+    "website_link": "https://www.martinez-johnson.com/",
+    "description": "Blood win business represent. Father ever especially opportunity stuff. Child will it president together several adult call. Model best act risk movie. About history take new.",
+    "rating": 3.5,
+    "category": "powder",
+    "product_type": "blush",
+    "tag_list": [
+      "Vegan",
+      "Cruelty-Free",
+      "Hypoallergenic",
+      "EWG Verified"
+    ],
+    "created_at": "2022-10-25T03:39:59",
+    "updated_at": "2025-04-12T03:41:56",
+    "product_api_url": "https://example.com/api/v1/products/1071.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1071/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#479c12",
+        "colour_name": "MintCream"
+      }
+    ]
+  },
+  {
+    "id": 1072,
+    "brand": "Maybelline",
+    "name": "Pre-emptive impactful Graphic Interface",
+    "price": "18.94",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1072/300/300",
+    "product_link": "http://www.brown.net/",
+    "website_link": "http://russo.com/",
+    "description": "North issue situation today begin third. Thousand meet tax surface forget. Campaign big while letter fact. Actually his your hope. Prepare population film that know education capital. Material particularly of.",
+    "rating": 3.5,
+    "category": "powder",
+    "product_type": "blush",
+    "tag_list": [
+      "Organic",
+      "Hypoallergenic",
+      "Vegan",
+      "No Talc"
+    ],
+    "created_at": "2022-07-10T02:42:22",
+    "updated_at": "2025-01-18T18:03:20",
+    "product_api_url": "https://example.com/api/v1/products/1072.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1072/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#2309e1",
+        "colour_name": "LightSlateGray"
+      }
+    ]
+  },
+  {
+    "id": 1073,
+    "brand": "Maybelline",
+    "name": "Multi-layered holistic instruction set",
+    "price": "18.47",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1073/300/300",
+    "product_link": "https://www.hill.biz/",
+    "website_link": "https://hardy-ingram.net/",
+    "description": "Movie somebody firm on pass plant. Most story no message general national head. Research discover against quite wide attorney service. Money writer team pretty citizen.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "blush",
+    "tag_list": [
+      "No Talc",
+      "Hypoallergenic"
+    ],
+    "created_at": "2024-06-07T21:51:41",
+    "updated_at": "2024-10-01T01:55:55",
+    "product_api_url": "https://example.com/api/v1/products/1073.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1073/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#ee8ee6",
+        "colour_name": "DarkSlateGray"
+      }
+    ]
+  },
+  {
+    "id": 1074,
+    "brand": "L'Or\u00e9al",
+    "name": "Extended 6thgeneration protocol",
+    "price": "41.50",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1074/300/300",
+    "product_link": "https://www.davis.biz/",
+    "website_link": "https://howe-ortiz.biz/",
+    "description": "Few continue Congress collection. Suddenly yet specific. Former community visit but suddenly decision senior police. Age writer it material already wall person. Couple hospital see person home set.",
+    "rating": 3.5,
+    "category": "powder",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "No Talc",
+      "Vegan",
+      "Organic"
+    ],
+    "created_at": "2022-11-03T02:41:40",
+    "updated_at": "2024-12-24T17:04:33",
+    "product_api_url": "https://example.com/api/v1/products/1074.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1074/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#17e732",
+        "colour_name": "AntiqueWhite"
+      }
+    ]
+  },
+  {
+    "id": 1075,
+    "brand": "C'est Moi",
+    "name": "Extended high-level hardware",
+    "price": "49.63",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1075/300/300",
+    "product_link": "http://wilson-cochran.com/",
+    "website_link": "https://richardson.org/",
+    "description": "Manager fact tax much cup fall responsibility. Development peace production choose company few stuff rule. Head little fund can on trouble research. Why travel positive language also.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "blush",
+    "tag_list": [
+      "Cruelty-Free",
+      "No Talc"
+    ],
+    "created_at": "2023-07-21T09:42:22",
+    "updated_at": "2024-11-30T21:37:14",
+    "product_api_url": "https://example.com/api/v1/products/1075.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1075/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#91aa66",
+        "colour_name": "PeachPuff"
+      }
+    ]
+  },
+  {
+    "id": 1076,
+    "brand": "Covergirl",
+    "name": "Re-engineered intangible conglomeration",
+    "price": "48.87",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1076/300/300",
+    "product_link": "https://swanson.com/",
+    "website_link": "https://parks-garcia.com/",
+    "description": "Break hard research describe thought. Join shoulder loss able worry form size. Wish body for during threat.",
+    "rating": 3.5,
+    "category": "powder",
+    "product_type": "foundation",
+    "tag_list": [
+      "Cruelty-Free",
+      "EWG Verified",
+      "Hypoallergenic"
+    ],
+    "created_at": "2022-10-02T02:32:17",
+    "updated_at": "2024-08-05T06:02:55",
+    "product_api_url": "https://example.com/api/v1/products/1076.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1076/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#d47140",
+        "colour_name": "Purple"
+      },
+      {
+        "hex_value": "#e062b4",
+        "colour_name": "MediumSlateBlue"
+      },
+      {
+        "hex_value": "#63c05b",
+        "colour_name": "LightYellow"
+      }
+    ]
+  },
+  {
+    "id": 1077,
+    "brand": "L'Or\u00e9al",
+    "name": "Self-enabling bi-directional parallelism",
+    "price": "48.17",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1077/300/300",
+    "product_link": "https://watson.info/",
+    "website_link": "http://mckee.net/",
+    "description": "Agent opportunity though television stop way visit. Anything paper ask time. Trial learn entire.",
+    "rating": 3.5,
+    "category": "powder",
+    "product_type": "lipstick",
+    "tag_list": [
+      "Hypoallergenic",
+      "EWG Verified"
+    ],
+    "created_at": "2023-03-14T23:06:10",
+    "updated_at": "2025-05-12T12:07:24",
+    "product_api_url": "https://example.com/api/v1/products/1077.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1077/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#715113",
+        "colour_name": "WhiteSmoke"
+      },
+      {
+        "hex_value": "#d5da1e",
+        "colour_name": "Brown"
+      }
+    ]
+  },
+  {
+    "id": 1078,
+    "brand": "Maybelline",
+    "name": "Ameliorated web-enabled functionalities",
+    "price": "48.82",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1078/300/300",
+    "product_link": "http://www.kelley.info/",
+    "website_link": "http://www.powell.com/",
+    "description": "Police accept detail under serious this bill pay. Go movie cost. Return crime two than matter poor act. Push identify floor key. Interest like within budget.",
+    "rating": 3.8,
+    "category": "cream",
+    "product_type": "blush",
+    "tag_list": [
+      "No Talc",
+      "Hypoallergenic"
+    ],
+    "created_at": "2023-10-17T21:05:59",
+    "updated_at": "2024-11-04T08:05:07",
+    "product_api_url": "https://example.com/api/v1/products/1078.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1078/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#8f8faf",
+        "colour_name": "Lime"
+      },
+      {
+        "hex_value": "#0f86ec",
+        "colour_name": "DarkGoldenRod"
+      },
+      {
+        "hex_value": "#feeae8",
+        "colour_name": "AntiqueWhite"
+      }
+    ]
+  },
+  {
+    "id": 1079,
+    "brand": "e.l.f",
+    "name": "Optimized impactful access",
+    "price": "49.80",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1079/300/300",
+    "product_link": "https://adams.com/",
+    "website_link": "https://www.williams.biz/",
+    "description": "Western common almost off. Rest learn relate do price ahead southern. Believe interest television girl. Man most cover technology pretty tough responsibility. Media style another father.",
+    "rating": 3.5,
+    "category": "lip_gloss",
+    "product_type": "mascara",
+    "tag_list": [
+      "Cruelty-Free",
+      "EWG Verified"
+    ],
+    "created_at": "2022-10-12T18:42:36",
+    "updated_at": "2025-02-10T17:47:24",
+    "product_api_url": "https://example.com/api/v1/products/1079.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1079/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#0ff0be",
+        "colour_name": "Silver"
+      }
+    ]
+  },
+  {
+    "id": 1080,
+    "brand": "NYX",
+    "name": "Multi-layered eco-centric architecture",
+    "price": "29.42",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1080/300/300",
+    "product_link": "http://www.andrews.biz/",
+    "website_link": "https://leon.com/",
+    "description": "Your sell news loss. Scientist bring candidate religious quickly. Let force level account film traditional fear town. None space remain now let. Factor still Mr government. Week time model.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "foundation",
+    "tag_list": [
+      "Organic",
+      "Hypoallergenic"
+    ],
+    "created_at": "2023-08-04T11:46:23",
+    "updated_at": "2024-07-09T01:33:37",
+    "product_api_url": "https://example.com/api/v1/products/1080.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1080/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#80bbf5",
+        "colour_name": "DarkSeaGreen"
+      }
+    ]
+  },
+  {
+    "id": 1081,
+    "brand": "NYX",
+    "name": "De-engineered scalable implementation",
+    "price": "29.70",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1081/300/300",
+    "product_link": "http://www.williams.biz/",
+    "website_link": "http://www.lee.com/",
+    "description": "Help contain miss risk. Wear fish have term simply unit. Challenge whole wear. Fly training star section fight any sister. Water he college.",
+    "rating": 3.6,
+    "category": "liquid",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "EWG Verified",
+      "Organic",
+      "No Talc"
+    ],
+    "created_at": "2023-08-18T01:04:15",
+    "updated_at": "2025-04-26T05:54:24",
+    "product_api_url": "https://example.com/api/v1/products/1081.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1081/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#6856d6",
+        "colour_name": "ForestGreen"
+      }
+    ]
+  },
+  {
+    "id": 1082,
+    "brand": "Maybelline",
+    "name": "Profound 24/7 info-mediaries",
+    "price": "44.19",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1082/300/300",
+    "product_link": "https://roberts-hamilton.com/",
+    "website_link": "https://www.huynh.org/",
+    "description": "Would as edge term their fast whether. Business live lawyer fear gun almost surface. Pick new here. Skill price affect.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "blush",
+    "tag_list": [
+      "Hypoallergenic",
+      "Organic",
+      "Vegan"
+    ],
+    "created_at": "2023-04-19T02:04:19",
+    "updated_at": "2024-11-06T13:15:50",
+    "product_api_url": "https://example.com/api/v1/products/1082.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1082/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#8e41f8",
+        "colour_name": "Khaki"
+      },
+      {
+        "hex_value": "#11d8b5",
+        "colour_name": "MidnightBlue"
+      },
+      {
+        "hex_value": "#464473",
+        "colour_name": "Moccasin"
+      }
+    ]
+  },
+  {
+    "id": 1083,
+    "brand": "L'Or\u00e9al",
+    "name": "Vision-oriented zero administration orchestration",
+    "price": "43.99",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1083/300/300",
+    "product_link": "https://nichols-ramirez.com/",
+    "website_link": "https://brown.org/",
+    "description": "Skin fire hospital war article old attorney. I company describe life born school total. Full man theory perform pull reason player.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "blush",
+    "tag_list": [
+      "Organic",
+      "EWG Verified"
+    ],
+    "created_at": "2023-01-23T23:00:46",
+    "updated_at": "2025-03-31T00:51:21",
+    "product_api_url": "https://example.com/api/v1/products/1083.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1083/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#b58b3b",
+        "colour_name": "Indigo"
+      },
+      {
+        "hex_value": "#76e55a",
+        "colour_name": "Pink"
+      },
+      {
+        "hex_value": "#7a4ca0",
+        "colour_name": "Indigo"
+      }
+    ]
+  },
+  {
+    "id": 1084,
+    "brand": "NYX",
+    "name": "Triple-buffered 3rdgeneration portal",
+    "price": "26.18",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1084/300/300",
+    "product_link": "https://elliott.com/",
+    "website_link": "https://www.santos.net/",
+    "description": "Almost want only policy base process show. Three color out last head. Technology note if family continue.",
+    "rating": 4.4,
+    "category": "liquid",
+    "product_type": "foundation",
+    "tag_list": [
+      "No Talc",
+      "EWG Verified",
+      "Hypoallergenic"
+    ],
+    "created_at": "2023-07-27T08:19:36",
+    "updated_at": "2024-07-21T16:25:20",
+    "product_api_url": "https://example.com/api/v1/products/1084.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1084/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#7b8f41",
+        "colour_name": "DarkSlateGray"
+      },
+      {
+        "hex_value": "#1dd360",
+        "colour_name": "Maroon"
+      }
+    ]
+  },
+  {
+    "id": 1085,
+    "brand": "Revlon",
+    "name": "Automated bottom-line software",
+    "price": "6.09",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1085/300/300",
+    "product_link": "http://www.curtis-mills.info/",
+    "website_link": "http://bryant.com/",
+    "description": "Daughter from night up tax push. Us everyone reveal television. Image both condition green ask blood. Growth sure miss news ability. Threat scene answer detail four son six.",
+    "rating": 4.9,
+    "category": "powder",
+    "product_type": "mascara",
+    "tag_list": [
+      "Organic",
+      "EWG Verified",
+      "Hypoallergenic",
+      "No Talc"
+    ],
+    "created_at": "2023-09-14T07:20:45",
+    "updated_at": "2025-04-24T19:16:39",
+    "product_api_url": "https://example.com/api/v1/products/1085.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1085/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#1db889",
+        "colour_name": "DarkOrchid"
+      },
+      {
+        "hex_value": "#4e3575",
+        "colour_name": "Indigo"
+      },
+      {
+        "hex_value": "#2b847e",
+        "colour_name": "DarkSlateGray"
+      }
+    ]
+  },
+  {
+    "id": 1086,
+    "brand": "Maybelline",
+    "name": "Seamless logistical forecast",
+    "price": "18.54",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1086/300/300",
+    "product_link": "http://www.fisher-ortiz.info/",
+    "website_link": "http://www.cole.biz/",
+    "description": "Natural above affect east commercial evidence almost. Exist quickly lawyer decide. Pay including keep inside hit while ground. Lose people fill indicate network you traditional third.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "Cruelty-Free",
+      "Hypoallergenic",
+      "Organic",
+      "No Talc"
+    ],
+    "created_at": "2024-01-12T19:04:00",
+    "updated_at": "2024-08-18T23:44:50",
+    "product_api_url": "https://example.com/api/v1/products/1086.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1086/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#940df1",
+        "colour_name": "FireBrick"
+      },
+      {
+        "hex_value": "#d129b8",
+        "colour_name": "DarkBlue"
+      }
+    ]
+  },
+  {
+    "id": 1087,
+    "brand": "e.l.f",
+    "name": "Programmable analyzing budgetary management",
+    "price": "32.24",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1087/300/300",
+    "product_link": "https://www.vance.com/",
+    "website_link": "https://www.williams-beard.com/",
+    "description": "Degree nation wish international generation bank. Himself within crime level at. Sing near tend risk among level. Director mother pay.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "mascara",
+    "tag_list": [
+      "Cruelty-Free",
+      "EWG Verified",
+      "No Talc"
+    ],
+    "created_at": "2023-02-03T17:05:19",
+    "updated_at": "2024-11-10T04:38:11",
+    "product_api_url": "https://example.com/api/v1/products/1087.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1087/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#601b2e",
+        "colour_name": "LightBlue"
+      },
+      {
+        "hex_value": "#0ba4ba",
+        "colour_name": "MediumSeaGreen"
+      }
+    ]
+  },
+  {
+    "id": 1088,
+    "brand": "Covergirl",
+    "name": "Fully-configurable incremental ability",
+    "price": "11.17",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1088/300/300",
+    "product_link": "http://www.swanson-palmer.com/",
+    "website_link": "https://barron-lyons.net/",
+    "description": "Hospital little sense reduce. However wide something fear food second. Everybody seem senior wind step well four.",
+    "rating": 3.6,
+    "category": "powder",
+    "product_type": "blush",
+    "tag_list": [
+      "Cruelty-Free",
+      "EWG Verified"
+    ],
+    "created_at": "2024-02-16T22:09:07",
+    "updated_at": "2024-09-27T06:03:19",
+    "product_api_url": "https://example.com/api/v1/products/1088.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1088/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#e4095a",
+        "colour_name": "OliveDrab"
+      }
+    ]
+  },
+  {
+    "id": 1089,
+    "brand": "C'est Moi",
+    "name": "Operative well-modulated attitude",
+    "price": "24.99",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1089/300/300",
+    "product_link": "http://www.andrews.com/",
+    "website_link": "http://hammond.org/",
+    "description": "Course which sense direction big. Technology without possible. Phone can move actually cup interesting real effect. Trouble stop relationship language. Center service however people him. Item there good billion position.",
+    "rating": 4.5,
+    "category": "powder",
+    "product_type": "foundation",
+    "tag_list": [
+      "No Talc",
+      "Hypoallergenic"
+    ],
+    "created_at": "2022-08-01T08:11:36",
+    "updated_at": "2025-05-16T19:47:50",
+    "product_api_url": "https://example.com/api/v1/products/1089.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1089/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#33bd58",
+        "colour_name": "AliceBlue"
+      },
+      {
+        "hex_value": "#ed379f",
+        "colour_name": "Linen"
+      },
+      {
+        "hex_value": "#b8d211",
+        "colour_name": "MidnightBlue"
+      }
+    ]
+  },
+  {
+    "id": 1090,
+    "brand": "L'Or\u00e9al",
+    "name": "Reverse-engineered eco-centric productivity",
+    "price": "15.46",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1090/300/300",
+    "product_link": "https://rodriguez.org/",
+    "website_link": "http://www.lewis-cooper.org/",
+    "description": "Social probably worry either. Range today son. Carry race by writer how discover every style. Adult respond thousand nation draw nature. Stage finish return city worry. Set matter hundred area.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "blush",
+    "tag_list": [
+      "Organic",
+      "Vegan",
+      "Cruelty-Free",
+      "No Talc"
+    ],
+    "created_at": "2024-01-21T03:03:53",
+    "updated_at": "2024-11-22T15:40:30",
+    "product_api_url": "https://example.com/api/v1/products/1090.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1090/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#43543e",
+        "colour_name": "LawnGreen"
+      }
+    ]
+  },
+  {
+    "id": 1091,
+    "brand": "Revlon",
+    "name": "Stand-alone motivating contingency",
+    "price": "20.66",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1091/300/300",
+    "product_link": "https://wilson.info/",
+    "website_link": "https://johnson.com/",
+    "description": "About evidence note. Not from station. Long attack power risk trial case animal dream. Sure art talk happen task speak month.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "foundation",
+    "tag_list": [
+      "Organic",
+      "No Talc",
+      "EWG Verified",
+      "Vegan"
+    ],
+    "created_at": "2024-05-13T11:19:48",
+    "updated_at": "2025-03-27T07:21:19",
+    "product_api_url": "https://example.com/api/v1/products/1091.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1091/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#6237d7",
+        "colour_name": "DeepSkyBlue"
+      }
+    ]
+  },
+  {
+    "id": 1092,
+    "brand": "Maybelline",
+    "name": "Public-key next generation access",
+    "price": "25.85",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1092/300/300",
+    "product_link": "https://www.kelly.com/",
+    "website_link": "http://www.soto.com/",
+    "description": "Method term occur continue many clearly heart. Community property first whose. Learn appear side social box be. Real politics PM line institution. Recently cup buy popular set hour.",
+    "rating": 2.8,
+    "category": "cream",
+    "product_type": "foundation",
+    "tag_list": [
+      "Organic",
+      "Hypoallergenic"
+    ],
+    "created_at": "2023-12-16T11:28:52",
+    "updated_at": "2024-07-09T16:29:55",
+    "product_api_url": "https://example.com/api/v1/products/1092.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1092/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#a0769d",
+        "colour_name": "White"
+      },
+      {
+        "hex_value": "#90ea43",
+        "colour_name": "PowderBlue"
+      },
+      {
+        "hex_value": "#0e1505",
+        "colour_name": "Green"
+      }
+    ]
+  },
+  {
+    "id": 1093,
+    "brand": "Covergirl",
+    "name": "Virtual scalable toolset",
+    "price": "46.57",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1093/300/300",
+    "product_link": "https://patterson-lane.com/",
+    "website_link": "http://www.bruce.info/",
+    "description": "Degree sound explain region life report unit. Source forget society single forget whatever animal measure. Also ahead everything down above save toward.",
+    "rating": 3.5,
+    "category": "cream",
+    "product_type": "mascara",
+    "tag_list": [
+      "Cruelty-Free",
+      "No Talc",
+      "Hypoallergenic",
+      "Organic"
+    ],
+    "created_at": "2022-07-29T04:35:10",
+    "updated_at": "2024-10-04T04:53:53",
+    "product_api_url": "https://example.com/api/v1/products/1093.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1093/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#ed431a",
+        "colour_name": "NavajoWhite"
+      },
+      {
+        "hex_value": "#a1ac42",
+        "colour_name": "MediumOrchid"
+      }
+    ]
+  },
+  {
+    "id": 1094,
+    "brand": "Revlon",
+    "name": "Virtual upward-trending implementation",
+    "price": "49.81",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1094/300/300",
+    "product_link": "https://www.holder.com/",
+    "website_link": "https://www.mcpherson-thompson.com/",
+    "description": "Happy although military information thus require blood doctor. Child free agency skin nice little. Fish key factor under letter expect develop. Collection field back professional. Chair degree society wrong nice wife finish tax. Claim study feeling central maintain she.",
+    "rating": 3.5,
+    "category": "cream",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "EWG Verified",
+      "Vegan",
+      "Hypoallergenic"
+    ],
+    "created_at": "2022-09-17T04:03:25",
+    "updated_at": "2024-08-10T00:34:47",
+    "product_api_url": "https://example.com/api/v1/products/1094.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1094/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#3cb3f5",
+        "colour_name": "PaleTurquoise"
+      },
+      {
+        "hex_value": "#720454",
+        "colour_name": "GreenYellow"
+      }
+    ]
+  },
+  {
+    "id": 1095,
+    "brand": "e.l.f",
+    "name": "De-engineered contextually-based superstructure",
+    "price": "33.13",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1095/300/300",
+    "product_link": "http://howard.com/",
+    "website_link": "https://chapman.com/",
+    "description": "Break imagine make yourself rise include body. Deep certainly finish each truth. Whole yard try lay. Threat blue exist short letter whether base cause.",
+    "rating": 2.1,
+    "category": "liquid",
+    "product_type": "mascara",
+    "tag_list": [
+      "Hypoallergenic",
+      "Vegan",
+      "Organic",
+      "Cruelty-Free"
+    ],
+    "created_at": "2024-03-24T08:19:04",
+    "updated_at": "2025-02-01T02:21:30",
+    "product_api_url": "https://example.com/api/v1/products/1095.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1095/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#bb49e6",
+        "colour_name": "DarkOrange"
+      }
+    ]
+  },
+  {
+    "id": 1096,
+    "brand": "Revlon",
+    "name": "Customer-focused logistical strategy",
+    "price": "21.00",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1096/300/300",
+    "product_link": "http://williamson-taylor.com/",
+    "website_link": "https://richardson.org/",
+    "description": "Her factor reflect marriage explain government success. Them name which television meet responsibility hospital. Many degree often.",
+    "rating": 3.5,
+    "category": "cream",
+    "product_type": "blush",
+    "tag_list": [
+      "Cruelty-Free",
+      "EWG Verified",
+      "No Talc",
+      "Vegan"
+    ],
+    "created_at": "2023-09-25T04:10:06",
+    "updated_at": "2025-01-12T22:28:59",
+    "product_api_url": "https://example.com/api/v1/products/1096.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1096/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#578607",
+        "colour_name": "Aquamarine"
+      },
+      {
+        "hex_value": "#b8eea9",
+        "colour_name": "Snow"
+      },
+      {
+        "hex_value": "#303f12",
+        "colour_name": "Olive"
+      }
+    ]
+  },
+  {
+    "id": 1097,
+    "brand": "L'Or\u00e9al",
+    "name": "Re-engineered full-range task-force",
+    "price": "36.96",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1097/300/300",
+    "product_link": "http://www.brown-lopez.org/",
+    "website_link": "http://cole.com/",
+    "description": "Two western have audience. Teacher art movement others. Size foot your own.",
+    "rating": 3.5,
+    "category": "liquid",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "Cruelty-Free",
+      "EWG Verified"
+    ],
+    "created_at": "2022-08-09T14:40:28",
+    "updated_at": "2025-03-21T06:29:07",
+    "product_api_url": "https://example.com/api/v1/products/1097.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1097/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#7dbddc",
+        "colour_name": "Bisque"
+      },
+      {
+        "hex_value": "#92ce2c",
+        "colour_name": "LightPink"
+      }
+    ]
+  },
+  {
+    "id": 1098,
+    "brand": "Revlon",
+    "name": "Advanced bandwidth-monitored conglomeration",
+    "price": "32.63",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1098/300/300",
+    "product_link": "https://www.lowe.info/",
+    "website_link": "https://www.ruiz.com/",
+    "description": "Yes final concern site. Like speak almost those age alone system fast. Major significant should.",
+    "rating": 3.5,
+    "category": "powder",
+    "product_type": "mascara",
+    "tag_list": [
+      "Cruelty-Free",
+      "Hypoallergenic",
+      "No Talc",
+      "Vegan"
+    ],
+    "created_at": "2023-12-22T17:56:12",
+    "updated_at": "2024-12-24T17:14:42",
+    "product_api_url": "https://example.com/api/v1/products/1098.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1098/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#ea44d7",
+        "colour_name": "DarkSalmon"
+      }
+    ]
+  },
+  {
+    "id": 1099,
+    "brand": "L'Or\u00e9al",
+    "name": "Front-line local task-force",
+    "price": "30.47",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1099/300/300",
+    "product_link": "http://nguyen-gonzalez.info/",
+    "website_link": "http://valenzuela.com/",
+    "description": "Author like there military. Former affect be debate can. Back doctor project pretty almost natural experience. Debate enjoy wonder four onto house. Assume for performance trip conference.",
+    "rating": null,
+    "category": "lip_gloss",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "No Talc",
+      "EWG Verified",
+      "Cruelty-Free"
+    ],
+    "created_at": "2024-03-07T20:28:03",
+    "updated_at": "2024-11-20T06:48:09",
+    "product_api_url": "https://example.com/api/v1/products/1099.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1099/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#67912a",
+        "colour_name": "LightGoldenRodYellow"
+      }
+    ]
+  },
+  {
+    "id": 1100,
+    "brand": "e.l.f",
+    "name": "Phased methodical customer loyalty",
+    "price": "44.13",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1100/300/300",
+    "product_link": "http://www.torres.com/",
+    "website_link": "https://rodriguez.com/",
+    "description": "It degree subject else truth week law. Experience factor need worry bar push thing. Phone air continue small.",
+    "rating": null,
+    "category": "liquid",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "Hypoallergenic",
+      "Organic",
+      "Vegan",
+      "Cruelty-Free"
+    ],
+    "created_at": "2024-01-24T17:29:30",
+    "updated_at": "2025-03-10T03:25:11",
+    "product_api_url": "https://example.com/api/v1/products/1100.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1100/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#5802ea",
+        "colour_name": "Orchid"
+      },
+      {
+        "hex_value": "#dcc8f7",
+        "colour_name": "Salmon"
+      },
+      {
+        "hex_value": "#81ae06",
+        "colour_name": "PaleVioletRed"
+      }
+    ]
+  },
+  {
+    "id": 1101,
+    "brand": "NYX",
+    "name": "Versatile intermediate matrix",
+    "price": "16.94",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1101/300/300",
+    "product_link": "https://bailey.info/",
+    "website_link": "http://www.olson-davis.net/",
+    "description": "Inside above suffer. Mention statement stay everything detail son. Easy those success new nearly look however. Response remain shoulder education budget.",
+    "rating": null,
+    "category": "lip_gloss",
+    "product_type": "blush",
+    "tag_list": [
+      "Organic",
+      "No Talc",
+      "Vegan"
+    ],
+    "created_at": "2023-11-01T11:38:51",
+    "updated_at": "2025-04-04T23:35:12",
+    "product_api_url": "https://example.com/api/v1/products/1101.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1101/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#f3c9b6",
+        "colour_name": "DarkSeaGreen"
+      },
+      {
+        "hex_value": "#0e2dad",
+        "colour_name": "DarkGoldenRod"
+      }
+    ]
+  },
+  {
+    "id": 1102,
+    "brand": "L'Or\u00e9al",
+    "name": "Phased didactic product",
+    "price": "15.83",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1102/300/300",
+    "product_link": "https://hopkins-gilbert.info/",
+    "website_link": "https://buchanan.com/",
+    "description": "Picture environment wind give. Have by feel family child threat. Condition lot arm east.",
+    "rating": 1.9,
+    "category": "lip_gloss",
+    "product_type": "lipstick",
+    "tag_list": [
+      "Vegan",
+      "No Talc",
+      "Cruelty-Free",
+      "Organic"
+    ],
+    "created_at": "2023-12-28T03:38:37",
+    "updated_at": "2024-07-19T22:19:24",
+    "product_api_url": "https://example.com/api/v1/products/1102.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1102/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#d2f7a1",
+        "colour_name": "MediumVioletRed"
+      }
+    ]
+  },
+  {
+    "id": 1103,
+    "brand": "NYX",
+    "name": "Organized dedicated hub",
+    "price": "19.25",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1103/300/300",
+    "product_link": "http://dunn.com/",
+    "website_link": "https://www.walker.com/",
+    "description": "World seat democratic. Magazine Democrat treatment its dog pressure size. Professor process least reflect a democratic.",
+    "rating": null,
+    "category": "liquid",
+    "product_type": "foundation",
+    "tag_list": [
+      "Vegan",
+      "EWG Verified",
+      "Cruelty-Free"
+    ],
+    "created_at": "2022-12-18T19:06:05",
+    "updated_at": "2025-06-07T04:15:04",
+    "product_api_url": "https://example.com/api/v1/products/1103.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1103/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#b4380b",
+        "colour_name": "Silver"
+      }
+    ]
+  },
+  {
+    "id": 1104,
+    "brand": "L'Or\u00e9al",
+    "name": "Synergistic fresh-thinking Graphic Interface",
+    "price": "16.16",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1104/300/300",
+    "product_link": "https://todd.com/",
+    "website_link": "https://macdonald.net/",
+    "description": "Indeed skill central or try matter garden. Authority do when course last financial former budget. Minute strong deep part foreign experience say. Property know product cover can hospital. Pretty behavior require tend situation sometimes.",
+    "rating": null,
+    "category": "cream",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "Vegan",
+      "Hypoallergenic",
+      "EWG Verified"
+    ],
+    "created_at": "2022-09-28T05:07:44",
+    "updated_at": "2025-02-12T00:17:33",
+    "product_api_url": "https://example.com/api/v1/products/1104.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1104/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#206aa0",
+        "colour_name": "LightGoldenRodYellow"
+      },
+      {
+        "hex_value": "#7724b3",
+        "colour_name": "Magenta"
+      }
+    ]
+  },
+  {
+    "id": 1105,
+    "brand": "C'est Moi",
+    "name": "Profound eco-centric monitoring",
+    "price": "47.44",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1105/300/300",
+    "product_link": "http://www.ramirez.com/",
+    "website_link": "http://www.sanchez-buckley.com/",
+    "description": "College eye specific chance lawyer west. Respond well me nation power majority wonder detail. Process figure sense radio risk officer than. Throughout young leader single. Paper question take attack turn truth. Anyone build help race forget.",
+    "rating": 2.6,
+    "category": "liquid",
+    "product_type": "lipstick",
+    "tag_list": [
+      "Hypoallergenic",
+      "Organic",
+      "EWG Verified",
+      "Cruelty-Free"
+    ],
+    "created_at": "2024-02-15T00:38:24",
+    "updated_at": "2025-06-11T19:11:00",
+    "product_api_url": "https://example.com/api/v1/products/1105.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1105/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#f46921",
+        "colour_name": "SaddleBrown"
+      },
+      {
+        "hex_value": "#e06e3f",
+        "colour_name": "CadetBlue"
+      }
+    ]
+  },
+  {
+    "id": 1106,
+    "brand": "Maybelline",
+    "name": "Cross-platform optimizing policy",
+    "price": "17.78",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1106/300/300",
+    "product_link": "http://roberts.com/",
+    "website_link": "http://www.wilson-price.org/",
+    "description": "Finish guess soldier send financial first themselves. Job beat maybe according treatment what. Focus thank perhaps animal.",
+    "rating": null,
+    "category": "cream",
+    "product_type": "foundation",
+    "tag_list": [
+      "Organic",
+      "No Talc"
+    ],
+    "created_at": "2024-05-15T00:14:01",
+    "updated_at": "2024-08-15T13:51:55",
+    "product_api_url": "https://example.com/api/v1/products/1106.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1106/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#50adbc",
+        "colour_name": "LightSalmon"
+      },
+      {
+        "hex_value": "#2dab05",
+        "colour_name": "Coral"
+      },
+      {
+        "hex_value": "#7c6b8d",
+        "colour_name": "Aqua"
+      }
+    ]
+  },
+  {
+    "id": 1107,
+    "brand": "Maybelline",
+    "name": "Optional bottom-line methodology",
+    "price": "13.30",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1107/300/300",
+    "product_link": "https://sutton.com/",
+    "website_link": "http://robinson.com/",
+    "description": "Nor other sound real nothing discuss. Whose still writer. Employee open woman story level indeed. Throw live present hundred event son clearly. Happy live trade support stuff your lawyer final. Public method man mind sound medical for.",
+    "rating": 3.7,
+    "category": "lip_gloss",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "Organic",
+      "EWG Verified",
+      "Hypoallergenic",
+      "Vegan"
+    ],
+    "created_at": "2023-04-05T08:20:50",
+    "updated_at": "2024-08-18T18:59:58",
+    "product_api_url": "https://example.com/api/v1/products/1107.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1107/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#926efe",
+        "colour_name": "NavajoWhite"
+      }
+    ]
+  },
+  {
+    "id": 1108,
+    "brand": "L'Or\u00e9al",
+    "name": "Synchronized hybrid info-mediaries",
+    "price": "37.99",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "https://picsum.photos/seed/1108/300/300",
+    "product_link": "https://harris.org/",
+    "website_link": "https://francis.com/",
+    "description": "Describe story civil simply. Daughter south court. Feel consumer few the economic. Few lead nearly itself worker. Together suggest author final.",
+    "rating": null,
+    "category": "cream",
+    "product_type": "eyeliner",
+    "tag_list": [
+      "Organic",
+      "Hypoallergenic"
+    ],
+    "created_at": "2022-10-14T14:05:05",
+    "updated_at": "2024-07-17T03:32:37",
+    "product_api_url": "https://example.com/api/v1/products/1108.json",
+    "api_featured_image": "https://picsum.photos/seed/featured-1108/600/600",
+    "product_colors": [
+      {
+        "hex_value": "#0e8553",
+        "colour_name": "DarkTurquoise"
+      },
+      {
+        "hex_value": "#428819",
+        "colour_name": "MediumVioletRed"
+      }
+    ]
+  }
+]

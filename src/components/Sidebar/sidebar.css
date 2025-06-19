@@ -1,48 +1,76 @@
-/* Custom scrollbar for the sidebar */
-.overflow-y-auto::-webkit-scrollbar {
-  width: 4px;
+/* sidebar.css */
+
+/* Sidebar scroll styling */
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #C28B7A #F8F0ED;
 }
 
-.overflow-y-auto::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
+.sidebar-scroll::-webkit-scrollbar {
+  width: 6px;
 }
 
-.overflow-y-auto::-webkit-scrollbar-thumb {
-  background: #e0c5bc;
-  border-radius: 10px;
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: #F8F0ED;
+  border-radius: 3px;
 }
 
-.overflow-y-auto::-webkit-scrollbar-thumb:hover {
-  background: #c28b7a;
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: #C28B7A;
+  border-radius: 3px;
 }
 
-/* Smooth transitions */
-.transition-transform {
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: #A06E5F;
 }
 
-/* Focus styles for accessibility */
-button:focus-visible {
-  outline: 2px solid #c28b7a;
-  outline-offset: 2px;
-}
-
-/* Active category animation */
-.bg-\[\#f8f0ed\] {
-  position: relative;
-  overflow: hidden;
-}
-
-.bg-\[\#f8f0ed\]::after {
-  content: "";
-  position: absolute;
-  left: 0;
+/* Mobile drawer styles */
+.mobile-drawer-overlay {
+  position: fixed;
   top: 0;
-  height: 100%;
-  width: 4px;
-  background-color: #c28b7a;
-  border-radius: 0 2px 2px 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.mobile-drawer-overlay.open {
+  opacity: 1;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  max-width: 80vw;
+  background: white;
+  box-shadow: 4px 0 6px -1px rgba(0, 0, 0, 0.1), 2px 0 4px -1px rgba(0, 0, 0, 0.06);
+  z-index: 60;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.mobile-drawer.open {
+  transform: translateX(0);
+}
+
+/* Animation cho smooth transitions */
+@media (max-width: 768px) {
+  .mobile-filter-button {
+    display: flex;
+    justify-content: center;
+    margin: 1.25rem 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-filter-button {
+    display: none;
+  }
 }

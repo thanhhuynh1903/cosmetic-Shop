@@ -1,23 +1,23 @@
-"use client"
-import { useNavigate } from "react-router-dom"
-import { Star,ShoppingBag } from "lucide-react"
-import useCartStore from "../../util/zustandCartState"
-export default function Card({ key, product, expired,isSwiper = false }) {
-  const navigate = useNavigate()
-  const { addToCart,updateQuantity } = useCartStore();
+"use client";
+import { useNavigate } from "react-router-dom";
+import { Star, ShoppingBag } from "lucide-react";
+import useCartStore from "../../util/zustandCartState";
+export default function Card({ key, product, expired, isSwiper }) {
+  const navigate = useNavigate();
+  const { addToCart, updateQuantity } = useCartStore();
   const handleNavigate = () => {
-    navigate(`/products/${product.id}`)
-  }
+    navigate(`/products/${product.id}`);
+  };
 
   const getStars = (rating) => {
-    const stars = []
+    const stars = [];
     for (let i = 0; i < 5; i++) {
-      stars.push(i < rating ? "filled" : "empty")
+      stars.push(i < rating ? "filled" : "empty");
     }
-    return stars
-  }
+    return stars;
+  };
 
-  const stars = getStars(product.rating) // Assuming product.rating is a number between 0 and 5
+  const stars = getStars(product.rating || 0);
 
   return (
     <div className="flex ">
@@ -30,23 +30,31 @@ export default function Card({ key, product, expired,isSwiper = false }) {
             : "w-full sm:w-[250px] md:w-[280px] h-auto sm:h-[385px] shadow-lg"
         } p-3 rounded-lg cursor-pointer flex flex-col`}
       >
-        <div className="w-full h-[200px] sm:h-[270px] overflow-hidden rounded-md">
+       <div
+          className={`${
+            isSwiper 
+              ? "aspect-square md:w-[248px] md:h-[239px]" 
+              : "aspect-1  md:aspect-[3/4] h-auto"
+          } w-full overflow-hidden rounded-md bg-gray-50 flex items-center justify-center`}
+        >
           <img
             src={product?.api_featured_image || "/placeholder.svg"}
             alt={product?.name}
-            className="w-full h-full rounded-md object-contain transition-transform duration-300 hover:scale-105"
+            className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
           />
         </div>
 
         <p
           className={`${
             expired ? "h-auto sm:h-[45px] mt-3" : ""
-          } text-sm sm:text-base text-gray-700 font-semibold dark:text-gray-400 line-clamp-1`}
+          } text-sm sm:text-base text-gray-700 font-semibold dark:text-gray-400 overflow-hidden whitespace-pre-wrap break-normal ${isSwiper && "mt-2"} `}
         >
           {product.name}
         </p>
 
-        <p className={`mt-1 text-xs sm:text-sm text-[#96a3b3] dark:text-gray-400 font-semibold`}>
+        <p
+          className={`mt-1 text-xs sm:text-sm text-[#96a3b3] dark:text-gray-400 font-semibold`}
+        >
           Brand: {product.brand}
         </p>
 
@@ -55,7 +63,11 @@ export default function Card({ key, product, expired,isSwiper = false }) {
             {stars.map((star, index) => (
               <Star
                 key={index}
-                className={`w-3 h-3 sm:w-4 sm:h-4 ${star === "filled" ? "text-yellow-500" : "text-gray-300"}`}
+                className={`w-3 h-3 sm:w-4 sm:h-4 ${
+                  star === "filled"
+                    ? "text-yellow-500 fill-current"
+                    : "text-gray-300"
+                }`}
               />
             ))}
           </div>
@@ -75,7 +87,7 @@ export default function Card({ key, product, expired,isSwiper = false }) {
                 onClick={handleNavigate}
                 className="mt-2 inline-flex items-center px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium font-semibold text-center text-weight-brown outline outline-1 outline-weight-brown bg-[#fffff] rounded-lg hover:bg-weight-brown hover:text-white hover:outline-0 transition-all duration-300"
               >
-                Buy now 
+                Buy now
                 <svg
                   className="rtl:rotate-180 w-3 h-3 ms-1 sm:ms-2"
                   aria-hidden="true"
@@ -96,18 +108,18 @@ export default function Card({ key, product, expired,isSwiper = false }) {
           )}
         </div>
 
-       {expired && (
-            <div className="flex justify-center w-full mt-2">
-              <button
-                onClick={handleNavigate}
-                className="inline-flex items-center px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-[#c28b7a] border border-[#c28b7a] rounded-lg hover:bg-[#c28b7a] hover:text-white transition-all duration-300 w-full justify-center"
-              >
-                <ShoppingBag size={14} className="mr-1 sm:mr-2" />
-                Add to bag
-              </button>
-            </div>
-          )}
+        {expired && (
+          <div className="flex justify-center w-full mt-2">
+            <button
+              onClick={handleNavigate}
+              className="inline-flex items-center px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-[#c28b7a] border border-[#c28b7a] rounded-lg hover:bg-[#c28b7a] hover:text-white transition-all duration-300 w-full justify-center"
+            >
+              <ShoppingBag size={14} className="mr-1 sm:mr-2" />
+              Add to bag
+            </button>
+          </div>
+        )}
       </div>
     </div>
-  )
+  );
 }
