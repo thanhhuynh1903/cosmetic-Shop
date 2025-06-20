@@ -3,11 +3,14 @@ import ItemCheckout from "../components/ItemCheckout/ItemCheckout";
 import { Link } from "react-router-dom";
 import "../components/layouts/Header/Header.css";
 import { useNavigate } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 import useUserState from "../util/zustandUserState";
+import useOrderStore from "../util/zustandOrderId";
 export default function Checkout() {
   const navigate = useNavigate();
-  const { user,setUser } = useUserState();
+  const { user, setUser } = useUserState();
   // State cho form data và errors
+  const { order, setOrder } = useOrderStore();
   const [formData, setFormData] = useState({
     email: "",
     firstName: "",
@@ -21,20 +24,26 @@ export default function Checkout() {
     phone: "",
     country: "Vietnam",
     newsOffers: false,
-    textOffers: false
+    textOffers: false,
   });
-  
+
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
+  const [cartItems, setCartItems] = useState([]);
+
+  // callback nhận cartItems từ ItemCheckout
+  const handleProductsChange = (items) => {
+    setCartItems(items);
+  };
 
   // Xử lý thay đổi input
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
       ...formData,
-      [name]: type === "checkbox" ? checked : value
+      [name]: type === "checkbox" ? checked : value,
     });
-    
+
     // Validate khi người dùng thay đổi giá trị
     validateField(name, type === "checkbox" ? checked : value);
   };
@@ -44,7 +53,7 @@ export default function Checkout() {
     const { name } = e.target;
     setTouched({
       ...touched,
-      [name]: true
+      [name]: true,
     });
     validateField(name, formData[name]);
   };
@@ -52,7 +61,7 @@ export default function Checkout() {
   // Validate từng field
   const validateField = (name, value) => {
     let newErrors = { ...errors };
-    
+
     switch (name) {
       case "email":
         if (!value) {
@@ -63,7 +72,7 @@ export default function Checkout() {
           delete newErrors.email;
         }
         break;
-      
+
       case "firstName":
         if (!value) {
           newErrors.firstName = "Họ là bắt buộc";
@@ -71,7 +80,7 @@ export default function Checkout() {
           delete newErrors.firstName;
         }
         break;
-      
+
       case "lastName":
         if (!value) {
           newErrors.lastName = "Tên là bắt buộc";
@@ -79,7 +88,7 @@ export default function Checkout() {
           delete newErrors.lastName;
         }
         break;
-      
+
       case "address":
         if (!value) {
           newErrors.address = "Địa chỉ là bắt buộc";
@@ -87,7 +96,7 @@ export default function Checkout() {
           delete newErrors.address;
         }
         break;
-      
+
       case "city":
         if (!value) {
           newErrors.city = "Thành phố là bắt buộc";
@@ -95,7 +104,7 @@ export default function Checkout() {
           delete newErrors.city;
         }
         break;
-      
+
       case "province":
         if (!value) {
           newErrors.province = "Tỉnh/thành là bắt buộc";
@@ -103,7 +112,7 @@ export default function Checkout() {
           delete newErrors.province;
         }
         break;
-      
+
       case "postalCode":
         if (!value) {
           newErrors.postalCode = "Mã bưu điện là bắt buộc";
@@ -113,32 +122,41 @@ export default function Checkout() {
           delete newErrors.postalCode;
         }
         break;
-      
+
       case "phone":
         if (!value) {
           newErrors.phone = "Số điện thoại là bắt buộc";
-        } else if (!/^[0-9]{10,11}$/.test(value.replace(/[^0-9]/g, ''))) {
+        } else if (!/^[0-9]{10,11}$/.test(value.replace(/[^0-9]/g, ""))) {
           newErrors.phone = "Số điện thoại không hợp lệ";
         } else {
           delete newErrors.phone;
         }
         break;
-      
+
       default:
         break;
     }
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   // Validate toàn bộ form
   const validateForm = () => {
-    const requiredFields = ["email", "firstName", "lastName", "address", "city", "province", "postalCode", "phone"];
+    const requiredFields = [
+      "email",
+      "firstName",
+      "lastName",
+      "address",
+      "city",
+      "province",
+      "postalCode",
+      "phone",
+    ];
     let newErrors = {};
     let newTouched = {};
-    
-    requiredFields.forEach(field => {
+
+    requiredFields.forEach((field) => {
       newTouched[field] = true;
       if (!formData[field]) {
         newErrors[field] = `${field} là bắt buộc`;
@@ -146,26 +164,86 @@ export default function Checkout() {
         validateField(field, formData[field]);
       }
     });
-    
+
     setTouched(newTouched);
-    setErrors({...newErrors, ...errors});
-    
+    setErrors({ ...newErrors, ...errors });
+
     return Object.keys(newErrors).length === 0;
   };
 
   const handleCancelCheckout = () => {
     navigate("/products");
   };
-  
-  const handleConfirmCheckout = (e) => {
+
+  const handleConfirmCheckout = async (e) => {
     e.preventDefault();
-    
+
     if (validateForm()) {
       setUser(formData);
-      navigate("/complete");
+
+      const emailSent = await handleSendEmail();
+
+      if (emailSent) {
+        navigate("/complete");
+        console.log("Đơn hàng đã được gửi thành công!");
+      } else {
+        console.log(emailSent);
+
+        alert("Lỗi khi gửi email!");
+      }
     } else {
-      // Hiển thị thông báo lỗi
       alert("Vui lòng điền đầy đủ thông tin bắt buộc");
+    }
+  };
+  console.log(cartItems);
+
+  const handleSendEmail = async () => {
+    try {
+      // Tạo mảng các sản phẩm
+      const orderItems = cartItems.map((item) => ({
+        name: item.name,
+        image_url: item.image,
+        price: item.price,
+        units: item.quantity,
+      }));
+
+      // Tính tổng giá trị đơn hàng
+      const subtotal = cartItems.reduce(
+        (sum, item) => sum + item.price * item.quantity,
+        0
+      );
+
+      // Giả sử phí vận chuyển và thuế
+      // Trong thực tế, bạn nên tính toán các giá trị này
+      const shippingFee = 0; // Miễn phí vận chuyển
+      const taxRate = 0.08; // Thuế 10%
+      const taxFee = Math.round(subtotal * taxRate);
+      const totalCost = subtotal + shippingFee + taxFee;
+      const orderInitial = "ORD_" + Date.now();
+      setOrder(orderInitial);
+      const orderData = {
+        order_id: orderInitial,
+        orders: orderItems, // Mảng các sản phẩm
+        cost: {
+          shipping: shippingFee,
+          tax: taxFee,
+          total: totalCost,
+        },
+        email: formData.email,
+      };
+
+      const result = await emailjs.send(
+        `${process.env.REACT_APP_SERVICE_ID}`,
+        `${process.env.REACT_APP_TEMPLATE_ID}`,
+        orderData,
+        `${process.env.REACT_APP_USER_ID}`
+      );
+
+      console.log(result.text);
+      return true;
+    } catch (error) {
+      console.error("Lỗi khi gửi email:", error);
+      return false;
     }
   };
 
@@ -189,14 +267,26 @@ export default function Checkout() {
           <form className="space-y-6" onSubmit={handleConfirmCheckout}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div>
-                <div className="flex justify-between mb-4">
-                  <button type="button" className="bg-purple-600 text-black py-2 px-4 rounded-lg font-semibold">
-                    Shop Pay
-                  </button>
-                  <button type="button" className="bg-yellow-400 text-black py-2 px-4 rounded-lg font-semibold">
-                    PayPal
-                  </button>
+                <div className="mb-4">
+                  <label
+                    className="flex items-center space-x-3 p-3 rounded-lg border border-gray-300 hover:border-gray-400 cursor-pointer"
+                    htmlFor="cod"
+                  >
+                    <input
+                      type="radio"
+                      id="cod"
+                      name="paymentMethod"
+                      value="COD"
+                      checked={true}
+                      readOnly
+                      className="h-4 w-4 text-[#07174f]"
+                    />
+                    <span className="font-semibold text-gray-800">
+                      Cash on Delivery (COD)
+                    </span>
+                  </label>
                 </div>
+
                 <div>
                   <label
                     htmlFor="email"
@@ -212,12 +302,16 @@ export default function Checkout() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     className={`mt-1 block w-full px-3 py-2 border ${
-                      errors.email && touched.email ? 'border-red-500' : 'border-gray-300'
+                      errors.email && touched.email
+                        ? "border-red-500"
+                        : "border-gray-300"
                     } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                     placeholder="Email"
                   />
                   {errors.email && touched.email && (
-                    <p className="text-[#CB0404] text-xs mt-1">{errors.email}</p>
+                    <p className="text-[#CB0404] text-xs mt-1">
+                      {errors.email}
+                    </p>
                   )}
                   <div className="flex items-center mt-2">
                     <input
@@ -285,12 +379,16 @@ export default function Checkout() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       className={`mt-1 block w-full px-3 py-2 border ${
-                        errors.firstName && touched.firstName ? 'border-red-500' : 'border-gray-300'
+                        errors.firstName && touched.firstName
+                          ? "border-red-500"
+                          : "border-gray-300"
                       } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                       placeholder="First name"
                     />
                     {errors.firstName && touched.firstName && (
-                      <p className="text-[#CB0404] text-xs mt-1">{errors.firstName}</p>
+                      <p className="text-[#CB0404] text-xs mt-1">
+                        {errors.firstName}
+                      </p>
                     )}
                   </div>
                   <div>
@@ -308,12 +406,16 @@ export default function Checkout() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       className={`mt-1 block w-full px-3 py-2 border ${
-                        errors.lastName && touched.lastName ? 'border-red-500' : 'border-gray-300'
+                        errors.lastName && touched.lastName
+                          ? "border-red-500"
+                          : "border-gray-300"
                       } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                       placeholder="Last name"
                     />
                     {errors.lastName && touched.lastName && (
-                      <p className="text-[#CB0404] text-xs mt-1">{errors.lastName}</p>
+                      <p className="text-[#CB0404] text-xs mt-1">
+                        {errors.lastName}
+                      </p>
                     )}
                   </div>
                 </div>
@@ -349,12 +451,16 @@ export default function Checkout() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     className={`mt-1 block w-full px-3 py-2 border ${
-                      errors.address && touched.address ? 'border-red-500' : 'border-gray-300'
+                      errors.address && touched.address
+                        ? "border-red-500"
+                        : "border-gray-300"
                     } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                     placeholder="Address"
                   />
                   {errors.address && touched.address && (
-                    <p className="text-[#CB0404] text-xs mt-1">{errors.address}</p>
+                    <p className="text-[#CB0404] text-xs mt-1">
+                      {errors.address}
+                    </p>
                   )}
                 </div>
                 <div className="mb-4">
@@ -390,12 +496,16 @@ export default function Checkout() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       className={`mt-1 block w-full px-3 py-2 border ${
-                        errors.city && touched.city ? 'border-red-500' : 'border-gray-300'
+                        errors.city && touched.city
+                          ? "border-red-500"
+                          : "border-gray-300"
                       } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                       placeholder="City"
                     />
                     {errors.city && touched.city && (
-                      <p className="text-[#CB0404] text-xs mt-1">{errors.city}</p>
+                      <p className="text-[#CB0404] text-xs mt-1">
+                        {errors.city}
+                      </p>
                     )}
                   </div>
                   <div>
@@ -413,12 +523,16 @@ export default function Checkout() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       className={`mt-1 block w-full px-3 py-2 border ${
-                        errors.province && touched.province ? 'border-red-500' : 'border-gray-300'
+                        errors.province && touched.province
+                          ? "border-red-500"
+                          : "border-gray-300"
                       } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                       placeholder="Province"
                     />
                     {errors.province && touched.province && (
-                      <p className="text-[#CB0404] text-xs mt-1">{errors.province}</p>
+                      <p className="text-[#CB0404] text-xs mt-1">
+                        {errors.province}
+                      </p>
                     )}
                   </div>
                   <div>
@@ -436,12 +550,16 @@ export default function Checkout() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       className={`mt-1 block w-full px-3 py-2 border ${
-                        errors.postalCode && touched.postalCode ? 'border-red-500' : 'border-gray-300'
+                        errors.postalCode && touched.postalCode
+                          ? "border-red-500"
+                          : "border-gray-300"
                       } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                       placeholder="Postal Code"
                     />
                     {errors.postalCode && touched.postalCode && (
-                      <p className="text-[#CB0404] text-xs mt-1">{errors.postalCode}</p>
+                      <p className="text-[#CB0404] text-xs mt-1">
+                        {errors.postalCode}
+                      </p>
                     )}
                   </div>
                 </div>
@@ -460,12 +578,16 @@ export default function Checkout() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     className={`mt-1 block w-full px-3 py-2 border ${
-                      errors.phone && touched.phone ? 'border-red-500' : 'border-gray-300'
+                      errors.phone && touched.phone
+                        ? "border-red-500"
+                        : "border-gray-300"
                     } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                     placeholder="Phone"
                   />
                   {errors.phone && touched.phone && (
-                    <p className="text-[#CB0404] text-xs mt-1">{errors.phone}</p>
+                    <p className="text-[#CB0404] text-xs mt-1">
+                      {errors.phone}
+                    </p>
                   )}
                 </div>
                 <div className="flex items-center mt-2">
@@ -477,10 +599,7 @@ export default function Checkout() {
                     onChange={handleChange}
                     className="mr-2"
                   />
-                  <label
-                    htmlFor="textOffers"
-                    className="text-sm text-gray-600"
-                  >
+                  <label htmlFor="textOffers" className="text-sm text-gray-600">
                     Text me with news and offers
                   </label>
                 </div>
@@ -496,11 +615,11 @@ export default function Checkout() {
                     type="submit"
                     className="bg-[#07174f] text-white py-2 px-4 rounded-lg font-semibold"
                   >
-                    Continue to shipping
+                    Complete checkout
                   </button>
                 </div>
               </div>
-              <ItemCheckout />
+              <ItemCheckout onProductsChange={handleProductsChange} />
             </div>
           </form>
         </div>

@@ -14,6 +14,7 @@ import {
   Heart,
   ArrowLeft,
   Clock,
+  Omega,
 } from "lucide-react";
 import { Tooltip } from "react-tooltip";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -24,6 +25,7 @@ import "swiper/css/pagination";
 import useCartStore from "../../util/zustandCartState";
 import useUserState from "../../util/zustandUserState";
 import ErrorPage404 from "../ErrorPage/ErrorPage";
+import useOrderStore from "../../util/zustandOrderId";
 // Format currency to USD
 const formatCurrency = (amount) => {
   return new Intl.NumberFormat("en-US", {
@@ -34,6 +36,7 @@ const formatCurrency = (amount) => {
 };
 
 const CompleteOrder = () => {
+  const { order } = useOrderStore();
   const { user } = useUserState();
   const { cart, removeAllCart } = useCartStore();
   const [orderData, setorderData] = useState(cart);
@@ -99,7 +102,9 @@ const CompleteOrder = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
             <div className="flex items-center">
-              <span className="text-gray-600 mr-2">Order Number:</span>
+              <span className="text-gray-600 mr-2">
+                Order Number: <strong>{order}</strong>
+              </span>
               <span className="font-medium text-pink-600">
                 {orderData.orderNumber}
               </span>
@@ -118,7 +123,9 @@ const CompleteOrder = () => {
             <div className="hidden sm:block text-gray-300">|</div>
             <div>
               <span className="text-gray-600 mr-2">Order Date:</span>
-              <span className="font-medium">{orderData.orderDate}</span>
+              <span className="font-medium">
+                {new Date().toLocaleDateString()}
+              </span>
             </div>
           </div>
 
@@ -238,6 +245,14 @@ const CompleteOrder = () => {
 
                       <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                         <div className="space-y-4">
+                          <div>
+                            <label className="text-sm font-medium text-gray-500">
+                              Email
+                            </label>
+                            <p className="mt-1 text-gray-900 font-medium">
+                              {user?.email}
+                            </p>
+                          </div>
                           <div>
                             <label className="text-sm font-medium text-gray-500">
                               Full Name
@@ -372,7 +387,7 @@ const CompleteOrder = () => {
                   className="border-blue-500 block w-full py-2 px-3 bg-gray-100 text-gray-700 rounded-md text-sm font-medium text-center hover:bg-gray-200 transition-colors"
                 >
                   Contact Support
-                </Link>  
+                </Link>
               </div>
             </div>
           </div>
