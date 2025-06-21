@@ -4,6 +4,8 @@ import useCartStore from "../../util/zustandCartState";
 import { useEffect } from "react";
 export default function ItemCheckout({ onProductsChange }) {
   const { cart } = useCartStore();
+  const shippingFee = 0; // Miễn phí vận chuyển
+  const taxRate = 0.08; // Thuế 8%
   function calculateSubtotal(items) {
     // Calculate item totals and overall subtotal
     const itemTotals = items?.map((item) => {
@@ -16,10 +18,14 @@ export default function ItemCheckout({ onProductsChange }) {
         total: total,
       };
     });
+    const subtotal = itemTotals.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
 
-    // Calculate final subtotal
-    const subtotal = itemTotals?.reduce((sum, item) => sum + item.total, 0).toFixed(2);
-    return subtotal;
+    const taxFee = Math.round(subtotal * taxRate);
+    const totalCost = subtotal + shippingFee + taxFee;
+    return totalCost.toFixed(2);
   }
   useEffect(() => {
     if (onProductsChange && cart) {
@@ -36,7 +42,13 @@ export default function ItemCheckout({ onProductsChange }) {
         <div className="flex justify-between">
           <p className="text-sm font-medium text-gray-900">Subtotal</p>
           <p className="text-sm font-medium text-gray-900">
-            ${calculateSubtotal(cart)}
+            ${calculateSubtotal(cart)-(taxRate*100)}
+          </p>
+        </div>
+        <div className="flex justify-between">
+          <p className="text-sm font-medium text-gray-900">Tax</p>
+          <p className="text-sm font-medium text-gray-900">
+            ${taxRate * 100}
           </p>
         </div>
         <div className="flex justify-between">

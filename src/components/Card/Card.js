@@ -46,7 +46,7 @@ export default function Card({ key, product, expired, isSwiper }) {
 
         <p
           className={`${
-            expired ? "h-auto sm:h-[45px] mt-3" : ""
+            expired ? "h-auto sm:h-[70px] mt-3" : ""
           } text-sm sm:text-base text-gray-700 font-semibold dark:text-gray-400 overflow-hidden whitespace-pre-wrap break-normal ${isSwiper && "mt-2"} `}
         >
           {product.name}

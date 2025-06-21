@@ -1,6 +1,6 @@
 import React from "react";
 import useCartStore from "../../util/zustandCartState";
-import CardOrder from "../CardOrder.js/CardOrder";
+import CardOrder from "../CardOrder/CardOrder";
 import { useNavigate } from "react-router-dom";
 
 export default function Drawer() {

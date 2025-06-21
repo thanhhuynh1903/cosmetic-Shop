@@ -1,9 +1,12 @@
 import { create } from 'zustand';
 
 const useDetailStore = create((set) => ({
-  product: null, // State to store the product detail
-  isLoading: false, // Loading state
-  error: null, // Error state
+  product: null,
+  isLoading: false,
+  error: null,
+  relatedProducts: [],
+  isLoadingRelated: false,
+  errorRelated: null,
 
   // Function to fetch product detail from API
   fetchProductDetail: async (id) => {
@@ -23,6 +26,21 @@ const useDetailStore = create((set) => ({
       set({ error: error.message, isLoading: false }); // Save error to state
     }
   },
+  fetchRelatedProducts: async (brand, productType, excludeId) => {
+    set({ isLoadingRelated: true, errorRelated: null });
+    try {
+      const response = await fetch(
+        `https://66ed176d380821644cdb4c2b.mockapi.io/cosmetic?brand=${brand}&product_type=${productType}`
+      );
+      let data = await response.json();
+      // Filter out current product and limit to 4 items
+      data = data.filter(product => product.id != excludeId).slice(0, 4);
+      set({ relatedProducts: data, isLoadingRelated: false });
+    } catch (err) {
+      set({ errorRelated: err.message, isLoadingRelated: false });
+    }
+  },
+
 }));
 
 export default useDetailStore;
