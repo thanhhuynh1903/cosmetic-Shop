@@ -12,20 +12,20 @@ export default function CardOrder({ cart }) {
   const handleIncrement = () => {
     const newQuantity = quantity + 1;
     setQuantity(newQuantity);
-    updateQuantity(cart.id, newQuantity);
+    updateQuantity(cart.uniqueId, newQuantity);
   };
 
   const handleDecrement = () => {
     if (quantity > 1) {
       const newQuantity = quantity - 1;
       setQuantity(newQuantity);
-      updateQuantity(cart.id, newQuantity);
+      updateQuantity(cart.uniqueId, newQuantity);
     }
   };
 
   const handleRemove = () => {
-    removeFromCart(cart.id);
-    console.log(removeFromCart(cart.id));
+    removeFromCart(cart.uniqueId);
+    console.log(removeFromCart(cart.uniqueId));
   };
 
   return (

@@ -68,6 +68,7 @@ export default function ProductDetail() {
       color: selectedColor,
       type: product.product_type,
       quantity,
+      uniqueId: `${product.id}-${selectedColor}`
     });
   };
 
@@ -80,6 +81,7 @@ export default function ProductDetail() {
       color: selectedColor,
       type: product.product_type,
       quantity,
+      uniqueId: `${product.id}-${selectedColor}`
     });
     navigate("/checkout");
   };

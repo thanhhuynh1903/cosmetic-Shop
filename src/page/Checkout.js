@@ -216,7 +216,7 @@ export default function Checkout() {
       // Giả sử phí vận chuyển và thuế
       // Trong thực tế, bạn nên tính toán các giá trị này
       const shippingFee = 0; // Miễn phí vận chuyển
-      const taxRate = 0.08; // Thuế 10%
+      const taxRate = 0.08; // Thuế 8%
       const taxFee = Math.round(subtotal * taxRate);
       const totalCost = subtotal + shippingFee + taxFee;
       const orderInitial = "ORD_" + Date.now();
@@ -227,7 +227,7 @@ export default function Checkout() {
         cost: {
           shipping: shippingFee,
           tax: taxFee,
-          total: totalCost,
+          total: totalCost.toFixed(2),
         },
         email: formData.email,
       };
@@ -239,7 +239,6 @@ export default function Checkout() {
         `${process.env.REACT_APP_USER_ID}`
       );
 
-      console.log(result.text);
       return true;
     } catch (error) {
       console.error("Lỗi khi gửi email:", error);

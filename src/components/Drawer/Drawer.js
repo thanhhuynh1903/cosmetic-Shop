@@ -25,7 +25,7 @@ export default function Drawer() {
     });
 
     // Calculate final subtotal
-    const subtotal = itemTotals.reduce((sum, item) => sum + item.total, 0);
+    const subtotal = itemTotals.reduce((sum, item) => sum + item.total, 0).toFixed(2);
     return subtotal;
   }
 
