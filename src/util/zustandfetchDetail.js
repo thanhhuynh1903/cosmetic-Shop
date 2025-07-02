@@ -30,7 +30,7 @@ const useDetailStore = create((set) => ({
     set({ isLoadingRelated: true, errorRelated: null });
     try {
       const response = await fetch(
-        `http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand}`
+        `https://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand}`
       );
       let data = await response.json();
       
