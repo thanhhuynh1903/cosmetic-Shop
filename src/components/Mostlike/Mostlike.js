@@ -16,7 +16,7 @@ export default function Mostlike() {
 
   useEffect(() => {
     fetchProducts();
-  }, [fetchProducts]);
+  }, []);
 
   if (isLoading) {
     return <MostlikeProductsSkeleton />;

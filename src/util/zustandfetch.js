@@ -9,7 +9,7 @@ const useProductStore = create((set) => ({
   fetchProducts: async (retryCount = 0) => {
     set({ isLoading: true, error: null }); // Bắt đầu loading
     try {
-      const response = await fetch('https://66ed176d380821644cdb4c2b.mockapi.io/cosmetic');
+      const response = await fetch('https://makeup-api.herokuapp.com/api/v1/products.json');
       if (!response.ok) {
         throw new Error('Failed to fetch products');
       }

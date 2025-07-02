@@ -195,14 +195,16 @@ export default function Checkout() {
       alert("Vui lòng điền đầy đủ thông tin bắt buộc");
     }
   };
-  console.log(cartItems);
 
   const handleSendEmail = async () => {
     try {
       // Tạo mảng các sản phẩm
+      console.log(cartItems);
       const orderItems = cartItems.map((item) => ({
         name: item.name,
-        image_url: item.image,
+        image_url: item.image.startsWith("http")
+          ? item.image
+          : `https:${item.image}`,
         price: item.price,
         units: item.quantity,
       }));

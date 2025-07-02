@@ -31,7 +31,8 @@ export default function ProductDetail() {
     fetchRelatedProducts,
   } = useDetailStore();
   const { addToCart } = useCartStore();
-
+  
+  
   useEffect(() => {
     if (id) {
       fetchProductDetail(id);
@@ -39,8 +40,9 @@ export default function ProductDetail() {
   }, [id, fetchProductDetail]);
 
   useEffect(() => {
-    if (product && product.brand && product.product_type) {
-      fetchRelatedProducts(product.brand, product.product_type, product.id);
+    if (product && product?.brand && product?.product_type) {
+      console.log("Product Detail Rendered", product);
+      fetchRelatedProducts(product?.brand, product?.product_type, product?.id);
     }
   }, [product, fetchRelatedProducts]);
 
@@ -103,8 +105,8 @@ export default function ProductDetail() {
   };
 
   return (
-    <div className="bg-white min-h-screen flex flex-col">
-      <section className="py-4 px-2 sm:px-4 md:px-8 lg:px-[10%] md:h-[750px] ">
+    <div className="bg-white min-h-screen flex flex-col ">
+      <section className="py-4 px-2 sm:px-4 md:px-8 lg:px-[10%] h-auto">
         <Breadcrumbs productName={product?.name} />
         {/* Container */}
         <div className="w-full py-5 md:py-[40px]">

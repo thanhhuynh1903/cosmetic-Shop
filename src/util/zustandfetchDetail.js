@@ -14,14 +14,14 @@ const useDetailStore = create((set) => ({
     
     set({ isLoading: true, error: null }); // Start loading
     try {
-      const response = await fetch(`https://66ed176d380821644cdb4c2b.mockapi.io/cosmetic?id=${id}`);
+      const response = await fetch(`https://makeup-api.herokuapp.com/api/v1/products/${id}.json`);
       console.log(response.data);
       
       if (!response.ok) {
         throw new Error('Failed to fetch product detail');
       }
       const data = await response.json();
-      set({ product: data[0], isLoading: false }); // Save data to state
+      set({ product: data, isLoading: false }); // Save data to state
     } catch (error) {
       set({ error: error.message, isLoading: false }); // Save error to state
     }
@@ -30,11 +30,12 @@ const useDetailStore = create((set) => ({
     set({ isLoadingRelated: true, errorRelated: null });
     try {
       const response = await fetch(
-        `https://66ed176d380821644cdb4c2b.mockapi.io/cosmetic?brand=${brand}&product_type=${productType}`
+        `http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand}`
       );
       let data = await response.json();
+      
       // Filter out current product and limit to 4 items
-      data = data.filter(product => product.id != excludeId).slice(0, 4);
+      data = data.filter(product => product.id !== excludeId).slice(0, 4);
       set({ relatedProducts: data, isLoadingRelated: false });
     } catch (err) {
       set({ errorRelated: err.message, isLoadingRelated: false });

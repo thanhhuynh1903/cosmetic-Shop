@@ -40,7 +40,7 @@ export default function Shoppingpage() {
 
   useEffect(() => {
     fetchAllProducts();
-  }, [fetchAllProducts]);
+  }, []);
 
   useEffect(() => {
     if (products.length > 0) {
